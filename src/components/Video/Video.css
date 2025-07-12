@@ -1,0 +1,67 @@
+/* ========== VIDEO SECTION ========== */
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ========== PARTNERS LOGO OVERLAY ========== */
+.partners-overlay {
+  position: absolute;
+  bottom: 30px; /* You can change this */
+  right: 60px; /* You can change this */
+  padding: 0;
+  background: transparent;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+/* Title styling */
+.mainpartners-title {
+  font-family: 'Sarabun', sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  color: var(--text-color);
+  margin-right: -10px;
+}
+
+/* Logos container */
+.partners-logos {
+  display: flex;
+  gap: 12px; /* spacing between logos */
+  align-items: center;
+}
+
+/* Individual logo image styling */
+.partners-logos img {
+  height: 25px; /* You can change size */
+  width: auto;
+  object-fit: contain;
+  filter: brightness(100%) contrast(100%);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  opacity: 0.9;
+  margin-bottom: -10px;
+}
+
+.partners-logos img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}

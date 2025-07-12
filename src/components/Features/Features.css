@@ -1,0 +1,81 @@
+/* =============== FEATURES SECTION =============== */
+.features-section {
+  width: 100%;
+  height: 300px;
+  background-color: #fff;
+  padding: 60px 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.features-container {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 60px;
+  gap: 40px;
+}
+
+/* =============== INDIVIDUAL FEATURE BOX =============== */
+.feature-box {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex: 1;
+}
+
+/* ICON STYLE */
+.feature-icon {
+  font-size: 100px;
+  color: #cc4d4d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.feature-icon:hover {
+  transform: scale(1.2); /* Zoom in on hover */
+}
+/* TEXT STYLING */
+.feature-texts {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-title {
+  font:
+    30px prompt,
+    sans-serif;
+  color: #15171c;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.feature-desc {
+  font:
+    16px prompt,
+    sans-serif;
+  color: #777777;
+  padding-top: 10px;
+  max-width: 200px;
+  line-height: 1.6;
+}
+
+/* =============== RESPONSIVE =============== */
+@media (max-width: 1024px) {
+  .features-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .feature-box {
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .feature-icon {
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+}

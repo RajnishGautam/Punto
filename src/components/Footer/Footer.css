@@ -1,0 +1,195 @@
+.footer {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 0px 20px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+
+  /* Global font styles */
+  font-family: 'Sarabun', sans-serif;
+  font-size: 25px;
+  font-weight: normal;
+  line-height: 0.7;
+}
+
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr 1fr 1.5fr;
+  }
+}
+/* ---------- Brand Section (Redesigned) ---------- */
+.brand-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 0px;
+  padding-left: 0;
+}
+.footer-logo-img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  margin: 0;
+  margin-left: -70px;
+  margin-top: -70px;
+}
+.brand-description {
+  color: var(--text-secondary);
+  line-height: 1.4;
+  font-size: 30px;
+  margin-top: -80px;
+  margin-left: -50px;
+}
+
+.footer-logo-img:hover {
+  transform: scale(1.2);
+}
+
+/* ---------- Contact Section ---------- */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.contactsection-title {
+  font-size: 30px;
+  margin-bottom: 24px;
+  transition: color 0.3s ease;
+  color: var(--text-color);
+}
+
+.section-title:hover {
+  color: var(--primary-color);
+  cursor: default;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: var(--text-secondary);
+}
+
+.contact-item {
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.contact-item:hover {
+  color: var(--primary-color);
+  cursor: text;
+}
+
+/* ---------- Career Section ---------- */
+.career-section {
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  width: 100%;
+}
+
+.career-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--text-secondary);
+}
+
+.career-list li {
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.career-list li:hover {
+  color: var(--primary-color);
+}
+
+/* ---------- Services Section ---------- */
+.services-section {
+  display: flex;
+  flex-direction: column;
+  margin-left: 120px;
+  width: 100%;
+}
+
+.services-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: var(--text-secondary);
+}
+
+.services-list li {
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.services-list li:hover {
+  color: var(--primary-color);
+}
+
+/* ---------- Responsive Typography ---------- */
+@media (max-width: 1024px) {
+  .footer {
+    font-size: 16px;
+  }
+
+  .brand-section {
+    margin-left: 0;
+  }
+
+  .career-section,
+  .services-section,
+  .contact-section {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    font-size: 15px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    font-size: 14px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-logo-img {
+    height: 200px;
+    margin-top: -80px;
+    margin-bottom: -80px;
+  }
+}
