@@ -1,4 +1,3 @@
-import Hero from '../components/Hero/Hero'
 import VideoSection from '../components/Video/Video'
 import Footer from '../components/Footer/Footer'
 import HeroWithVideo from '../components/Contactsection/Contactsection'
