@@ -137,19 +137,10 @@ body.dark {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-  .marquee-container {
-    margin-top: 50px;
-  }
-  .marquee-track {
-    gap: 10px;
-  }
-  .partner-item {
-    padding: 12px;
-  }
+@media (max-width: 768px) {z
   .partner-logo {
     width: 100px;
-    height: 100px;
+    height: 50px;
   }
   .partner-name {
     font-size: 0.8rem;
@@ -158,8 +149,8 @@ body.dark {
 
 @media (max-width: 480px) {
   .partner-logo {
-    width: 80px;
-    height: 40px;
+    width: 100px;
+    height: 80px;
   }
   .partner-name {
     font-size: 0.75rem;
@@ -167,5 +158,8 @@ body.dark {
   .partner-tooltip {
     font-size: 0.7rem;
     padding: 4px 8px;
+  }
+  .marquee-track {
+    gap: 20px;
   }
 }
