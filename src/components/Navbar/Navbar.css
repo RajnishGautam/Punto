@@ -183,7 +183,11 @@ body.dark {
     align-items: center;
     justify-content: center;
   }
-
+.logo-img {
+    max-height: 40px;
+    max-width: 100px;
+    margin-left: 140px;
+  }
   .navbar-links {
     position: absolute;
     top: 100%;
@@ -253,6 +257,7 @@ body.dark {
   .logo-img {
     max-height: 40px;
     max-width: 100px;
+    margin-left: 170px;
   }
 
   .navbar-links a {

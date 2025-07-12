@@ -65,3 +65,32 @@
   transform: scale(1.1);
   opacity: 1;
 }
+@media (max-width: 768px) {
+  /* Adjustments for smaller screens */
+  .video-section {
+    height: 50vh; /* Adjust height for smaller screens */
+  }
+  .video-container{
+    height: 50vh; /* Adjust height for smaller screens */
+    width: 100%;
+  }
+  .partners-overlay {
+    bottom: 20px; /* Adjust for smaller screens */
+    right: 20px; /* Adjust for smaller screens */
+  }
+  .partners-logos img {
+    height: 20px; /* Adjust logo size for smaller screens */
+  }
+  .mainpartners-title {
+    font-size: 16px; /* Adjust title size for smaller screens */
+  }
+}
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Ensure video is behind other content */
+}

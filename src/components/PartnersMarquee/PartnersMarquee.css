@@ -138,9 +138,18 @@ body.dark {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .marquee-container {
+    margin-top: 50px;
+  }
+  .marquee-track {
+    gap: 10px;
+  }
+  .partner-item {
+    padding: 12px;
+  }
   .partner-logo {
     width: 100px;
-    height: 50px;
+    height: 100px;
   }
   .partner-name {
     font-size: 0.8rem;

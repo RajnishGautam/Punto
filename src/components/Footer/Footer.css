@@ -156,11 +156,15 @@
   .footer {
     font-size: 16px;
   }
-
-  .brand-section {
-    margin-left: 0;
+  .footer-logo-img {
+    margin-left: 1px;
   }
-
+  .brand-section {
+    margin-left: 10px;
+  }
+  .brand-description {
+    font-size: 35px;
+  }
   .career-section,
   .services-section,
   .contact-section {
@@ -176,7 +180,24 @@
   .footer-content {
     grid-template-columns: 1fr 1fr;
   }
+  .brand-section {
+    align-items: center;
+    text-align: center;
+  }
+  .footer-logo-img {
+    height: 200px;
+    margin-left: -10px;
 }
+  .brand-description {
+    font-size: 30px;
+    margin-left: 20px;
+    width: 100%;
+  }
+  .contact-section,
+  .career-section,
+  .services-section {
+    margin-left: 0;
+  }
 
 @media (max-width: 480px) {
   .footer {
@@ -192,4 +213,5 @@
     margin-top: -80px;
     margin-bottom: -80px;
   }
+}
 }

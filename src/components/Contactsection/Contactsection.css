@@ -289,6 +289,18 @@
 }
 
 @media (max-width: 768px) {
+  .hero-container {
+    margin-top: -100px;
+  }
+  .hero-socials {
+  margin-top: -100px;
+  margin-bottom: -100px;
+  }
+  .hero-left {
+
+    padding-top: 0px;
+    margin-left: 0;
+  }
   .hero-heading {
     font-size: 35px;
   }
