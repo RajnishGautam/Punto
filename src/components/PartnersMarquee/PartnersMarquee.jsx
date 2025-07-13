@@ -14,10 +14,12 @@ const partners = [
     logo: '/images/philips.png',
     info: 'Marketing',
   },
-  { id: 3, name: 'Skoda', logo: '/images/skoda.png', info: 'Digital Partner' },
+  { id: 3, name: 'Skoda', 
+    logo: '/images/skoda.png', 
+    info: 'Digital Partner' },
   {
     id: 4,
-    name: 'Mahindra',
+    name: 'Mahindra & Mahindra',
     logo: '/images/mahindra.png',
     info: 'Research & Development',
   },
@@ -27,8 +29,16 @@ const partners = [
     logo: '/images/mamaearth.png',
     info: ' Website Branding',
   },
-  { id: 6, name: 'Kbeauty', logo: '/images/k_beauty.png', info: 'Branding' },
-  { id: 7, name: 'Nykaa', logo: '/images/nykaa.png', info: 'E-Commerce sales' },
+  { 
+    id: 6, 
+    name: 'Kbeauty',
+     logo: '/images/k_beauty.png', 
+     info: 'Branding' },
+  { 
+    id: 7, 
+    name: 'Nykaa', 
+    logo: '/images/nykaa.png', 
+    info: 'E-Commerce sales' },
   {
     id: 8,
     name: 'BlueStone',
@@ -53,7 +63,12 @@ const partners = [
     logo: '/images/damac.png',
     info: 'Channel Partner',
   },
-  { id: 12, name: 'Sketchers', logo: '/images/skechers.png', info: 'Branding' },
+  { 
+    id: 12, 
+    name: 'Sketchers', 
+    logo: '/images/skechers.png', 
+    info: 'Branding',
+   },
   {
     id: 11,
     name: 'Playbox',

@@ -107,7 +107,10 @@ body.dark {
 }
 
 /* ========== CTA BUTTON ========== */
+/* Push navbar-cta to the right within navbar-actions */
 .navbar-cta {
+  margin-left: auto;   /* pushes to the right inside the flex container */
+  margin-right: -100px;
   padding: 0.3rem 1.8rem;
   border: 2px solid var(--text-color);
   background: transparent;
@@ -121,16 +124,23 @@ body.dark {
   gap: 10px;
   transition: all 0.3s ease;
   cursor: pointer;
-  margin-right: -60px;
   white-space: nowrap;
 }
 
-.navbar-cta:hover {
-  background-color: var(--primary-color);
-  color: #fff;
-  box-shadow: 0 4px 12px rgba(221, 75, 57, 0.3);
-  transform: translateY(-2px);
+.navbar-actions {
+  grid-area: actions;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;  /* Increased for more space between CTA and toggle */
+  justify-self: end;
 }
+
+.dark-toggle {
+  margin-left: 0;
+}
+
+
+
 
 /* ========== HAMBURGER MENU ========== */
 .hamburger-icon {
