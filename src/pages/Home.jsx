@@ -3,12 +3,14 @@ import Footer from '../components/Footer/Footer'
 import HeroWithVideo from '../components/Contactsection/Contactsection'
 import WhyUs3DCards from '../components/Whyus/Whyus'
 import PartnersMarquee from '../components/PartnersMarquee/PartnersMarquee'
+import OurServices from '../components/Ourservices/Ourservices'
 const Home = () => {
   return (
     <div>
       <VideoSection />
       <WhyUs3DCards />
       <PartnersMarquee />
+      <OurServices />
       <HeroWithVideo />
       {/*Contact section with video */}
       <Footer />

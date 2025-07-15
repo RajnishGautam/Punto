@@ -360,3 +360,19 @@ html {
     scroll-padding-top: 120px;
   }
 }
+.popup-message {
+  background-color: #9dd69f;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  font-weight: bold;
+  animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-10px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-10px); }
+}

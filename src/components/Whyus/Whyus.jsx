@@ -230,7 +230,7 @@ const WhyUs3DCards = () => {
           )}
         </div>
       </div>
-      <style jsx>{`
+      <style >{`
  .why-us-container {
   min-height: 70vh;
   position: relative;
