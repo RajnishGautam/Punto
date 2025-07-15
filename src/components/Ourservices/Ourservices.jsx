@@ -1,5 +1,5 @@
 import React from 'react';
-import './OurServices.css';
+import './Ourservices.css';
 
 const services = [
   { id: 1, image: '/images/service1.png', title: 'Web Development', slogan: 'Crafting stunning websites' },
