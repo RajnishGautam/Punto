@@ -197,8 +197,12 @@
 }
 
 @media(max-width: 600px) {
+  .our-services-section{
+    margin-top: -40px;
+  }
   .services-grid {
     grid-template-columns: 1fr;
+    margin-top: 0px;
   }
 
   .service-card {
@@ -218,9 +222,15 @@
   .read-more-btn {
     display: none;
   }
-
+  .dot{
+    display: none;
+  }
+  .line{
+    display: none;
+  }
   .service-title {
     font-size: 1.2rem;
-    margin: 0;
+    font-weight: normal;
+    font-weight: normal;
   }
 }
