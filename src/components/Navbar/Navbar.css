@@ -395,7 +395,7 @@ body.dark {
   
   .navbar-logo img,
   .logo-img {
-    height: 35px;
+    display: none;
   }
   
   .navbar-links {
