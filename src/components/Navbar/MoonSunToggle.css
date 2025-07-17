@@ -83,13 +83,13 @@
   }
 
   .celestial-body {
-    width: 10px;
-    height: 10px;
+    width: 9px;
+    height: 9px;
     top: 2px;
     left: 2px;
   }
 
   .celestial-body.sun {
-    left: 17px;
+    left: 15px;
   }
 }
