@@ -1,6 +1,6 @@
 .our-services-section {
   position: relative;
-  padding: 5rem 1rem;
+  padding: 3rem 3rem;
   overflow: hidden;
   background: var(--bg-color, #000000);
   color: var(--text-color, #fff);
@@ -79,11 +79,11 @@
 }
 
 .section-heading {
+  font-family: 'sarabun', sans-serif;
+  letter-spacing: 2px;
   font-size: 2.5rem;
-  background:#8e1616;
   font-weight: normal;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #8e1616;
 }
 
 .services-grid {
@@ -199,6 +199,7 @@
 @media(max-width: 600px) {
   .our-services-section{
     margin-top: -40px;
+    padding: 20px;
   }
   .services-grid {
     grid-template-columns: 1fr;

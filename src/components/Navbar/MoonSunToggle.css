@@ -8,7 +8,8 @@
   background: #fff;
   border: 1.5px solid var(--text-color);
   overflow: hidden;
-margin-top: 20px;
+  margin-top: 15px;
+  align-items: center;
 }
 
 .moon-sun-toggle.day {
@@ -58,6 +59,7 @@ margin-top: 20px;
   .moon-sun-toggle {
     width: 40px;
     height: 18px;
+    margin-bottom: 15px;
   }
 
   .celestial-body {
