@@ -1,0 +1,26 @@
+.development-landing {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.development-services {
+  text-align: center;
+  padding: 2rem;
+}
+
+.development-services-buttons button {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--primary-color);
+  background: transparent;
+  color: var(--text-color);
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.development-services-buttons .active {
+  background-color: var(--primary-color);
+  color: #fff;
+}

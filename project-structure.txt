@@ -1,0 +1,101 @@
+Folder PATH listing for volume private
+Volume serial number is F2D9-D8FC
+E:.
+�   .gitignore
+�   eslint.config.js
+�   index.html
+�   package-lock.json
+�   package.json
+�   prettier.config.js
+�   project-structure.txt
+�   README.md
+�   vite.config.js
+�   
+�           
++---public
+�   �   3dots.png
+�   �   vite.svg
+�   �   
+�   +---images
+�           ALP.png
+�           bluestone.png
+�           damac.png
+�           dot&key skincare.png
+�           k_beauty.png
+�           lemontree.png
+�           logo.png
+�           mahindra.png
+�           mamaearth.png
+�           nykaa.png
+�           philips.png
+�           PlayBox.png
+�           prana.png
+�           service1.gif
+�           service1.png
+�           service2.png
+�           service3.png
+�           service4.png
+�           service5.png
+�           service6.png
+�           service7.png
+�           service8.png
+�           skechers.png
+�           skoda.png
+�           
++---src
+    �   App.css
+    �   App.jsx
+    �   index.css
+    �   main.jsx
+    �   
+    +---assets
+    �       contactvideodark.mp4
+    �       contactvideolight.mp4
+    �       google.png
+    �       logo.png
+    �       logodarkmode.png
+    �       logolightmode.png
+    �       meta.png
+    �       videodarkmode.mp4
+    �       videolightmode.mp4
+    �       
+    +---components
+    �   +---Branding
+    �   +---Home
+    �       +---Contactsection
+    �       �       Contactsection.css
+    �       �       Contactsection.jsx
+    �       �       
+    �       +---Features
+    �       �       Features.css
+    �       �       Features.jsx
+    �       �       
+    �       +---Footer
+    �       �       Footer.css
+    �       �       Footer.jsx
+    �       �       
+    �       +---Navbar
+    �       �       MoonSunToggle.css
+    �       �       MoonSunToggle.jsx
+    �       �       Navbar.css
+    �       �       Navbar.jsx
+    �       �       
+    �       +---Ourservices
+    �       �       Ourservices.css
+    �       �       Ourservices.jsx
+    �       �       
+    �       +---PartnersMarquee
+    �       �       PartnersMarquee.css
+    �       �       PartnersMarquee.jsx
+    �       �       
+    �       +---Video
+    �       �       Video.css
+    �       �       Video.jsx
+    �       �       
+    �       +---Whyus
+    �               Whyus.css
+    �               Whyus.jsx
+    �               
+    +---pages
+            Home.jsx
+            

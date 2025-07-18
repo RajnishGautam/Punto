@@ -1,0 +1,28 @@
+.branding-services {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.branding-services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 20px;
+}
+
+.branding-service-btn {
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--text-color);
+  padding: 10px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.branding-service-btn.active,
+.branding-service-btn:hover {
+  background: var(--primary-color);
+  color: #fff;
+}

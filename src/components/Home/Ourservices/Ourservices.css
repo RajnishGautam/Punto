@@ -1,0 +1,206 @@
+.our-services-section {
+  position: relative;
+  padding: 3rem 3rem;
+  overflow: hidden;
+  background: var(--bg-color, #000000);
+  color: var(--text-color, #fff);
+}
+
+.our-services-background-orbs {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  pointer-events: none;
+}
+
+.our-services-orb {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.3;
+  filter: blur(80px);
+  animation: float 6s ease-in-out infinite;
+}
+
+.our-services-orb-1 {
+  width: 150px; height: 150px;
+  top: 20%; left: 15%;
+  background: #8e1616;
+}
+
+.our-services-orb-2 {
+  width: 100px; height: 100px;
+  bottom: 20%; right: 20%;
+  background: #8e1616;
+  animation-delay: 2s;
+}
+
+.our-services-orb-3 {
+  width: 80px; height: 80px;
+  top: 40%; right: 30%;
+  background: #8e1616;
+  animation-delay: 4s;
+}
+
+.our-services-heading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+.our-services-line {
+  height: 2px;
+  background: #8e1616;
+  width: 50px;
+  animation: pulseLine 2s infinite ease-in-out;
+}
+
+.our-services-dot {
+  width: 12px;
+  height: 12px;
+  background: #8e1616;
+  border-radius: 50%;
+  animation: dotPulse 2s infinite ease-in-out;
+}
+
+.our-services-section-heading {
+  font-family: 'sarabun', sans-serif;
+  letter-spacing: 2px;
+  font-size: 2.5rem;
+  font-weight: normal;
+  color: #8e1616;
+}
+
+.our-services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.our-services-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 2rem 1rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeInUp 0.6s forwards;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08),
+              0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.our-services-card:hover {
+  transform: translateY(-15px) scale(1.05) rotateY(8deg);
+  box-shadow: 0 32px 64px rgba(142, 22, 22, 0.15),
+              0 16px 32px rgba(0, 0, 0, 0.1);
+}
+
+.our-services-card-glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+  transform: rotate(-45deg);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.our-services-card:hover .our-services-card-glow {
+  opacity: 1;
+  animation: shimmer 2s infinite linear;
+}
+
+.our-services-image {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.our-services-card:hover .our-services-image {
+  filter: grayscale(0%);
+}
+
+.our-services-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: 'sarabun', sans-serif;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  letter-spacing: 2px;
+}
+
+.our-services-slogan {
+  font-family: sarabun, sans-serif;
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.our-services-read-more-btn {
+  margin-top: 1rem;
+  padding: 0.4rem 1rem;
+  border: none;
+  background: #8e1616;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.our-services-card:hover .our-services-read-more-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Media Queries */
+@media(max-width: 1024px) {
+  .our-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 600px) {
+  .our-services-section {
+    margin-top: -40px;
+    padding: 20px;
+  }
+
+  .our-services-grid {
+    grid-template-columns: 1fr;
+    margin-top: 0px;
+  }
+
+  .our-services-card {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: 1rem;
+  }
+
+  .our-services-image {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+  }
+
+  .our-services-slogan,
+  .our-services-read-more-btn,
+  .our-services-dot,
+  .our-services-line {
+    display: none;
+  }
+
+  .our-services-title {
+    font-size: 1.2rem;
+    font-weight: normal;
+  }
+}

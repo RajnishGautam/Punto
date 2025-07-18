@@ -1,23 +1,26 @@
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
-import About from './pages/About'
-import Services from './pages/Services'
-import Blog from './pages/Blog'
-import Contact from './pages/Contact'
-import Navbar from './components/Navbar/Navbar'
+import Branding from './pages/Branding'
+import DigitalMarketing from './pages/Marketing'
+import Navbar from './components/common/Navbar/Navbar'
+import Footer from './components/common/Footer/Footer'
+import Development from './pages/Develoment'
+import './App.css' // Assuming CSS is here
 
 function App() {
   return (
-    <>
+    <div className="app-container">
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </>
+      <div className="content-wrapper">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/branding" element={<Branding />} />
+          <Route path="/digital-marketing" element={<DigitalMarketing/>} />
+          <Route path="/development" element={<Development />} />
+        </Routes>
+      </div>
+      <Footer />
+    </div>
   )
 }
 

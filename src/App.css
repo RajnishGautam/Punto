@@ -1,55 +1,13 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-  background-color: var(--bg-color);
-  color: var(--text-color);
+html, body, #root, .app-container {
+  height: 100%;
 }
 
-/* === Logo Styling === */
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em var(--primary-color));
-}
-.logo.react:hover {
-  filter: drop-shadow(
-    0 0 2em #61dafbaa
-  ); /* Optional: Keep this or also convert */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-/* === Spinning Animation === */
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-/* === Card Styling === */
-.card {
-  padding: 2em;
-  background-color: var(--card-bg);
-  color: var(--text-color);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-}
-
-/* === Docs Link === */
-.read-the-docs {
-  color: var(--text-color);
-  opacity: 0.7;
+.content-wrapper {
+  flex: 1; /* This allows content to grow and pushes footer to bottom */
 }

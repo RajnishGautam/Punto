@@ -1,9 +1,9 @@
-import VideoSection from '../components/Video/Video'
-import Footer from '../components/Footer/Footer'
-import HeroWithVideo from '../components/Contactsection/Contactsection'
-import WhyUs3DCards from '../components/Whyus/Whyus'
-import PartnersMarquee from '../components/PartnersMarquee/PartnersMarquee'
-import OurServices from '../components/Ourservices/Ourservices'
+import VideoSection from '../components/Home/Video/Video'
+// import Footer from '../components/common/Footer/Footer'
+import HeroWithVideo from '../components/common/Contactsection/Contactsection'
+import WhyUs3DCards from '../components/Home/Whyus/Whyus'
+import PartnersMarquee from '../components/Home/PartnersMarquee/PartnersMarquee'
+import OurServices from '../components/Home/Ourservices/Ourservices'
 const Home = () => {
   return (
     <div>
@@ -13,7 +13,7 @@ const Home = () => {
       <OurServices />
       <HeroWithVideo />
       {/*Contact section with video */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }
