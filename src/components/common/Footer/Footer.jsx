@@ -79,9 +79,9 @@ const Footer = () => {
               <li>
                 <a href="/Development">Mobile App Development</a>
               </li>
-              <li>
+              {/* <li>
                 <a href="/Development">Web Design & Development</a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
