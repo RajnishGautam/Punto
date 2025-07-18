@@ -68,16 +68,16 @@ const Footer = () => {
             <h3 className="contactsection-title">Services</h3>
             <ul className="services-list">
               <li>
-                <a href="digital-marketing">Digital Marketing</a>
+                <a href="/digital-marketing">Digital Marketing</a>
               </li>
               <li>
-                <a href="branding">UI & UX Designing</a>
+                <a href="/branding">UI & UX Designing</a>
               </li>
               <li>
                 <a href="/branding">Branding & Identity</a>
               </li>
               <li>
-                <a href="development">Mobile App Development</a>
+                <a href="/development">Mobile App Development</a>
               </li>
               <li>
                 <a href="/development">Web Design & Development</a>
