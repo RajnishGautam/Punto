@@ -6,7 +6,7 @@ import { OrbitControls, Environment, useGLTF } from '@react-three/drei';
 // ===============================
 // ✅ DeveloperModel Component
 // ===============================
-function DeveloperModel({ mouse, isHovered }) {
+function DeveloperModel({ mouse, isHovered, scale }) {
   const ref = useRef();
   const { scene } = useGLTF('/models/me sitting in office chair.glb');
   const initialRotation = useRef({ x: 0, y: 3.4, z: 0 });
@@ -27,7 +27,7 @@ function DeveloperModel({ mouse, isHovered }) {
     <primitive
       ref={ref}
       object={scene}
-      scale={[1.7, 1.7, 2]}
+      scale={scale}
       position={[0, -1.0, 0]}
     />
   );
@@ -42,6 +42,20 @@ const DevelopmentLanding = () => {
   const mouseRef = useRef({ x: 0, y: 0 });
   const isHovered = useRef(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  // ✅ Responsive model scale based on screen size
+  const [modelScale, setModelScale] = useState([1.7, 1.7, 2]);
+
+  useEffect(() => {
+    const updateScale = () => {
+      const isMobile = window.innerWidth < 768;
+      setModelScale(isMobile ? [2.2, 2.2, 2.2] : [1.7, 1.7, 2]);
+    };
+
+    updateScale(); // Initial call
+    window.addEventListener('resize', updateScale);
+    return () => window.removeEventListener('resize', updateScale);
+  }, []);
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -85,7 +99,7 @@ const DevelopmentLanding = () => {
       </div>
 
       <div className="development-hero-content loaded">
-        {/* Wrapper for all text content to restore desktop layout */}
+        {/* Left Side Text */}
         <div className="development-text-content">
           <h1 className="development-hero-title">
             <span className="gradient-text">We Don't Just Build,</span><br />
@@ -118,7 +132,7 @@ const DevelopmentLanding = () => {
                 <ambientLight intensity={0.7} />
                 <directionalLight position={[2, 2, 5]} intensity={1} />
                 <Suspense fallback={null}>
-                  <DeveloperModel mouse={mouseRef} isHovered={isHovered} />
+                  <DeveloperModel mouse={mouseRef} isHovered={isHovered} scale={modelScale} />
                   <Environment preset="city" />
                   <OrbitControls enableZoom={false} enablePan={false} />
                 </Suspense>
