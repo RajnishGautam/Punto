@@ -69,7 +69,7 @@ const Navbar = () => {
             onClick={closeMenu}
             className={location.pathname === '/digital-marketing' ? 'active' : ''}
           >
-            DIGITAL MARKETING
+            DIGITAL-MARKETING
           </Link>
 
           <Link
