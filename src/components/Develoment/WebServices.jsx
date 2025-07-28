@@ -99,28 +99,11 @@ const WebServices = () => {
                 
                 <h3 className="service-title">{service.title}</h3>
                 <p className="service-description">{service.description}</p>
-                
-                <ul className="service-features">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="feature-item">
-                      <span className="feature-bullet">▶</span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                
-                {/* <div className="webdevcard-footer">
-                  <button className="service-cta">
-                    <span>Learn More</span>
-                    <div className="cta-arrow">→</div>
-                  </button>
-                </div> */}
               </div>
               
               <div className="webdevcard-hover-overlay">
                 <div className="overlay-content">
                   <h4>Ready to start?</h4>
-                  <p>Let's discuss your {service.title.toLowerCase()} project</p>
                   <button className="overlay-cta">Get Quote</button>
                 </div>
               </div>

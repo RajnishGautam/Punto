@@ -1,4 +1,4 @@
-/* Development Hero Section - Mind-Blowing Visual Effects */
+/* Development Hero Section */
 .development-hero-section {
   min-height: 100vh;
   background: var(--bg-color);
@@ -15,8 +15,8 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+  z-index: 1;
 }
-
 .development-particle {
   position: absolute;
   width: 2px;
@@ -25,21 +25,19 @@
   border-radius: 50%;
   animation: particleFloat 20s linear infinite;
 }
-
-.development-particle.particle-0 { left: 10%; animation-delay: 0s; background: rgba(0, 212, 255, 0.8); }
+.development-particle.particle-0 { left: 10%; animation-delay: 0s; }
 .development-particle.particle-1 { left: 25%; animation-delay: -4s; background: rgba(57, 255, 20, 0.8); }
 .development-particle.particle-2 { left: 50%; animation-delay: -8s; background: rgba(255, 255, 255, 0.6); }
 .development-particle.particle-3 { left: 75%; animation-delay: -12s; background: rgba(138, 43, 226, 0.8); }
-.development-particle.particle-4 { left: 90%; animation-delay: -16s; background: rgba(0, 212, 255, 0.8); }
-
+.development-particle.particle-4 { left: 90%; animation-delay: -16s; }
 @keyframes particleFloat {
-  0% { transform: translateY(100vh) translateX(0px) scale(0); opacity: 0; }
-  10% { opacity: 1; transform: translateY(90vh) translateX(10px) scale(1); }
-  90% { opacity: 1; transform: translateY(10vh) translateX(-10px) scale(1); }
-  100% { transform: translateY(0vh) translateX(0px) scale(0); opacity: 0; }
+  0% { transform: translateY(100vh) scale(0); opacity: 0; }
+  10% { opacity: 1; transform: translateY(90vh) scale(1); }
+  90% { opacity: 1; transform: translateY(10vh) scale(1); }
+  100% { transform: translateY(0vh) scale(0); opacity: 0; }
 }
 
-/* Main Content */
+/* Main Content - Flexbox Layout */
 .development-hero-content {
   display: flex;
   align-items: center;
@@ -51,41 +49,35 @@
   position: relative;
 }
 
-/* KEEP LEFT SIDE UNCHANGED */
-.development-hero-left {
+/* Text container, styled identically to the old .development-hero-left */
+.development-text-content {
   flex: 1;
   max-width: 750px;
   padding-left: 100px;
+  display: flex;
+  flex-direction: column;
 }
 
-.development-hero-text.loaded .development-hero-title {
+/* Animation Selectors */
+.development-hero-content.loaded .development-hero-title {
   animation: titleReveal 1.5s ease-out forwards;
 }
-.development-hero-text.loaded .development-hero-subtitle {
+.development-hero-content.loaded .development-hero-subtitle {
   animation: subtitleReveal 1.5s ease-out 0.3s forwards;
 }
-.development-hero-text.loaded .development-hero-description {
-  animation: descriptionReveal 1.5s ease-out 0.6s forwards;
-}
-.development-hero-text.loaded .development-hero-cta {
+.development-hero-content.loaded .development-hero-cta {
   animation: ctaReveal 1.5s ease-out 0.9s forwards;
 }
 
+/* Keyframes */
 @keyframes titleReveal {
   0% { opacity: 0; transform: translateY(50px) rotateX(20deg); }
   100% { opacity: 1; transform: translateY(0) rotateX(0); }
 }
-
 @keyframes subtitleReveal {
   0% { opacity: 0; transform: translateX(-30px); }
   100% { opacity: 1; transform: translateX(0); }
 }
-
-@keyframes descriptionReveal {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
 @keyframes ctaReveal {
   0% { opacity: 0; transform: translateY(30px) scale(0.9); }
   100% { opacity: 1; transform: translateY(0) scale(1); }
@@ -99,62 +91,33 @@
   margin-bottom: 1.5rem;
   opacity: 0;
 }
-
-.gradient-text {
-  color: #00D4FF;
-  font-weight: 600;
-} 
-
-.neon-text {
-  color: #00D4FF;
+.gradient-text, .neon-text {
+  color: #7bddf1;
   font-weight: 600;
 }
-
-/* Subtitle */
 .development-hero-subtitle {
   font-size: 1.5rem;
   color: var(--text-color);
   margin-bottom: 1rem;
   opacity: 0;
 }
-
 .typewriter {
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
   border-right: 2px solid #00D4FF;
-  font-size: 2.35rem;
+  font-size: 2.4rem;
   font-family: 'sarabun';
   font-weight: normal;
   animation: typing 6s steps(50, end) infinite, blink 0.7s step-end infinite;
 }
-
 @keyframes typing {
-  0% {
-    width: 0;
-  }
-  70% {
-    width: 100%;
-  }
-  100% {
-    width: 100%;
-  }
+  0% { width: 0; }
+  70% { width: 100%; }
+  100% { width: 100%; }
 }
-
 @keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
-
-/* Description */
-.development-hero-description {
-  font-family: sarabun;
-  font-size: 1.8rem;
-  color: var(--text-color);
-  line-height: 1;
-  margin-bottom: 3rem;
-  opacity: 0;
+  50% { border-color: transparent; }
 }
 
 /* CTA */
@@ -163,7 +126,6 @@
   gap: 1.5rem;
   opacity: 0;
 }
-
 .neon-button {
   position: relative;
   padding: 1rem 2.5rem;
@@ -177,59 +139,20 @@
   overflow: hidden;
   transition: all 0.3s ease;
 }
-
-.neon-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(88, 44, 40, 0.2), transparent);
-  transition: left 0.5s;
-}
-
-.neon-button:hover::before {
-  left: 100%;
-}
-
 .neon-button:hover {
   background: rgba(0, 212, 255, 0.1);
   box-shadow: 0 0 20px rgba(222, 24, 21, 0.792), inset 0 0 20px rgba(0, 212, 255, 0.2);
   transform: translateY(-3px);
 }
 
-.glass-button {
-  padding: 1rem 2.5rem;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: white;
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-  border-radius: 50px;
-  transition: all 0.3s ease;
-}
-
-.glass-button:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-/* RIGHT SIDE - SCENE CONTAINER TO FOLLOW CURSOR */
-/* Right content (3D + effects) */
+/* RIGHT SIDE */
 .development-hero-right {
   flex: 1;
   position: relative;
-  min-height: 100vh;  /* Ensures enough space */
+  min-height: 100vh;
   width: 100%;
   overflow: hidden;
-  margin-top: 0;       /* Remove risky negative margin */
 }
-
-/* Wrapper that controls canvas size */
 .development-3d-canvas-wrapper {
   position: absolute;
   padding: 2rem;
@@ -239,8 +162,10 @@
   width: 100%;
 }
 
+/* ===================================== */
+/* RESPONSIVE STYLES          */
+/* ===================================== */
 
-/* Responsive Styles */
 @media (max-width: 1024px) {
   .development-hero-content {
     flex-direction: column;
@@ -248,19 +173,22 @@
     text-align: center;
     padding: 2rem 0;
   }
-  
-  .development-hero-left {
-    padding: 2rem;
+
+  /* Make the text wrapper "disappear" and let its children be flex items */
+  .development-text-content {
+    display: contents;
+  }
+
+  /* Use order to rearrange the flex items for the desired mobile layout */
+  .development-hero-title { order: 1; }
+  .development-hero-right { order: 2; height: 50vh; min-height: 400px; }
+  .development-hero-subtitle { order: 3; }
+  .development-hero-cta { order: 4; justify-content: center; }
+
+  /* Reset padding for mobile */
+  .development-text-content {
+    padding-left: 0;
     max-width: 100%;
-  }
-  
-  .development-hero-right {
-    height: 50vh;
-    min-height: 400px;
-  }
-  
-  .development-3d-canvas-wrapper {
-    padding: 1rem;
   }
 }
 
@@ -268,70 +196,63 @@
   .development-hero-section {
     padding: 0 2%;
   }
-  
-  .development-hero-left {
+  .development-text-content {
     padding: 1.5rem;
   }
-  
   .development-hero-title {
     font-size: 2.5rem;
   }
-  
   .development-hero-subtitle {
     font-size: 1.2rem;
   }
-  
-  .development-hero-description {
-    font-size: 1rem;
+  .typewriter {
+    font-size: 1.2rem;
   }
-  
   .development-hero-cta {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
   }
-  
-  .neon-button, .glass-button {
+  .neon-button {
     width: 100%;
     max-width: 300px;
   }
-  
   .development-hero-right {
     height: 40vh;
     min-height: 300px;
   }
-  
-  /* Keep typewriter in one line on all devices */
 }
 
 @media (max-width: 480px) {
-  .development-hero-left {
+  .development-text-content {
     padding-top: 2rem;
   }
-  
   .development-hero-title {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
-  
-  .development-hero-subtitle {
-    font-size: 1rem;
-  }
-  .typewriter {
-    width: 100%;
-    font-size: 15px;
-  }
-  .development-hero-description {
-    font-size: 1.1rem;
-    text-align: justify;
-  }
-  
   .development-hero-right {
-    height: 35vh;
+    height: 50vh;
     min-height: 250px;
+    margin-bottom: 90px;
+    margin-top:-50px;
+  }
+  .development-3d-canvas-wrapper {
+  position: absolute;
+  padding: 0rem;
+  top: 0px;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+  .development-hero-subtitle, .typewriter {
+    font-size: 1rem;
+    margin-top: -110px;
+    color: #ffffff;
   }
   
-  .neon-button, .glass-button {
-    padding: 0.75rem 1.5rem;
+  .neon-button {
+    padding: 0.75rem 1rem;
     font-size: 1rem;
+    margin-top: -40px;
   }
 }
