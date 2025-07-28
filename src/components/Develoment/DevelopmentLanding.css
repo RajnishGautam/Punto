@@ -114,7 +114,7 @@
 .development-hero-subtitle {
   font-size: 1.5rem;
   color: var(--text-color);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   opacity: 0;
 }
 
@@ -123,8 +123,8 @@
   white-space: nowrap;
   overflow: hidden;
   border-right: 2px solid #00D4FF;
-  font-size: 1.5rem;
-  font-family: 'sarabun' sans-serif;
+  font-size: 2.35rem;
+  font-family: 'sarabun';
   font-weight: normal;
   animation: typing 6s steps(50, end) infinite, blink 0.7s step-end infinite;
 }
@@ -149,9 +149,10 @@
 
 /* Description */
 .development-hero-description {
-  font-size: 1.2rem;
+  font-family: sarabun;
+  font-size: 1.8rem;
   color: var(--text-color);
-  line-height: 1.6;
+  line-height: 1;
   margin-bottom: 3rem;
   opacity: 0;
 }
@@ -317,10 +318,11 @@
   }
   .typewriter {
     width: 100%;
-    font-size: 10px;
+    font-size: 15px;
   }
   .development-hero-description {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    text-align: justify;
   }
   
   .development-hero-right {

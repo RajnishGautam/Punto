@@ -66,26 +66,16 @@
 }
 
 .appsection-title {
-  font-size: clamp(3rem, 8vw, 6rem);
-  font-weight: 800;
-  margin-bottom: 1.5rem;
+  font-family: sarabun;
+  font-size: 70px;
+  font-weight: normal;
   line-height: 1.1;
 } 
 
-.title-part {
-  display: block;
-}
-.title-part.mobile{
-  font-size: 50px;
-  font-weight: normal;
-  margin-bottom: 1.5rem;
-  position: relative;
-  font-family: 'sarabun' sans-serif;
-}
-.title-part.mobile::after {
+.appsection-title::after {
   content: '';
   position: absolute;
-  bottom: -20px;
+  bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
   width: 80px;
@@ -95,13 +85,13 @@
   animation: lineExpand 2s ease-out forwards;
 }
 .section-subtitle {
-  font-size: 1.4rem;
+  font-size: 2rem;
   color: var(--text-color);
   font-weight: normal;
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.6;
-  font-family: 'sarabun' sans-serif;
+  font-family: 'sarabun';
 }
 
 /* App Showcase */
@@ -407,17 +397,6 @@
   color: white; 
 }
 
-/* .tab-indicator {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: var(--tab-color);
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-} */
-
 .app-tab.active .tab-indicator {
   transform: scaleX(1);
 }
@@ -660,18 +639,65 @@
     width: 240px;
     height: 480px;
   }
-  
+ .app-services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: -80px;
+  }
+
+  .service-highlight {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    text-align: left;
+  }
+
+  .service-highlight .highlight-icon {
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin: 0;
+  }
+
+  .service-highlight h4 {
+    font-size: .8rem;
+    margin: 0;
+    color: #fff;
+  }
+
+  .service-highlight p {
+    display: none;
+  }
+  .app-cta-section{
+    margin-top: -50px;
+    padding: 0rem 3% 1rem;
+  }
   .cta-buttons {
     flex-direction: column;
     align-items: center;
   }
-  
+  .appcta-content h3{
+    font-size: 1.5rem;
+  }
+  .appcta-content p{
+    display: none;
+  }
   .primary-cta, .secondary-cta {
-    width: 100%;
-    max-width: 300px;
+    width: 70%;
+    padding: .7rem 0rem;
+    font-size: 15px;
   }
   
-  .section-title {
-    font-size: 2.5rem;
+  .appsection-title {
+    font-size: 2rem;
+  }
+  .section-subtitle {
+    display: none;
+  }
+  .appsection-title::after{
+    top: 40px;
   }
 }

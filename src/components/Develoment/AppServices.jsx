@@ -113,7 +113,7 @@ const AppServices = () => {
       <div className="app-services-container">
         <div className={`section-header ${isVisible ? 'visible' : ''}`}>
           <h2 className="appsection-title">
-            <span className="title-part mobile">Mobile App Development</span>
+            <span className="setion-title">Mobile App Development</span>
           </h2>
           <p className="section-subtitle">
             Creating mobile experiences that users love and businesses need
