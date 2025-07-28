@@ -1,73 +1,27 @@
-.branding-page {
-  padding: 100px 20px 40px; /* Top padding increased to avoid overlap with navbar */
-  background-color: var(--bg-color);
-  color: var(--text-color);
+.branding-sections-wrapper {
+  position: relative;
+  width: 100%;
 }
 
-.branding-services {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.branding-services h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: var(--primary-color);
-}
-
-.branding-services-grid {
+/* Each section sticks and overlaps the previous one */
+.branding-section {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
   display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
+  align-items: center;
   justify-content: center;
+  background-color: inherit; /* Keep your theme background */
+
+  /* Smooth cover: make sure it's fully above previous */
+  box-shadow: 0 0 0 1px transparent; /* forces stacking context */
 }
 
-.service-btn {
-  background: transparent;
-  border: 1px solid var(--primary-color);
-  color: var(--text-color);
-  padding: 0.5rem 1.2rem;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.service-btn:hover,
-.service-btn.active {
-  background: var(--primary-color);
-  color: #fff;
-}
-
-.branding-portfolio {
-  text-align: center;
-}
-
-.branding-portfolio h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.portfolio-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  transition: opacity 0.3s ease;
-}
-
-.portfolio-grid.fade {
-  opacity: 0.3;
-}
-
-.portfolio-item img {
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
-  border: 2px solid var(--border-color);
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-
-.portfolio-item img:hover {
-  transform: scale(1.05);
-}
+/* Give each one higher z-index to stack properly */
+.branding-section:nth-child(1) { z-index: 5; }
+.branding-section:nth-child(2) { z-index: 4; }
+.branding-section:nth-child(3) { z-index: 3; }
+.branding-section:nth-child(4) { z-index: 2; }
+.branding-section:nth-child(5) { z-index: 1; }

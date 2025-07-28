@@ -51,9 +51,24 @@
 .our-services-line {
   height: 2px;
   background: #8e1616;
-  width: 50px;
+  width: 0;
   animation: pulseLine 2s infinite ease-in-out;
 }
+
+@keyframes pulseLine {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100px;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+
+
 
 .our-services-dot {
   width: 12px;

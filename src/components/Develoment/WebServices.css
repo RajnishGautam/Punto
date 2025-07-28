@@ -1,0 +1,518 @@
+/* Web Services Section - Matrix & Glow Effects */
+.web-services-section {
+  min-height: 100vh;
+  background:var(--bg-color);
+  position: relative;
+  padding: 0rem 5% 2rem;
+  overflow: hidden;
+}
+
+/* Matrix Background Effect */
+.matrix-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  overflow: hidden;
+}
+
+.matrix-char {
+  position: absolute;
+  color: #00D4FF;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  animation: matrixFall linear infinite;
+  white-space: nowrap;
+}
+
+.char-0 { left: 5%; animation-duration: 8s; animation-delay: 0s; }
+.char-1 { left: 15%; animation-duration: 12s; animation-delay: 2s; }
+.char-2 { left: 25%; animation-duration: 10s; animation-delay: 4s; }
+.char-3 { left: 35%; animation-duration: 15s; animation-delay: 1s; }
+.char-4 { left: 45%; animation-duration: 9s; animation-delay: 3s; }
+.char-5 { left: 55%; animation-duration: 11s; animation-delay: 5s; }
+.char-6 { left: 65%; animation-duration: 13s; animation-delay: 2s; }
+.char-7 { left: 75%; animation-duration: 14s; animation-delay: 6s; }
+.char-8 { left: 85%; animation-duration: 7s; animation-delay: 1s; }
+.char-9 { left: 95%; animation-duration: 16s; animation-delay: 4s; }
+
+@keyframes matrixFall {
+  0% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* Services Container */
+.services-container {
+  max-width: 100;
+  margin: 0 auto;
+  z-index: 10;
+  position: relative;
+}
+
+/* Header Section */
+.services-header {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.services-title {
+  font-size: 70px;
+  font-weight: normal;
+  position: relative;
+  font-family: 'sarabun';
+}
+
+
+.title-line::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #00D4FF, #39FF14);
+  border-radius: 2px;
+  animation: lineExpand 2s ease-out forwards;
+}
+
+@keyframes lineExpand {
+  0% { width: 0; }
+  100% { width: 100px; }
+}
+
+.services-subtitle {
+  font-size: 2rem;
+  color: #ffffff;
+  font-family: 'sarabun';
+  font-weight: normal;
+  max-width: 100%;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 6rem;
+}
+
+/* Service WebdevCards */
+.service-webdevcard {
+  position: relative;
+  background: rgba(22, 22, 22, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 0;
+  overflow: hidden;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  height: 500px;
+}
+
+.service-webdevcard.visible {
+  transform: translateY(0);
+  opacity: 1;
+  animation: webdevCardReveal 0.8s ease-out var(--delay) forwards;
+}
+
+@keyframes webdevCardReveal {
+  0% {
+    transform: translateY(50px) rotateX(20deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) rotateX(0);
+    opacity: 1;
+  }
+}
+
+.service-webdevcard:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: var(--service-color);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 0 0 1px var(--service-color),
+    0 0 50px rgba(var(--service-color-rgb), 0.3);
+}
+
+/* WebdevCard Glow Effect */
+.webdevcard-glow {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, var(--service-color), transparent, var(--service-color));
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+  animation: rotateGlow 3s linear infinite;
+}
+
+.service-webdevcard:hover .webdevcard-glow {
+  opacity: 0.6;
+}
+
+@keyframes rotateGlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.webdevcard-content {
+  padding: 2.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+
+/* Service Icons */
+.service-icon {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-emoji {
+  font-size: 2.5rem;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 0 10px var(--service-color));
+}
+
+.icon-pulse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--service-color);
+  border-radius: 50%;
+  animation: iconPulse 2s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* Typography */
+.service-title {
+  font-family: sarabun;
+  font-size: 2.5rem;
+  font-weight: normal;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.service-description {
+  font-family: sarabun;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  line-height: normal;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+  text-align:start;
+}
+
+/* Features List */
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.feature-item {
+  display: flex;
+  font-family: sarabun;
+  align-items: center;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.service-webdevcard:hover .feature-item {
+  color: #B0B0B0;
+}
+
+.feature-bullet {
+  color: var(--service-color);
+  margin-right: 0.5rem;
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.service-webdevcard:hover .feature-bullet {
+  transform: translateX(5px);
+}
+
+/* WebdevCard Footer */
+.webdevcard-footer {
+  margin-top: auto;
+}
+
+.service-cta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: 1px solid var(--service-color);
+  color: var(--service-color);
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  width: 100%;
+  justify-content: center;
+}
+
+.service-cta:hover {
+  background: var(--service-color);
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cta-arrow {
+  transition: transform 0.3s ease;
+}
+
+.service-cta:hover .cta-arrow {
+  transform: translateX(5px);
+}
+
+/* Hover Overlay */
+.webdevcard-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--service-color), rgba(0, 0, 0, 0.9));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border-radius: 20px;
+}
+
+.service-webdevcard.hovered .webdevcard-hover-overlay {
+  opacity: 1;
+  transform: scale(1);
+}
+.service-webdevcard.hovered .webdevcard-content {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.overlay-content {
+  text-align: center;
+  color: white;
+  padding: 2rem;
+}
+
+.overlay-content h4 {
+  font-family: sarabun;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.overlay-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.overlay-cta {
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  font-weight: normal;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.overlay-cta:hover {
+  background: #000;
+  transform: translateY(-3px);
+}
+
+/* Bottom CTA Section */
+.services-bottom-cta {
+  text-align: center;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  border: 2px solid #2a2a2a;
+  position:relative;
+  overflow: hidden;
+  max-height: 300px;
+}
+@keyframes ctaGlow {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
+.cta-contentweb {
+  position: relative;
+  z-index: 2;
+}
+
+.cta-contentweb h3 {
+  font-size: 4rem;
+  color:var(--text-color);
+  font-family: 'sarabun';
+  font-weight: normal;
+}
+
+.cta-contentweb p {
+  font-size: 2.5rem;
+  color:var(--text-color);
+  font-family: sarabun;
+  font-weight: normal;
+  margin-top: -30px;
+}
+
+/* Main CTA Button */
+.main-cta-button {
+  position: relative;
+  background: linear-gradient(135deg, #00D4FF, #39FF14);
+  border: none;
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: normal;
+  padding: 1rem 3rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.main-cta-button:hover {
+  transform: translateY(-5px) scale(1.05);
+  /* box-shadow: 
+    0 20px 40px rgba(0, 212, 255, 0.3),
+    0 0 60px rgba(57, 255, 20, 0.3); */
+}
+
+.button-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 50px;
+}
+
+.button-particles [class*="particle-"] {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  animation: buttonParticle 2s ease-in-out infinite;
+}
+
+.particle-0 { top: 20%; left: 10%; animation-delay: 0s; }
+.particle-1 { top: 80%; left: 20%; animation-delay: 0.2s; }
+.particle-2 { top: 40%; left: 80%; animation-delay: 0.4s; }
+.particle-3 { top: 60%; left: 60%; animation-delay: 0.6s; }
+.particle-4 { top: 30%; left: 40%; animation-delay: 0.8s; }
+.particle-5 { top: 70%; left: 70%; animation-delay: 1s; }
+.particle-6 { top: 10%; left: 90%; animation-delay: 1.2s; }
+.particle-7 { top: 90%; left: 50%; animation-delay: 1.4s; }
+
+@keyframes buttonParticle {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-10px) scale(1.5);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .service-webdevcard {
+    height: auto;
+    min-height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .web-services-section {
+    padding: 6rem 3% 4rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .webdevcard-content {
+    padding: 2rem;
+  }
+  
+  .services-title {
+    font-size: 2.5rem;
+  }
+  
+  .cta-contentweb h3 {
+    font-size: 2rem;
+  }
+  
+  .main-cta-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}

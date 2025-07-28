@@ -1,26 +1,45 @@
-.development-landing {
-  text-align: center;
-  padding: 2rem;
-  background-color: var(--bg-color);
-  color: var(--text-color);
+/* === Wrapper for entire Development page === */
+.development-section-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #0e0e0e; /* Dark background */
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+  
+/* === Each Subsection (DevelopmentLanding2, WebServices, etc.) === */
+.development-section-wrapper section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
 }
 
-.development-services {
-  text-align: center;
-  padding: 2rem;
+/* === Smooth transition between sections === */
+.development-section-wrapper section + section {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.development-services-buttons button {
-  margin: 0.5rem;
-  padding: 0.5rem 1rem;
-  border: 1px solid var(--primary-color);
-  background: transparent;
-  color: var(--text-color);
-  cursor: pointer;
-  border-radius: 5px;
+/* Optional: Custom section background examples */
+.web-services-section {
+  background-color: #121212;
 }
 
-.development-services-buttons .active {
-  background-color: var(--primary-color);
-  color: #fff;
+.app-services-section {
+  background-color: #1a1a1a;
+}
+
+.pricing-section {
+  background: linear-gradient(to bottom right, #111, #222);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .development-section-wrapper section {
+    padding: 3rem 1.5rem;
+  }
 }

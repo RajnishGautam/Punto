@@ -1,17 +1,16 @@
 import React, { useState } from 'react'
 import DevelopmentLanding from './DevelopmentLanding'
-import DevelopmentServices from './DevelopmentServices'
-import DevelopmentWork from './DevelopmentWork'
-import './DevelopmentSection.css'
-
+import WebServices from './WebServices'
+import AppServices from './AppServices'
+import HeroWithVideo from '../common/Contactsection/Contactsection'
 const DevelopmentSection = () => {
-  const [selectedService, setSelectedService] = useState('Web Development')
 
   return (
     <div>
       <DevelopmentLanding />
-      <DevelopmentServices selectedService={selectedService} setSelectedService={setSelectedService} />
-      <DevelopmentWork selectedService={selectedService} />
+      <WebServices />
+      <AppServices />
+      <HeroWithVideo />
     </div>
   )
 }

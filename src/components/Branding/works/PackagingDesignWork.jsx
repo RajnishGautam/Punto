@@ -1,16 +1,29 @@
-import React from 'react'
+import React from 'react';
+import './WorkSection.css';
 
-const PackagingDesignWork = () => (
-  <div className="work-content">
-    <h3>Attractive Packaging Designs</h3>
-    <p>We design packaging that enhances product appeal and customer engagement.</p>
-    <div className="work-grid">
-      <img src="https://static.vecteezy.com/system/resources/thumbnails/036/324/708/small/ai-generated-picture-of-a-tiger-walking-in-the-forest-photo.jpg" alt="Packaging 1" />
-      <img src="https://static.vecteezy.com/system/resources/thumbnails/036/324/708/small/ai-generated-picture-of-a-tiger-walking-in-the-forest-photo.jpg" alt="Packaging 2" />
-      <img src="https://static.vecteezy.com/system/resources/thumbnails/036/324/708/small/ai-generated-picture-of-a-tiger-walking-in-the-forest-photo.jpg" alt="Packaging 3" />
-    </div>
-    <button className="cta-btn">Explore Packaging</button>
-  </div>
-)
+const PackagingDesignWork = () => {
+  return (
+    <section className="branding-section">
+      <div className="section-content">
+        <h2 className="section-heading">Packaging Design</h2>
+        <p className="section-subheading">Visually striking packaging that stands out</p>
 
-export default PackagingDesignWork
+        <div className="image-grid">
+  {[...Array(10)].map((_, index) => (
+    <img
+      key={index}
+      src={`https://picsum.photos/seed/branding${index}/600/400`}
+      alt={`Work ${index + 1}`}
+      className="work-image"
+    />
+  ))}
+</div>
+
+
+        <button className="cta-button">Explore More</button>
+      </div>
+    </section>
+  );
+};
+
+export default PackagingDesignWork;

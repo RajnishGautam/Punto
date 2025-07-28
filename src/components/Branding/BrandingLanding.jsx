@@ -1,12 +1,23 @@
-import React from 'react'
-import './BrandingLanding.css'
+import React from 'react';
+import './BrandingLanding.css';
 
-const BrandingLanding = () => (
-  <section className="branding-landing">
-    <h1>Transform Your Brand</h1>
-    <p>We bring creativity and strategy together to build impactful brand experiences.</p>
-    <button className="cta-btn">Get Started</button>
-  </section>
-)
+const BrandingLanding = () => {
+  return (
+    <section className="branding-landing">
+      <video
+        className="landing-bg"
+        autoPlay
+        muted
+        loop
+        playsInline
+        src="https://www.w3schools.com/howto/rain.mp4"
+      />
+      <div className="landing-content">
+        <h1>Welcome to Our Branding Studio</h1>
+        <p>Crafting unforgettable brand experiences through visuals.</p>
+      </div>
+    </section>
+  );
+};
 
-export default BrandingLanding
+export default BrandingLanding;

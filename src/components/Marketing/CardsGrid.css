@@ -1,0 +1,53 @@
+.market-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.5rem;
+  width: 100%;
+  background-color: black;
+  padding: 5rem 2rem 2rem 2rem;
+}
+
+.market-card {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.market-card img,
+.market-card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* Individual card sizes */
+.market-card-1 { grid-column: span 2; grid-row: span 1; }
+.market-card-2 { grid-column: span 1; grid-row: span 2; }
+.market-card-3 { grid-column: span 2; grid-row: span 2; }
+.market-card-4 { grid-column: span 1; grid-row: span 1; }
+.market-card-5 { grid-column: span 1; grid-row: span 1; }
+.market-card-6 { grid-column: span 2; grid-row: span 1; }
+.market-card-7 { grid-column: span 1; grid-row: span 2; }
+.market-card-8 { grid-column: span 1; grid-row: span 1; }
+.market-card-9 { grid-column: span 2; grid-row: span 1; }
+.market-card-10 { grid-column: span 1; grid-row: span 1; }
+.market-card-11 { grid-column: span 1; grid-row: span 2; }
+.market-card-12 { grid-column: span 2; grid-row: span 2; }
+.market-card-13 { grid-column: span 1; grid-row: span 1; }
+.market-card-14 { grid-column: span 2; grid-row: span 1; }
+.market-card-15 { grid-column: span 1; grid-row: span 1; }
+.market-card-16 { grid-column: span 1; grid-row: span 2; }
+.market-card-17 { grid-column: span 1; grid-row: span 1; }
+.market-card-18 { grid-column: span 2; grid-row: span 1; }
+.market-card-19 { grid-column: span 1; grid-row: span 1; }
+.market-card-20 { grid-column: span 1; grid-row: span 1; }
+
+@media (max-width: 768px) {
+  .market-grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+}

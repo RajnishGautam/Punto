@@ -1,34 +1,335 @@
-.development-landing {
-  text-align: center;
-  padding: 4rem 1rem;
-  background-color: var(--bg-color);
+/* Development Hero Section - Mind-Blowing Visual Effects */
+.development-hero-section {
+  min-height: 100vh;
+  background: var(--bg-color);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 0 0%;
+}
+
+/* Particles Animation */
+.development-particles-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.development-particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(0, 212, 255, 0.8);
+  border-radius: 50%;
+  animation: particleFloat 20s linear infinite;
+}
+
+.development-particle.particle-0 { left: 10%; animation-delay: 0s; background: rgba(0, 212, 255, 0.8); }
+.development-particle.particle-1 { left: 25%; animation-delay: -4s; background: rgba(57, 255, 20, 0.8); }
+.development-particle.particle-2 { left: 50%; animation-delay: -8s; background: rgba(255, 255, 255, 0.6); }
+.development-particle.particle-3 { left: 75%; animation-delay: -12s; background: rgba(138, 43, 226, 0.8); }
+.development-particle.particle-4 { left: 90%; animation-delay: -16s; background: rgba(0, 212, 255, 0.8); }
+
+@keyframes particleFloat {
+  0% { transform: translateY(100vh) translateX(0px) scale(0); opacity: 0; }
+  10% { opacity: 1; transform: translateY(90vh) translateX(10px) scale(1); }
+  90% { opacity: 1; transform: translateY(10vh) translateX(-10px) scale(1); }
+  100% { transform: translateY(0vh) translateX(0px) scale(0); opacity: 0; }
+}
+
+/* Main Content */
+.development-hero-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  gap: 0rem;
+  z-index: 10;
+  position: relative;
+}
+
+/* KEEP LEFT SIDE UNCHANGED */
+.development-hero-left {
+  flex: 1;
+  max-width: 750px;
+  padding-left: 100px;
+}
+
+.development-hero-text.loaded .development-hero-title {
+  animation: titleReveal 1.5s ease-out forwards;
+}
+.development-hero-text.loaded .development-hero-subtitle {
+  animation: subtitleReveal 1.5s ease-out 0.3s forwards;
+}
+.development-hero-text.loaded .development-hero-description {
+  animation: descriptionReveal 1.5s ease-out 0.6s forwards;
+}
+.development-hero-text.loaded .development-hero-cta {
+  animation: ctaReveal 1.5s ease-out 0.9s forwards;
+}
+
+@keyframes titleReveal {
+  0% { opacity: 0; transform: translateY(50px) rotateX(20deg); }
+  100% { opacity: 1; transform: translateY(0) rotateX(0); }
+}
+
+@keyframes subtitleReveal {
+  0% { opacity: 0; transform: translateX(-30px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes descriptionReveal {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ctaReveal {
+  0% { opacity: 0; transform: translateY(30px) scale(0.9); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Typography */
+.development-hero-title {
+  font-size: clamp(3rem, 6vw, 3rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+}
+
+.gradient-text {
+  color: #00D4FF;
+  font-weight: 600;
+} 
+
+.neon-text {
+  color: #00D4FF;
+  font-weight: 600;
+}
+
+/* Subtitle */
+.development-hero-subtitle {
+  font-size: 1.5rem;
   color: var(--text-color);
+  margin-bottom: 2rem;
+  opacity: 0;
 }
 
-.development-landing h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  color: var(--primary-color);
+.typewriter {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #00D4FF;
+  font-size: 1.5rem;
+  font-family: 'sarabun' sans-serif;
+  font-weight: normal;
+  animation: typing 6s steps(50, end) infinite, blink 0.7s step-end infinite;
 }
 
-.development-landing p {
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  70% {
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Description */
+.development-hero-description {
   font-size: 1.2rem;
-  max-width: 600px;
-  margin: 0 auto 2rem;
-  opacity: 0.9;
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  opacity: 0;
 }
 
-.landing-cta-btn {
-  background: var(--primary-color);
-  color: #fff;
-  border: none;
-  padding: 0.75rem 2rem;
-  border-radius: 25px;
+/* CTA */
+.development-hero-cta {
+  display: flex;
+  gap: 1.5rem;
+  opacity: 0;
+}
+
+.neon-button {
+  position: relative;
+  padding: 1rem 2.5rem;
+  background: transparent;
+  border: 2px solid #00D4FF;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-weight: 500;
   cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
-.landing-cta-btn:hover {
-  background: var(--hover-color);
+.neon-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(88, 44, 40, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.neon-button:hover::before {
+  left: 100%;
+}
+
+.neon-button:hover {
+  background: rgba(0, 212, 255, 0.1);
+  box-shadow: 0 0 20px rgba(222, 24, 21, 0.792), inset 0 0 20px rgba(0, 212, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+.glass-button {
+  padding: 1rem 2.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.glass-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* RIGHT SIDE - SCENE CONTAINER TO FOLLOW CURSOR */
+/* Right content (3D + effects) */
+.development-hero-right {
+  flex: 1;
+  position: relative;
+  min-height: 100vh;  /* Ensures enough space */
+  width: 100%;
+  overflow: hidden;
+  margin-top: 0;       /* Remove risky negative margin */
+}
+
+/* Wrapper that controls canvas size */
+.development-3d-canvas-wrapper {
+  position: absolute;
+  padding: 2rem;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .development-hero-content {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  .development-hero-left {
+    padding: 2rem;
+    max-width: 100%;
+  }
+  
+  .development-hero-right {
+    height: 50vh;
+    min-height: 400px;
+  }
+  
+  .development-3d-canvas-wrapper {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .development-hero-section {
+    padding: 0 2%;
+  }
+  
+  .development-hero-left {
+    padding: 1.5rem;
+  }
+  
+  .development-hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .development-hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .development-hero-description {
+    font-size: 1rem;
+  }
+  
+  .development-hero-cta {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .neon-button, .glass-button {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .development-hero-right {
+    height: 40vh;
+    min-height: 300px;
+  }
+  
+  /* Keep typewriter in one line on all devices */
+}
+
+@media (max-width: 480px) {
+  .development-hero-left {
+    padding-top: 2rem;
+  }
+  
+  .development-hero-title {
+    font-size: 1.5rem;
+  }
+  
+  .development-hero-subtitle {
+    font-size: 1rem;
+  }
+  .typewriter {
+    width: 100%;
+    font-size: 10px;
+  }
+  .development-hero-description {
+    font-size: 0.9rem;
+  }
+  
+  .development-hero-right {
+    height: 35vh;
+    min-height: 250px;
+  }
+  
+  .neon-button, .glass-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
 }

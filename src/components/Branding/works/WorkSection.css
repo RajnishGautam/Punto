@@ -1,0 +1,47 @@
+/* E:\punto\src\components\Branding\works\WorkSection.css */
+.section-content {
+  text-align: center;
+  width: 100%;
+}
+
+.section-heading {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.section-subheading {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--subtext-color);
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.work-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.cta-button {
+  padding: 0.75rem 1.5rem;
+  background-color: brown;
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--accent-hover-color);
+}

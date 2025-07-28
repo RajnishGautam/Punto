@@ -169,7 +169,6 @@ const WhyUs3DCards = () => {
                       {card.icon}
                     </div>
                     <h3 className="card-title">{card.title}</h3>
-                    {/* <p className="card-subtitle">{card.subtitle}</p> */}
                     <div className="card-hover-effect">
                       <span>Click to explore</span>
                     </div>

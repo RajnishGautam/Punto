@@ -1,16 +1,29 @@
-import React from 'react'
+import React from 'react';
+import './WorkSection.css';
 
-const BrandIdentityWork = () => (
-  <div className="work-content">
-    <h3>Complete Brand Identities</h3>
-    <p>We create consistent brand visuals and messaging for lasting impressions.</p>
-    <div className="work-grid">
-      <img src="\public\3dots.png" alt="Brand Identity 1" />
-      <img src="https://www.shutterstock.com/image-vector/purple-corporate-identity-template-design-600nw-1130146703.jpg" alt="Brand Identity 2" />
-      <img src="https://www.shutterstock.com/image-vector/purple-corporate-identity-template-design-600nw-1130146703.jpg" alt="Brand Identity 3" />
-    </div>
-    <button className="cta-btn">View More Identities</button>
-  </div>
-)
+const BrandIdentityWork = () => {
+  return (
+    <section className="branding-section">
+      <div className="section-content">
+        <h2 className="section-heading">Brand Identity</h2>
+        <p className="section-subheading">Comprehensive brand systems to tell your story</p>
 
-export default BrandIdentityWork
+        <div className="image-grid">
+  {[...Array(10)].map((_, index) => (
+    <img
+      key={index}
+      src={`https://picsum.photos/seed/branding${index}/600/400`}
+      alt={`Work ${index + 1}`}
+      className="work-image"
+    />
+  ))}
+</div>
+
+
+        <button className="cta-button">Explore More</button>
+      </div>
+    </section>
+  );
+};
+
+export default BrandIdentityWork;

@@ -1,19 +1,22 @@
-import React, { useState } from 'react'
-import BrandingLanding from './BrandingLanding'
-import BrandingServices from './BrandingServices'
-import ServiceWorkRenderer from './ServiceWorkRenderer'
-import './BrandingSection.css'
+import React from 'react';
+import './BrandingSection.css';
+
+import BrandingLanding from './BrandingLanding';
+import LogoDesignWork from './works/LogoDesignWork';
+import BrandIdentityWork from './works/BrandIdentityWork';
+import PackagingDesignWork from './works/PackagingDesignWork';
+import RebrandingWork from './works/RebrandingWork';
 
 const BrandingSection = () => {
-  const [selectedService, setSelectedService] = useState('Logo Design')
-
   return (
-    <div className="branding-section">
-      <BrandingLanding />
-      <BrandingServices selectedService={selectedService} onChange={setSelectedService} />
-      <ServiceWorkRenderer selectedService={selectedService} />
+    <div className="branding-sections-wrapper">
+      <section className="branding-section"><BrandingLanding /></section>
+      <section className="branding-section"><LogoDesignWork /></section>
+      <section className="branding-section"><BrandIdentityWork /></section>
+      <section className="branding-section"><PackagingDesignWork /></section>
+      <section className="branding-section"><RebrandingWork /></section>
     </div>
-  )
-}
+  );
+};
 
-export default BrandingSection
+export default BrandingSection;
