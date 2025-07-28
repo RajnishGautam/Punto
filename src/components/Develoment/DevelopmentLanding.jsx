@@ -49,7 +49,7 @@ const DevelopmentLanding = () => {
   useEffect(() => {
     const updateScale = () => {
       const isMobile = window.innerWidth < 768;
-      setModelScale(isMobile ? [2.2, 2.2, 2.2] : [1.7, 1.7, 2]);
+      setModelScale(isMobile ? [2, 2, 2] : [1.7, 1.7, 2]);
     };
 
     updateScale(); // Initial call
