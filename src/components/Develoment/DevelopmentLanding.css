@@ -225,7 +225,7 @@
 
 @media (max-width: 480px) {
   .development-text-content {
-    padding-top: 2rem;
+    padding-top: 0rem;
   }
   .development-hero-title {
     font-size: 1.8rem;
