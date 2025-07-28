@@ -229,13 +229,13 @@
   }
   .development-hero-title {
     font-size: 1.8rem;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
   }
   .development-hero-right {
     height: 50vh;
     min-height: 250px;
     margin-bottom: 90px;
-    margin-top:-50px;
+    margin-top:-70px;
   }
   .development-3d-canvas-wrapper {
   position: absolute;
