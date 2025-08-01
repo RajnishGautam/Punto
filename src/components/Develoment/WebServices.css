@@ -1,7 +1,7 @@
 /* Web Services Section - Matrix & Glow Effects */
 .web-services-section {
   min-height: 100vh;
-  background:var(--bg-color);
+  background: var(--bg-color);
   position: relative;
   padding: 0rem 5% 2rem;
   overflow: hidden;
@@ -57,7 +57,7 @@
 
 /* Services Container */
 .services-container {
-  max-width: 100;
+  max-width: 100%;
   margin: 0 auto;
   z-index: 10;
   position: relative;
@@ -75,7 +75,6 @@
   position: relative;
   font-family: 'sarabun';
 }
-
 
 .title-line::after {
   content: '';
@@ -116,7 +115,7 @@
 /* Service WebdevCards */
 .service-webdevcard {
   position: relative;
-  background: rgba(22, 22, 22, 0.8);
+  background: var(--card-bg);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   padding: 0;
@@ -126,7 +125,7 @@
   transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   backdrop-filter: blur(10px);
   cursor: pointer;
-  height:fit-content;
+  height: fit-content;
 }
 
 .service-webdevcard.visible {
@@ -190,36 +189,38 @@
   transition: opacity 0.4s ease;
 }
 
-
-/* Service Icons */
+/* Service Icons Container */
 .service-icon {
   position: relative;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 80px;
   height: 80px;
-  margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* Emoji Icon */
 .icon-emoji {
   font-size: 2.5rem;
   position: relative;
-  margin-left: 160px;
   z-index: 2;
   filter: drop-shadow(0 0 10px var(--service-color));
 }
 
+/* Pulse Ring */
 .icon-pulse {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  margin-left: 80px;
   border: 2px solid var(--service-color);
   border-radius: 50%;
   animation: iconPulse 2s ease-in-out infinite;
+  z-index: 1;
 }
 
 @keyframes iconPulse {
@@ -248,9 +249,9 @@
   font-size: 1.5rem;
   color: var(--text-color);
   line-height: normal;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0rem;
   flex-grow: 1;
-  text-align:start;
+  text-align: start;
 }
 
 /* Features List */
@@ -342,6 +343,7 @@
   opacity: 1;
   transform: scale(1);
 }
+
 .service-webdevcard.hovered .webdevcard-content {
   opacity: 0;
   pointer-events: none;
@@ -388,10 +390,11 @@
   padding: 1rem 2rem;
   border-radius: 30px;
   border: 2px solid #2a2a2a;
-  position:relative;
+  position: relative;
   overflow: hidden;
   max-height: 300px;
 }
+
 @keyframes ctaGlow {
   0% { transform: scale(1); }
   100% { transform: scale(1.1); }
@@ -404,14 +407,14 @@
 
 .cta-contentweb h3 {
   font-size: 4rem;
-  color:var(--text-color);
+  color: var(--text-color);
   font-family: 'sarabun';
   font-weight: normal;
 }
 
 .cta-contentweb p {
   font-size: 2.5rem;
-  color:var(--text-color);
+  color: var(--text-color);
   font-family: sarabun;
   font-weight: normal;
   margin-top: -30px;
@@ -434,9 +437,6 @@
 
 .main-cta-button:hover {
   transform: translateY(-5px) scale(1.05);
-  /* box-shadow: 
-    0 20px 40px rgba(0, 212, 255, 0.3),
-    0 0 60px rgba(57, 255, 20, 0.3); */
 }
 
 .button-particles {
@@ -479,6 +479,20 @@
 }
 
 /* Responsive Design */
+
+/* Tablet View (768px to 1023px) - 2 columns for better layout */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .service-webdevcard {
+    height: fit-content;
+    min-height: 350px;
+  }
+}
+
 @media (max-width: 1024px) {
   .services-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -486,19 +500,23 @@
   }
   
   .service-webdevcard {
+    padding: 0px;
     height: auto;
-    min-height: 350px;
+    max-height: 250px;
+  }
+  services.webdevcard-content{
+    padding: 0px;
   }
 }
 
 @media (max-width: 768px) {
   .web-services-section {
-    padding: 2rem 3% 0rem;
+    padding: 0rem 3% 0rem;
   }
   
   .services-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
     margin-top: -30px;
   }
   
@@ -508,23 +526,119 @@
   }
   
   .services-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 10px;
   }
+  .title-line::after{
+    width: 100px;
+    margin-bottom: -10px;
+  }
   .services-subtitle{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 1;
+  }
+  .service-webdevcard {
+  height: auto; /* Let content control height */
+  min-height: 200px; /* Or whatever is your design need */
+}
+.webdevcard-content {
+  padding: 1rem;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+  .service-title{
+    font-size: 1.5rem;
+  }
+  .service-description{
+    font-size: 1.2rem;
+    text-align: center;
   }
   .cta-contentweb h3 {
     font-size: 1.5rem;
+    line-height: 1;
+  }
+
+  .cta-contentweb p{
+    display: none;
+  }
+  .main-cta-button {
+    padding: 2%;
+    width: 30%;
+    font-size: 13px;
+  }
+}
+@media (max-width: 425px) {
+  .web-services-section {
+    padding: 0rem 3% 0rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: -30px;
+  }
+  
+  .webdevcard-content {
+    padding-top: 2rem;
+    padding-bottom: 0rem;
+  }
+  
+  .services-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  .title-line::after{
+    width: 100px;
+    margin-bottom: -10px;
+  }
+  .services-subtitle{
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+  .service-webdevcard {
+  height: auto; /* Let content control height */
+  min-height: 200px; /* Or whatever is your design need */
+}
+.webdevcard-content {
+  padding: 1rem;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+  .service-title{
+    font-size: 1.5rem;
+  }
+  .service-description{
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .services-bottom-cta {
+    padding: 2%;
+    margin-top: -50px;
+  }
+  .cta-contentweb h3 {
+    font-size: 1.1rem;
     line-height: 1;
   }
   .cta-contentweb p{
     display: none;
   }
   .main-cta-button {
+    margin-top: 10px;
+    margin-bottom: 0px;
     padding: 5%;
-    width: 90%;
-    font-size: 15px;
+    width: 50%;
+    font-size: 10px;
   }
 }

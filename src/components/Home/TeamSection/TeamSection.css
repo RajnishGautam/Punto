@@ -1,6 +1,6 @@
 .ourteam-main {
   background-color: var(--bg-color);
-  padding: 4rem 20rem;
+  padding: 4rem 10rem;
 }
 
 /* ========== DESKTOP GRID ========== */
@@ -8,13 +8,13 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, auto);
-  gap: 40px;
+  gap:40px;
   justify-items: center;
   align-items: start;
   justify-content: center;
 }
 .ourteam-heading h2 {
-    font-family: sarabun;
+  font-family: sarabun;
   font-size: 4rem;
   font-weight: normal;
   margin-bottom: 0rem;
@@ -25,7 +25,7 @@
   position: relative;
   width: 220px;
   height: 220px;
-  background: #fff9f9;
+  background: #ffffff;
   padding: 30px;
   border-radius: 50%;
   box-shadow: 0 0 22px #3336;
@@ -94,40 +94,8 @@
 }
 
 /* ========== MOBILE CAROUSEL ========== */
-.mobile-carousel {
+@media screen and (max-width: 768px) {
+  .ourteam-main{
   display: none;
 }
-
-@media screen and (max-width: 768px) {
-  .desktop-grid {
-    display: none;
-  }
-
-  .mobile-carousel {
-    display: block;
-  }
-
-  .ourteam-card {
-    width: 85vw;
-    height: auto;
-    border-radius: 10px !important;
-    padding: 1.5rem;
-  }
-
-  .ourteam-img,
-  .ourteam-img img {
-    border-radius: 10px !important;
-    box-shadow: none;
-    transform: none !important;
-  }
-
-  .ourteam-caption {
-    transform: none;
-    opacity: 1;
-    margin-top: 1rem;
-  }
-
-  .ourteam-card:hover {
-    height: auto;
-  }
 }

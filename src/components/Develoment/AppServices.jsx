@@ -205,8 +205,11 @@ const AppServices = () => {
                 </button>
               ))}
             </div>
+            <div
+            className="app-info"
+            style={{ '--tab-color': appTypes[currentApp].mockupColor }}
+            >
 
-            <div className="app-info">
               <h3 className="app-title">{appTypes[currentApp].title}</h3>
               <p className="app-description">{appTypes[currentApp].description}</p>
 

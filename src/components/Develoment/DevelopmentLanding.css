@@ -171,7 +171,7 @@
     flex-direction: column;
     gap: 2rem;
     text-align: center;
-    padding: 2rem 0;
+    padding: 5rem 0;
   }
 
   /* Make the text wrapper "disappear" and let its children be flex items */

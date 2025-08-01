@@ -84,6 +84,7 @@
   border-radius: 2px;
   animation: lineExpand 2s ease-out forwards;
 }
+
 .section-subtitle {
   font-size: 2rem;
   color: var(--text-color);
@@ -373,28 +374,30 @@
 
 .app-tab {
   position: relative;
-  background: rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #B0B0B0;
-  padding: 1rem 1.5rem;
+  background: var(--bg-color);
+  border: 1px solid #00D4FF;
+  padding: .5rem 1.5rem;
   border-radius: 15px;
   cursor: pointer;
-  font-weight: 600;
+  font-family: sarabun;
+  font-size: 1.5rem;
+   color: var(--text-color);
+  font-weight: normal;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
   overflow: hidden;
 }
 
 .app-tab:hover {
-  border-color: var(--tab-color);
-  color: white;
+  border-color: 2px var(--tab-color);
+  color: var(--text-color);
   transform: translateY(-2px);
 }
 
 .app-tab.active {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: var(--tab-color);
-  color: white; 
+  background: var(--bg-color);
+  border-color:var(--tab-color);
+  color: var(--text-color); 
 }
 
 .app-tab.active .tab-indicator {
@@ -403,25 +406,26 @@
 
 /* App Info */
 .app-info {
-  background: rgba(0, 0, 0, 0.3);
+  background: var(--bg-color);
   padding: 2.5rem;
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--tab-color);
   backdrop-filter: blur(10px);
 }
 
 .app-title {
-  font-size: 2rem;
-  color: white;
-  margin-bottom: 1rem;
-  font-weight: 700;
+  font-family: sarabun;
+  font-size: 2.5rem;
+  color: var(--text-color);
+  font-weight: normal;
 }
 
 .app-description {
-  font-size: 1.1rem;
-  color: #B0B0B0;
+  font-family: sarabun;
+  font-size: 1.5rem;
+  color: var(--text-color);
   line-height: 1.6;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .app-features {
@@ -432,15 +436,21 @@
 }
 
 .feature-tag {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--tab-color);
+  color: var(--text-color);
+  font-family: sarabun;
+  font-size: 1.2rem;
+  width: 150px;
+  height: 36px;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 0.5rem 1rem;
-  border-radius: 25px;
-  color: white;
-  font-size: 0.9rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  justify-content: center;
+  border-radius: 50px;
+  margin: 0.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   transition: all 0.3s ease;
 }
 
@@ -450,7 +460,7 @@
 }
 
 .feature-icon {
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .app-cta {
@@ -549,7 +559,7 @@
 }
 
 .appcta-content {
-  position:relative;
+  position: relative;
   z-index: 2;
 }
 
@@ -558,7 +568,6 @@
   font-size: 70px;
   font-weight: normal;
   color: white;
-  font-weight: normal;
 }
 
 .appcta-content p {
@@ -610,7 +619,13 @@
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
+
+/* Large Tablet (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .app-services-section {
+    padding: 3rem 2% 2rem;
+  }
+  
   .app-showcase {
     grid-template-columns: 1fr;
     gap: 4rem;
@@ -621,26 +636,119 @@
     transform: rotateY(0deg) rotateX(0deg);
   }
   
+  .phone-mockup {
+    width: 260px;
+    height: 520px;
+  }
+  
+  /* App selector - keep 2 columns for tablet */
   .app-selector {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  /* App features - 2 rows of features for better display */
+  .app-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .feature-tag {
+    width: 100%;
+    font-size: 1.1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Services grid - 2 columns for tablet */
+  .app-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .service-highlight {
+    padding: 1.5rem;
+  }
+  
+  .highlight-icon {
+    font-size: 2.5rem;
+  }
+  
+  .service-highlight h4 {
+    font-size: 1.2rem;
+  }
+  
+  .service-highlight p {
+    font-size: 1.3rem;
+  }
+  
+  .appsection-title {
+    font-size: 3.5rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.4rem;
+  }
+  
+  .appcta-content h3 {
+    font-size: 3rem;
+  }
+  
+  .appcta-content p {
+    font-size: 1.8rem;
   }
 }
 
-@media (max-width: 768px) {
+/* Mobile (767px and below) */
+@media (max-width: 767px) {
   .app-services-section {
-    padding: 6rem 3% 4rem;
+    padding: 2rem 3% 2rem;
   }
   
-  .app-services-grid {
+  .app-showcase {
     grid-template-columns: 1fr;
+    gap: 4rem;
+    text-align: center;
+  }
+  
+  .phone-frame {
+    transform: rotateY(0deg) rotateX(0deg);
   }
   
   .phone-mockup {
     width: 240px;
-    height: 480px;
+    height: 400px;
   }
- .app-services-grid {
-    display: grid;
+  
+  /* App selector - 1 column for mobile */
+  .app-selector {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .app-tab {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .app-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+  }
+  
+  .feature-tag {
+    width: auto;
+    width: 150px;
+    font-size: 1rem;
+    height: 32px;
+    padding: 0 1rem;
+  }
+  
+  .app-services-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     margin-top: -80px;
@@ -663,7 +771,7 @@
   }
 
   .service-highlight h4 {
-    font-size: .8rem;
+    font-size: 0.8rem;
     margin: 0;
     color: #fff;
   }
@@ -671,33 +779,54 @@
   .service-highlight p {
     display: none;
   }
-  .app-cta-section{
+  
+  .app-cta-section {
     margin-top: -50px;
     padding: 0rem 3% 1rem;
   }
-  .cta-buttons {
+  
+  .appcta-buttons {
     flex-direction: column;
     align-items: center;
   }
-  .appcta-content h3{
+  
+  .appcta-content h3 {
     font-size: 1.5rem;
   }
-  .appcta-content p{
+  
+  .appcta-content p {
     display: none;
   }
-  .primary-cta, .secondary-cta {
+  
+  .primary-cta {
     width: 70%;
-    padding: .7rem 0rem;
+    padding: 0.7rem 0rem;
     font-size: 15px;
   }
   
   .appsection-title {
     font-size: 2rem;
   }
+  
   .section-subtitle {
     display: none;
   }
-  .appsection-title::after{
+  
+  .appsection-title::after {
     top: 40px;
+  }
+  
+  .app-info {
+    padding: 1rem;
+  }
+  
+  .app-title {
+    font-family: sarabun;
+    font-size: 1.5rem;
+  }
+  
+  .app-description {
+    font-family: sarabun;
+    font-size: 1rem;
   }
 }

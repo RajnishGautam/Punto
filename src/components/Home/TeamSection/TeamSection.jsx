@@ -1,11 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './TeamSection.css';
 import { FaInstagram, FaWhatsapp, FaLinkedin } from 'react-icons/fa';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 
 const teamMembers = [
   {
@@ -92,18 +87,9 @@ const TeamCard = ({ member }) => (
 );
 
 const TeamSection = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
   return (
     <section className="ourteam-main">
-       <div className="our-services-heading-container">
+      <div className="our-services-heading-container">
         <div className="our-services-line"></div>
         <div className="our-services-dot"></div>
         <h2 className="our-services-section-heading">Our Team</h2>
@@ -111,30 +97,11 @@ const TeamSection = () => {
         <div className="our-services-line"></div>
       </div>
 
-      {!isMobile ? (
-        <div className="desktop-grid">
-          {teamMembers.map((member, idx) => (
-            <TeamCard member={member} key={idx} />
-          ))}
-        </div>
-      ) : (
-        <div className="mobile-carousel">
-          <Swiper
-            modules={[Navigation, Pagination, Autoplay]}
-            autoplay={{ delay: 2500, disableOnInteraction: false }}
-            pagination={{ clickable: true }}
-            navigation
-            loop
-            spaceBetween={30}
-          >
-            {teamMembers.map((member, idx) => (
-              <SwiperSlide key={idx}>
-                <TeamCard member={member} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-      )}
+      <div className="desktop-grid">
+        {teamMembers.map((member, idx) => (
+          <TeamCard member={member} key={idx} />
+        ))}
+      </div>
     </section>
   );
 };
