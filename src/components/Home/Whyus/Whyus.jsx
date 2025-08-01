@@ -147,8 +147,8 @@ const WhyUs3DCards = () => {
       </div>
 
       <div className="why-us-content">
-        <div className="section-header">
-          <h2 className="section-title">Creating Designs to Elevate your Brand</h2>
+        <div className="whysection-header">
+          <h2 className="whysection-title">Creating Designs to Elevate your Brand</h2>
         </div>
 
         <div className={`cards-container ${selectedCard ? 'expanded' : ''}`}>
@@ -243,7 +243,7 @@ const WhyUs3DCards = () => {
 
 .why-us-container.dark {
   background: #000000;
-  color: #f1f1f1;
+  color: #ffffff;
 }
 
 .why-us-container.light {
@@ -342,11 +342,12 @@ const WhyUs3DCards = () => {
   animation: fadeInUp 1s ease-out;
 }
 
-.section-title {
-  font-family: 'sarabun', sans-serif;
-  font-size: 2.5rem;
+.whysection-title {
+  font-family: 'sarabun';
+  font-size: 3rem;
   font-weight: normal;
   margin-bottom: 1rem;
+  text-align:center;
 }
 
 .dark .section-title {

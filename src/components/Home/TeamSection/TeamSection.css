@@ -1,0 +1,133 @@
+.ourteam-main {
+  background-color: var(--bg-color);
+  padding: 4rem 20rem;
+}
+
+/* ========== DESKTOP GRID ========== */
+.desktop-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 40px;
+  justify-items: center;
+  align-items: start;
+  justify-content: center;
+}
+.ourteam-heading h2 {
+    font-family: sarabun;
+  font-size: 4rem;
+  font-weight: normal;
+  margin-bottom: 0rem;
+  text-align: center;
+}
+
+.ourteam-card {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  background: #fff9f9;
+  padding: 30px;
+  border-radius: 50%;
+  box-shadow: 0 0 22px #3336;
+  transition: 0.6s;
+  overflow: visible;
+}
+
+.ourteam-card:hover {
+  border-radius: 10px;
+  height: 260px;
+}
+
+.ourteam-img {
+  width: 100%;
+  height: 100%;
+  transition: 0.6s;
+}
+
+.ourteam-card:hover .ourteam-img {
+  transform: translateY(-60px);
+}
+
+.ourteam-img img {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 22px #3336;
+  transition: 0.6s;
+}
+
+.ourteam-card:hover img {
+  border-radius: 10px;
+}
+
+.ourteam-caption {
+  text-align: center;
+  transform: translateY(-80px);
+  opacity: 0;
+  transition: 0.6s;
+}
+
+.ourteam-card:hover .ourteam-caption {
+  opacity: 1;
+}
+
+.ourteam-caption h3 {
+  font-size: 18px;
+  margin-bottom: 4px;
+  color: #000000;
+}
+
+.ourteam-caption p {
+  font-size: 14px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.ourteam-social-links a {
+  color: black;
+  margin: 0 8px;
+  font-size: 18px;
+  transition: 0.6s;
+}
+
+.ourteam-social-links a:hover {
+  color: #8e1616;
+}
+
+/* ========== MOBILE CAROUSEL ========== */
+.mobile-carousel {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .desktop-grid {
+    display: none;
+  }
+
+  .mobile-carousel {
+    display: block;
+  }
+
+  .ourteam-card {
+    width: 85vw;
+    height: auto;
+    border-radius: 10px !important;
+    padding: 1.5rem;
+  }
+
+  .ourteam-img,
+  .ourteam-img img {
+    border-radius: 10px !important;
+    box-shadow: none;
+    transform: none !important;
+  }
+
+  .ourteam-caption {
+    transform: none;
+    opacity: 1;
+    margin-top: 1rem;
+  }
+
+  .ourteam-card:hover {
+    height: auto;
+  }
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import BrandingSection from '../components/Branding/BrandingSection';
+import BrandingSection from '../components/Branding/Brandingsection';
 
 const Branding = () => {
   return (

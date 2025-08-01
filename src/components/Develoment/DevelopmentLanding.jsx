@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, Suspense } from 'react';
+
 import './DevelopmentLanding.css';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, Environment, useGLTF } from '@react-three/drei';
@@ -8,7 +9,7 @@ import { OrbitControls, Environment, useGLTF } from '@react-three/drei';
 // ===============================
 function DeveloperModel({ mouse, isHovered, scale }) {
   const ref = useRef();
-  const { scene } = useGLTF('/models/me sitting in office chair.glb');
+  const { scene } = useGLTF('/models/mesittinginofficechair.glb');
   const initialRotation = useRef({ x: 0, y: 3.4, z: 0 });
 
   useFrame(() => {
@@ -43,7 +44,7 @@ const DevelopmentLanding = () => {
   const isHovered = useRef(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
-  // ✅ Responsive model scale based on screen size
+  // ✅ Responsive model scale
   const [modelScale, setModelScale] = useState([1.7, 1.7, 2]);
 
   useEffect(() => {
@@ -52,7 +53,7 @@ const DevelopmentLanding = () => {
       setModelScale(isMobile ? [2, 2, 2] : [1.7, 1.7, 2]);
     };
 
-    updateScale(); // Initial call
+    updateScale();
     window.addEventListener('resize', updateScale);
     return () => window.removeEventListener('resize', updateScale);
   }, []);
@@ -133,7 +134,8 @@ const DevelopmentLanding = () => {
                 <directionalLight position={[2, 2, 5]} intensity={1} />
                 <Suspense fallback={null}>
                   <DeveloperModel mouse={mouseRef} isHovered={isHovered} scale={modelScale} />
-                  <Environment preset="city" />
+                  {/* ✅ Custom HDR environment added below */}
+                  <Environment files="/hdr/potsdamer_platz_1k.hdr" background={false} />
                   <OrbitControls enableZoom={false} enablePan={false} />
                 </Suspense>
               </Canvas>

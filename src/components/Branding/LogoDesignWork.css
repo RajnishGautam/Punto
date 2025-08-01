@@ -1,0 +1,312 @@
+/* ====== ROOT VARIABLES & MAIN CONTAINER ====== */
+
+.carousel3d-main-container {
+  height: 80vh;
+  width: 100vw;
+  background: var(--bg-color);
+  overflow-y: auto; /* Allow scrolling if content is too tall */
+  font-family: 'Sarabun', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ✨ MODIFIED: Changed to a flex column layout */
+.carousel3d-content-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem 0rem;
+  box-sizing: border-box;
+}
+
+/* ====== LOADING STATE ====== */
+.carousel3d-loading-container {
+  min-height: 100vh;
+  background: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.carousel3d-loading-spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid white;
+  border-radius: 50%;
+  animation: carousel3d-spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes carousel3d-spin {
+  100% { transform: rotate(360deg); }
+}
+
+/* ✨ MODIFIED: Removed absolute positioning */
+.carousel3d-header {
+  text-align: center;
+  color: white;
+  width: 100%;
+  margin-bottom: 2rem; /* Added space below header */
+}
+
+/* ✨ MODIFIED: Removed absolute positioning and set a fixed height */
+.carousel3d-viewport {
+  position: relative; /* Keep for nav buttons */
+  width: 100%;
+  height: 60vh; 
+  max-height: 550px; 
+  perspective: 2000px;
+  perspective-origin: center center;
+  overflow: visible;
+  margin-bottom: 2rem; /* Added space below carousel */
+}
+
+.carousel3d-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  cursor: grab;
+  user-select: none;
+}
+
+.carousel3d-stage:active {
+  cursor: grabbing;
+}
+
+/* ====== CAROUSEL ITEMS ====== */
+.carousel3d-item {
+  position: absolute;
+  cursor: pointer;
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+  --angle: calc(var(--carousel3d-position) * (360deg / var(--carousel3d-total)));
+  --radius: clamp(600px, 30vw, 900px);
+  --scale: 0.6;
+  --opacity: .3;
+  --z-offset: 0px;
+  transform: 
+    rotateY(var(--angle))
+    translateZ(var(--radius))
+    translateZ(var(--z-offset))
+    scale(var(--scale));
+  opacity: var(--opacity);
+  z-index: 1;
+}
+
+.carousel3d-item--active {
+  --scale: 1.2;
+  --opacity: 1;
+  --z-offset: 150px;
+  z-index: 10;
+}
+
+.carousel3d-item--adjacent {
+  --scale: 0.9;
+  --opacity: 0.7;
+  --z-offset: 0px;
+  z-index: 5;
+}
+
+.carousel3d-item--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ====== CAROUSEL CARD ====== */
+.carousel3d-card {
+  position: relative;
+  width: clamp(200px, 15vw, 330px);
+  height: clamp(150px, 15vw, 250px);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.carousel3d-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+/* ====== IMAGE & CONTENT ====== */
+.carousel3d-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%; /* Changed to fill the card */
+  overflow: hidden;
+}
+
+.carousel3d-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.carousel3d-card:hover .carousel3d-image {
+  transform: scale(1.05);
+}
+
+.carousel3d-shine-effect {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transform: skewX(-25deg);
+  transition: left 0.8s ease;
+}
+
+.carousel3d-card:hover .carousel3d-shine-effect {
+  left: 100%;
+}
+
+.carousel3d-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  color: white;
+  transform: translateY(100%);
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 70%, transparent 100%);
+  border-radius: 0 0 20px 20px;
+}
+
+.carousel3d-item--active .carousel3d-content,
+.carousel3d-card:hover .carousel3d-content {
+  transform: translateY(0);
+}
+
+.carousel3d-image-title {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.carousel3d-image-description {
+  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.4;
+  opacity: 0;
+  transition: opacity 0.5s ease 0.2s;
+}
+
+.carousel3d-item--active .carousel3d-image-description,
+.carousel3d-card:hover .carousel3d-image-description {
+    opacity: 1;
+}
+
+
+/* ====== NAVIGATION & INDICATORS ====== */
+.carousel3d-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: clamp(50px, 5vw, 70px);
+  height: clamp(50px, 5vw, 70px);
+  background: var(--bg-color);
+  backdrop-filter: blur(15px);
+  border: 2px solid #821616;
+  border-radius: 50%;
+  color: #8e1616;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 20;
+}
+
+.carousel3d-nav:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel3d-nav--prev { left: clamp(10px, 3vw, 30px); }
+.carousel3d-nav--next { right: clamp(10px, 3vw, 30px); }
+
+.carousel3d-nav-icon {
+  width: clamp(20px, 2.5vw, 28px);
+  height: clamp(20px, 2.5vw, 28px);
+}
+
+.carousel3d-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.carousel3d-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(237, 128, 128, 0.4);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel3d-dot:hover {
+  background: rgba(255, 255, 255, 0.7);
+  transform: scale(1.2);
+}
+
+.carousel3d-dot--active {
+  background: #8e1616;
+  transform: scale(1.4);
+}
+
+/* ====== RESPONSIVE DESIGN ====== */
+@media (max-width: 768px) {
+  .carousel3d-viewport {
+    height: 50vh;
+  }
+  .carousel3d-item {
+    --radius: clamp(180px, 25vw, 250px);
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel3d-content-wrapper {
+    padding: 1rem 0.5rem;
+    justify-content: start; /* Align to top on mobile */
+    padding-top: 4rem;
+  }
+  .carousel3d-header {
+      position: absolute; /* Put header back to absolute on mobile for space */
+      top: 1rem;
+      left: 0.5rem;
+      right: 0.5rem;
+      width: auto;
+  }
+  .carousel3d-viewport {
+    height: 55vh;
+  }
+  .carousel3d-item {
+    --radius: clamp(150px, 30vw, 200px);
+  }
+  .carousel3d-card {
+    width: clamp(200px, 50vw, 240px);
+    height: clamp(280px, 70vw, 340px);
+  }
+}

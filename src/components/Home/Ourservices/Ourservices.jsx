@@ -2,7 +2,7 @@
 import './Ourservices.css';
 
 const services = [
-  { id: 1, image: '/images/service1.png', title: 'Web Development', slogan: '' },
+  { id: 1, image: '/images/service1.png', title: 'Web Development', slogan: 'We create Digital Magic' },
   { id: 2, image: '/images/service2.png', title: 'App Development', slogan: 'Mobile apps that scale' },
   { id: 3, image: '/images/service3.png', title: 'UI/UX Design', slogan: 'Designs that convert' },
   { id: 4, image: '/images/service4.png', title: 'SEO Optimization', slogan: 'Boost your visibility' },
