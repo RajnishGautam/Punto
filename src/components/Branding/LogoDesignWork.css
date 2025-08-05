@@ -2,7 +2,7 @@
 
 .carousel3d-main-container {
   height: 80vh;
-  width: 100vw;
+  max-width: 100vw;
   background: var(--bg-color);
   overflow-y: auto; /* Allow scrolling if content is too tall */
   font-family: 'Sarabun', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -288,7 +288,7 @@
 
 @media (max-width: 480px) {
   .carousel3d-content-wrapper {
-    padding: 1rem 0.5rem;
+    padding: 1rem 10rem;
     justify-content: start; /* Align to top on mobile */
     padding-top: 4rem;
   }
@@ -308,5 +308,8 @@
   .carousel3d-card {
     width: clamp(200px, 50vw, 240px);
     height: clamp(280px, 70vw, 340px);
+  }
+  .carousel3d-nav {
+    display: none;
   }
 }
