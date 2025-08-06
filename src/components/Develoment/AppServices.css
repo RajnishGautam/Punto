@@ -507,7 +507,7 @@
 .service-highlight {
   text-align: center;
   padding: 2rem;
-  background: rgba(0, 0, 0, 0.3);
+  background: var(--card-bg);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   backdrop-filter: blur(10px);
@@ -533,8 +533,9 @@
 }
 
 .service-highlight h4 {
-  font-size: 1.4rem;
-  color: white;
+  font-family: sarabun;
+  font-size: 2rem;
+  color: var(--text-color);
   margin-bottom: 1rem;
   font-weight: normal;
 }
@@ -552,9 +553,9 @@
   position: relative;
   text-align: center;
   padding: 1rem 0rem;
-  background: rgba(0, 0, 0, 0.5);
+  background: var(--bg-color);
   border-radius: 30px;
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  border: 2px solid var(--border-color);
   overflow: hidden;
 }
 
@@ -669,6 +670,7 @@
   
   .service-highlight {
     padding: 1.5rem;
+    background: var(--card-bg);
   }
   
   .highlight-icon {

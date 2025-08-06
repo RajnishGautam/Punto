@@ -1,0 +1,460 @@
+/* Marketing Grid Container */
+.marketing-grid-container {
+  width: 100%;
+  max-width: 98%;
+  margin: 0 auto;
+  padding-top: 100px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Main Grid Layout - Exact replica of your original grid */
+.marketing-grid-parent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  gap: 8px;
+  height: 250vh;
+  min-height: 600px;
+}
+
+/* Base styles for all grid items */
+.marketing-grid-div {
+  background: #8e1616;
+  border: 2px solid #a9d4ff;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  text-align: center;
+}
+
+.marketing-grid-div:hover {
+  transform: translateY(-2px);
+}
+
+/* Typography */
+.marketing-grid-div h1,
+.marketing-grid-div h2,
+.marketing-grid-div h3,
+.marketing-grid-div h4,
+.marketing-grid-div h5,
+.marketing-grid-div h6 {
+  margin: 0 0 8px 0;
+  color: #333;
+}
+
+.marketing-grid-div p {
+  margin: 0;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* You can add custom styles for specific grids */
+
+
+/* Individual Grid Positioning - Exact replica of your CSS */
+.marketing-grid-div1 {
+  grid-row: span 4 / span 4;
+}
+.marketing-grid-div1 {
+  color: white;
+}
+.marketing-grid-div1 h2,
+.marketing-grid-div1 p {
+  color: white;
+}
+.marketing-grid-div1 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.marketing-grid-div2 {
+  grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
+  position: relative;
+  overflow: hidden;
+  background: #8e1616;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  color: white;
+}
+
+/* Matrix-style animated background */
+.seo-animation-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 255, 0, 0.1),
+    rgba(0, 255, 0, 0.1) 1px,
+    transparent 1px,
+    transparent 20px
+  );
+  animation: matrixMove 10s linear infinite;
+  z-index: 1;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+@keyframes matrixMove {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.seo-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.animated-heading {
+    font-family: sarabun;
+  font-size: 3rem;
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* animation: pulse 2s infinite alternate; */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    letter-spacing: 0px;
+  }
+  100% {
+    transform: scale(1.05);
+    letter-spacing: 2px;
+  }
+}
+.typing-text {
+  font-family: sarabun;
+  font-size: 2rem;
+  color: rgb(255, 255, 255) !important;
+  white-space: nowrap;
+  overflow: hidden;
+  /* border-right: 3px solid rgb(255, 255, 255); */
+  width: 0;
+  animation: typing 6s steps(40, end) infinite;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  70% {
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.marketing-grid-div3 {
+  grid-row: span 4 / span 4;
+  grid-column-start: 5;
+  grid-row-start: 1;
+}
+.marketing-grid-div3 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.marketing-grid-div4 {
+  grid-row: span 2 / span 2;
+  grid-column-start: 4;
+  grid-row-start: 1;
+}
+.marketing-grid-div4 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.marketing-grid-div5 {
+  grid-row: span 2 / span 2;
+  grid-column-start: 4;
+  grid-row-start: 3;
+}
+.marketing-grid-div5 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.marketing-grid-div6 {
+  grid-row: span 4 / span 4;
+  grid-column-start: 1;
+  grid-row-start: 5;
+}
+.marketing-grid-div6 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.marketing-grid-div7 {
+  grid-column: span 2 / span 2;
+  grid-row: span 4 / span 4;
+  grid-column-start: 2;
+  grid-row-start: 3;
+}
+.marketing-grid-div7 img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.marketing-grid-div7 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.marketing-grid-div20 {
+  grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
+  grid-column-start: 2;
+  grid-row-start: 7;
+}
+.marketing-grid-div8 {
+  grid-column: span 2 / span 2;
+  grid-row: span 4 / span 4;
+  grid-column-start: 4;
+  grid-row-start: 5;
+}
+.marketing-grid-div8 img.grid8-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.2);
+}
+
+.marketing-grid-div9 {
+  grid-column: span 4 / span 4;
+  grid-row: span 3 / span 3;
+  grid-row-start: 9;
+}
+
+.marketing-grid-div10 {
+  grid-row: span 6 / span 6;
+  grid-column-start: 5;
+  grid-row-start: 9;
+}
+.marketing-grid-div10 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.marketing-grid-div11 {
+  grid-row-start: 12;
+}
+.marketing-grid-div11 h4 {
+  font-family: sarabun;
+  font-size: 2.3rem;
+  color: rgb(255, 255, 255);
+  line-height: 1;
+}
+.marketing-grid-div12 {
+  grid-row-start: 12;
+}
+
+.marketing-grid-div13 {
+  grid-column: span 2 / span 2;
+  grid-row: span 3 / span 3;
+  grid-row-start: 12;
+}
+.marketing-grid-div13 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.marketing-grid-div14 {
+  grid-column: span 2 / span 2;
+  grid-row: span 4 / span 4;
+  grid-row-start: 13;
+}
+.marketing-grid-div14 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.marketing-grid-div15 {
+  grid-row: span 2 / span 2;
+  grid-column-start: 3;
+  grid-row-start: 15;
+}
+.marketing-grid-div15 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.marketing-grid-div16 {
+  grid-column: span 2 / span 2;
+  grid-row: span 4 / span 4;
+  grid-column-start: 4;
+  grid-row-start: 15;
+}
+
+.marketing-grid-div17 {
+  grid-column: span 3 / span 3;
+  grid-row: span 2 / span 2;
+  grid-row-start: 17;
+}
+
+.marketing-grid-div18 {
+  grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
+  grid-row-start: 19;
+}
+
+.marketing-grid-div19 {
+  grid-column: span 3 / span 3;
+  grid-row: span 2 / span 2;
+  grid-column-start: 3;
+  grid-row-start: 19;
+}
+
+/* Tablet Design (768px and below) */
+@media (max-width: 768px) {
+  .marketing-grid-parent {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: auto;
+  }
+  
+  /* Reset all grid positioning for tablet */
+  .marketing-grid-div {
+    grid-column: unset;
+    grid-row: unset;
+    grid-column-start: unset;
+    grid-row-start: unset;
+    border-radius: 30px;
+  }
+  
+  /* Individual tablet sizes - customize as needed */
+  .marketing-grid-div1 { width: 100%; height: 200px; }
+  .marketing-grid-div2 { width: 80%; height: 150px; margin: 0 auto; }
+  .marketing-grid-div3 { width: 100%; height: 180px; }
+  .marketing-grid-div4 { width: 60%; height: 120px; margin: 0 auto; }
+  .marketing-grid-div5 { width: 60%; height: 120px; margin: 0 auto; }
+  .marketing-grid-div6 { width: 100%; height: 200px; }
+  .marketing-grid-div7 { width: 90%; height: 250px; margin: 0 auto; }
+  .marketing-grid-div8 { width: 85%; height: 180px; margin: 0 auto; }
+  .marketing-grid-div9 { width: 100%; height: 160px; }
+  .marketing-grid-div10 { width: 70%; height: 220px; margin: 0 auto; }
+  .marketing-grid-div11 { width: 50%; height: 100px; margin: 0 auto; }
+  .marketing-grid-div12 { width: 50%; height: 100px; margin: 0 auto; }
+  .marketing-grid-div13 { width: 75%; height: 140px; margin: 0 auto; }
+  .marketing-grid-div14 { width: 80%; height: 170px; margin: 0 auto; }
+  .marketing-grid-div15 { width: 55%; height: 110px; margin: 0 auto; }
+  .marketing-grid-div16 { width: 85%; height: 180px; margin: 0 auto; }
+  .marketing-grid-div17 { width: 90%; height: 130px; margin: 0 auto; }
+  .marketing-grid-div18 { width: 70%; height: 120px; margin: 0 auto; }
+  .marketing-grid-div19 { width: 95%; height: 140px; margin: 0 auto; }
+  
+  .marketing-grid-div h2,
+  .marketing-grid-div h3 {
+    font-size: 16px;
+  }
+  
+  .marketing-grid-div p {
+    font-size: 12px;
+  }
+}
+
+/* Mobile Design (480px and below) */
+@media (max-width: 480px) {
+  .marketing-grid-parent {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: auto;
+    padding-top: 0rem;
+  }
+  
+  /* Reset all grid positioning for mobile */
+  .marketing-grid-div {
+    grid-column: unset;
+    grid-row: unset;
+    grid-column-start: unset;
+    grid-row-start: unset;
+    border-radius: 20px;
+  }
+  
+  /* Individual mobile sizes - customize as needed */
+  .marketing-grid-div1 { 
+    width: 100%;
+    height: 280px; 
+    }
+   .marketing-grid-div1 video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    }
+  .marketing-grid-div2 { width: 90%; height: 130px; margin: 0 auto; }
+  .marketing-grid-div3 { width: 100%; height: 160px; }
+  .marketing-grid-div4 {
+     width: 48%; 
+     height: 100px; 
+     margin: 0 auto; 
+     margin-left: 0px;
+    }
+  .marketing-grid-div5 { 
+    width: 48%; 
+    height: 100px; 
+    margin: 0 auto;
+    margin-right: 0px; 
+    margin-top: -110px;
+}
+  .marketing-grid-div6 { width: 100%; height: 170px; }
+
+  .marketing-grid-div7 {
+     width: 95%; 
+     height: 280px; 
+     margin: 0 auto; 
+    }
+  .marketing-grid-div8 { width: 90%; height: 150px; margin: 0 auto; }
+  .marketing-grid-div9 { width: 100%; height: 140px; }
+  .marketing-grid-div10 { width: 80%; height: 190px; margin: 0 auto; }
+  .marketing-grid-div11 { width: 60%; height: 80px; margin: 0 auto; }
+  .marketing-grid-div12 { width: 60%; height: 80px; margin: 0 auto; }
+  .marketing-grid-div13 { width: 85%; height: 120px; margin: 0 auto; }
+  .marketing-grid-div14 { width: 90%; height: 140px; margin: 0 auto; }
+  .marketing-grid-div15 { width: 70%; height: 90px; margin: 0 auto; }
+  .marketing-grid-div16 { width: 95%; height: 150px; margin: 0 auto; }
+  .marketing-grid-div17 { width: 100%; height: 110px; }
+  .marketing-grid-div18 { width: 80%; height: 100px; margin: 0 auto; }
+  .marketing-grid-div19 { width: 100%; height: 120px; }
+  
+  .marketing-grid-div h2,
+  .marketing-grid-div h3 {
+    font-size: 14px;
+  }
+  
+  .marketing-grid-div p {
+    font-size: 11px;
+  }
+}
