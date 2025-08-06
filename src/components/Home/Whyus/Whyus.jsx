@@ -1066,6 +1066,8 @@ const WhyUs3DCards = () => {
   
  .whysection-title {
     font-size: 1.3rem;
+    margin-bottom: 02rem;
+    margin-top: -1rem;
   }
   
   .section-subtitle {
