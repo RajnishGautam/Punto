@@ -383,41 +383,52 @@
   background: #000;
   transform: translateY(-3px);
 }
-
 /* Bottom CTA Section */
 .services-bottom-cta {
   text-align: center;
-  padding: 1rem 2rem;
-  border-radius: 30px;
+  padding: 1.5rem 2rem;
+  border-radius: 2rem;
   border: 2px solid #2a2a2a;
+  background: rgba(20, 20, 20, 0.8);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
   position: relative;
   overflow: hidden;
-  max-height: 300px;
+  max-height: 320px;
+  transition: transform 0.3s ease;
 }
 
+.services-bottom-cta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+}
+
+/* Glow animation */
 @keyframes ctaGlow {
   0% { transform: scale(1); }
-  100% { transform: scale(1.1); }
+  100% { transform: scale(1.05); }
 }
 
+/* CTA Content */
 .cta-contentweb {
   position: relative;
   z-index: 2;
 }
 
 .cta-contentweb h3 {
-  font-size: 4rem;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
   color: var(--text-color);
-  font-family: 'sarabun';
+  font-family: 'Sarabun', sans-serif;
   font-weight: normal;
+  margin-bottom: 0rem;
 }
 
 .cta-contentweb p {
-  font-size: 2.5rem;
+  font-size: clamp(1rem, 3vw, 2rem);
   color: var(--text-color);
-  font-family: sarabun;
-  font-weight: normal;
-  margin-top: -30px;
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 400;
+  margin-top: -2rem;
+  margin-bottom: 1.5rem;
 }
 
 /* Main CTA Button */
@@ -426,14 +437,21 @@
   background: linear-gradient(135deg, #00D4FF, #39FF14);
   border: none;
   color: #000;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: normal;
-  padding: 1rem 3rem;
-  border-radius: 50px;
+  padding: 1rem 2.5rem;
+  border-radius: 3rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
+  z-index: 2;
 }
+
+.main-cta-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #00d4ff, 0 0 20px #39ff14;
+}
+
 
 .main-cta-button:hover {
   transform: translateY(-5px) scale(1.05);
@@ -626,10 +644,11 @@
   
   .services-bottom-cta {
     padding: 1.5rem 1rem;
-    margin-top: 1rem;
+    margin-top: -2rem;
   }
   
   .cta-contentweb h3 {
+    font-family: sarabun;
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
   }
@@ -640,8 +659,9 @@
   }
   
   .main-cta-button {
-    padding: 0.8rem 1.5rem;
-    font-size: 0.9rem;
+    padding: 0.6rem 1.5rem;
+    font-size: 1.2rem;
+    font-family: sarabun;
     width: 70%;
   }
 }
