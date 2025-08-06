@@ -3,8 +3,8 @@
   width: 100%;
   max-width: 98%;
   margin: 0 auto;
-  padding-top: 100px;
-  font-family: 'Arial', sans-serif;
+  padding-top: 5rem ;
+  font-family: 'sarabun', sans-serif;
 }
 
 /* Main Grid Layout - Exact replica of your original grid */
@@ -334,18 +334,60 @@
   grid-column-start: 3;
   grid-row-start: 19;
 }
+.marketing-grid-cta {
+  text-align: center;
+  margin: 3rem 0 2rem;
+  grid-column: 1 / -1; /* Makes it span full width of the grid */
+}
+.neon-button,
+.neon-button.marketing {
+  position: relative;
+  padding: .5rem 2.5rem;
+  background: transparent;
+  border: 2px solid #00D4FF;
+  color: var(--text-color);
+  font-size: 2rem;
+  font-weight: normal;
+  cursor: pointer;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.neon-button:hover,
+.neon-button.marketing:hover {
+  background: rgba(0, 212, 255, 0.1);
+  box-shadow: 0 0 20px rgba(222, 24, 21, 0.792), inset 0 0 20px rgba(0, 212, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+.button-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 20px 5px rgba(0, 212, 255, 0.6);
+  border-radius: 50px;
+  z-index: -1;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
 
 /* Tablet Design (768px and below) */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .marketing-grid-parent {
     display: flex;
     flex-direction: column;
     gap: 16px;
     height: auto;
-  }
+  } */
   
   /* Reset all grid positioning for tablet */
-  .marketing-grid-div {
+  /* .marketing-grid-div {
     grid-column: unset;
     grid-row: unset;
     grid-column-start: unset;
@@ -354,7 +396,7 @@
   }
   
   /* Individual tablet sizes - customize as needed */
-  .marketing-grid-div1 { width: 100%; height: 200px; }
+  /* .marketing-grid-div1 { width: 100%; height: 200px; }
   .marketing-grid-div2 { width: 80%; height: 150px; margin: 0 auto; }
   .marketing-grid-div3 { width: 100%; height: 180px; }
   .marketing-grid-div4 { width: 60%; height: 120px; margin: 0 auto; }
@@ -381,8 +423,8 @@
   
   .marketing-grid-div p {
     font-size: 12px;
-  }
-}
+  } */
+/* }  */
 
 /* Mobile Design (480px and below) */
 @media (max-width: 480px) {
@@ -414,18 +456,19 @@
   .marketing-grid-div4  { order: 6; }
   .marketing-grid-div5  { order: 7; }
   .marketing-grid-div6  { order: 8; }
-  .marketing-grid-div11 { order: 10; }
-  .marketing-grid-div12 { order: 11; }
-  .marketing-grid-div13 { order: 12; }
-  .marketing-grid-div14 { order: 13; }
-  .marketing-grid-div15 { order: 14; }
-  .marketing-grid-div16 { order: 15; }
-  .marketing-grid-div17 { order: 16; }
-  .marketing-grid-div18 { order: 17; }
-  .marketing-grid-div19 { order: 18; }
-  .marketing-grid-div10 { order: 19; }
-  .marketing-grid-div2  { order: 20; }
+  .marketing-grid-div11 { order: 9; }
+  .marketing-grid-div12 { order: 10; }
+  .marketing-grid-div13 { order: 11; }
+  .marketing-grid-div14 { order: 12; }
+  .marketing-grid-div15 { order: 13; }
+  .marketing-grid-div16 { order: 14; }
+  .marketing-grid-div17 { order: 15; }
+  .marketing-grid-div18 { order: 16; }
+  .marketing-grid-div19 { order: 17; }
+  .marketing-grid-div10 { order: 18; }
+  .marketing-grid-div2  { order: 19; }
   .marketing-grid-div9  { order: 20; }
+  .marketing-grid-cta { order: 21; }
   /* Individual Div Sizes */
   .marketing-grid-div1 {
     width: 100%;
@@ -489,8 +532,8 @@
   }
 
   .marketing-grid-div10 {
-    width: 80%;
-    height: 190px;
+    width: 98%;
+    height: 500px;
     margin: 0 auto;
   }
 
@@ -507,14 +550,14 @@
   }
 
   .marketing-grid-div13 {
-    width: 85%;
-    height: 120px;
+    width: 98%;
+     height: 200px; /*seo wala */
     margin: 0 auto;
   }
 
   .marketing-grid-div14 {
-    width: 90%;
-    height: 140px;
+    width: 98%;
+    height: 240px;
     margin: 0 auto;
   }
 
@@ -560,5 +603,21 @@
   .marketing-grid-div p {
     font-size: 18px;
     color: rgb(255, 255, 255) !important;
+  }
+  .marketing-grid-cta {
+    text-align: center;
+    margin: 5rem 0;
+    grid-column: 1 / -1; /* Makes it span full width of the grid */
+    padding: 0 4rem;
+    }
+  .neon-button,
+  .neon-button.marketing {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+  }
+  .button-glow {
+    box-shadow: 0 0 10px 3px rgba(0, 212, 255, 0.6);
+    border-radius: 30px;
+    opacity: 0.5;
   }
 }

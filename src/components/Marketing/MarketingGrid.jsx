@@ -113,10 +113,26 @@ const MarketingGrid = () => {
         </div>
 
         {/* Grid Item 19 */}
-        <div className="marketing-grid-div marketing-grid-div19">
-          <h3>Grid 19 - Wide</h3>
-          <p>Bottom wide section</p>
-        </div>
+        {/* Grid Item 19 */}
+<div className="marketing-grid-div marketing-grid-div19">
+  <h3>Grid 19 - Wide</h3>
+  <p>Bottom wide section</p>
+</div>
+
+{/* CTA Button at Bottom */}
+<div className="marketing-grid-cta">
+  <a
+    href="https://wa.me/917838649867"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="neon-button marketing primary"
+  >
+    <span>Start Your Journey</span>
+    <div className="button-glow"></div>
+  </a>
+</div>
+
+
       </div>
     </div>
   )
