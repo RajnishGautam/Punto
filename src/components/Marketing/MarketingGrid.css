@@ -386,6 +386,7 @@
 
 /* Mobile Design (480px and below) */
 @media (max-width: 480px) {
+  /* Parent Flex Container */
   .marketing-grid-parent {
     display: flex;
     flex-direction: column;
@@ -393,7 +394,7 @@
     height: auto;
     padding-top: 0rem;
   }
-  
+
   /* Reset all grid positioning for mobile */
   .marketing-grid-div {
     grid-column: unset;
@@ -401,60 +402,163 @@
     grid-column-start: unset;
     grid-row-start: unset;
     border-radius: 20px;
+    border: none;
   }
-  
-  /* Individual mobile sizes - customize as needed */
-  .marketing-grid-div1 { 
+
+  /* Flex Order: Rearranged Display Order */
+  .marketing-grid-div8  { order: 1; }
+  .marketing-grid-div7  { order: 2; }
+  .marketing-grid-div1  { order: 3; }
+  .marketing-grid-div20 { order: 4; }
+  .marketing-grid-div3  { order: 5; }
+  .marketing-grid-div4  { order: 6; }
+  .marketing-grid-div5  { order: 7; }
+  .marketing-grid-div6  { order: 8; }
+  .marketing-grid-div11 { order: 10; }
+  .marketing-grid-div12 { order: 11; }
+  .marketing-grid-div13 { order: 12; }
+  .marketing-grid-div14 { order: 13; }
+  .marketing-grid-div15 { order: 14; }
+  .marketing-grid-div16 { order: 15; }
+  .marketing-grid-div17 { order: 16; }
+  .marketing-grid-div18 { order: 17; }
+  .marketing-grid-div19 { order: 18; }
+  .marketing-grid-div10 { order: 19; }
+  .marketing-grid-div2  { order: 20; }
+  .marketing-grid-div9  { order: 20; }
+  /* Individual Div Sizes */
+  .marketing-grid-div1 {
     width: 100%;
-    height: 280px; 
-    }
-   .marketing-grid-div1 video {
+    height: 350px;
+  }
+
+  .marketing-grid-div1 video,
+  .marketing-grid-div7 video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-    }
-  .marketing-grid-div2 { width: 90%; height: 130px; margin: 0 auto; }
-  .marketing-grid-div3 { width: 100%; height: 160px; }
-  .marketing-grid-div4 {
-     width: 48%; 
-     height: 100px; 
-     margin: 0 auto; 
-     margin-left: 0px;
-    }
-  .marketing-grid-div5 { 
-    width: 48%; 
-    height: 100px; 
+  }
+
+  .marketing-grid-div2 {
+    width: 90%;
+    height: 130px;
     margin: 0 auto;
-    margin-right: 0px; 
+  }
+
+  .marketing-grid-div3 {
+    width: 100%;
+    height: 260px;
+  }
+
+  .marketing-grid-div4 {
+    width: 48%;
+    height: 100px;
+    margin: 0 auto;
+    margin-left: 0;
+  }
+
+  .marketing-grid-div5 {
+    width: 48%;
+    height: 100px;
+    margin: 0 auto;
+    margin-right: 0;
     margin-top: -110px;
-}
-  .marketing-grid-div6 { width: 100%; height: 170px; }
+  }
+
+  .marketing-grid-div6 {
+    width: 100%;
+    height: 270px;
+  }
 
   .marketing-grid-div7 {
-     width: 95%; 
-     height: 280px; 
-     margin: 0 auto; 
-    }
-  .marketing-grid-div8 { width: 90%; height: 150px; margin: 0 auto; }
-  .marketing-grid-div9 { width: 100%; height: 140px; }
-  .marketing-grid-div10 { width: 80%; height: 190px; margin: 0 auto; }
-  .marketing-grid-div11 { width: 60%; height: 80px; margin: 0 auto; }
-  .marketing-grid-div12 { width: 60%; height: 80px; margin: 0 auto; }
-  .marketing-grid-div13 { width: 85%; height: 120px; margin: 0 auto; }
-  .marketing-grid-div14 { width: 90%; height: 140px; margin: 0 auto; }
-  .marketing-grid-div15 { width: 70%; height: 90px; margin: 0 auto; }
-  .marketing-grid-div16 { width: 95%; height: 150px; margin: 0 auto; }
-  .marketing-grid-div17 { width: 100%; height: 110px; }
-  .marketing-grid-div18 { width: 80%; height: 100px; margin: 0 auto; }
-  .marketing-grid-div19 { width: 100%; height: 120px; }
-  
+    width: 100%;
+    height: 210px;
+    margin: 0 auto;
+  }
+
+  .marketing-grid-div8 {
+    width: 100%;
+    height: 180px;
+    margin: 0 auto;
+  }
+
+  .marketing-grid-div9 {
+    width: 100%;
+    height: 140px;
+  }
+
+  .marketing-grid-div10 {
+    width: 80%;
+    height: 190px;
+    margin: 0 auto;
+  }
+
+  .marketing-grid-div11 {
+    width: 100%;
+    height: 80px;
+    margin: 0 auto;
+  }
+
+  .marketing-grid-div12 {
+    width: 60%;
+    height: 80px;
+    margin: 0 auto;
+  }
+
+  .marketing-grid-div13 {
+    width: 85%;
+    height: 120px;
+    margin: 0 auto;
+  }
+
+  .marketing-grid-div14 {
+    width: 90%;
+    height: 140px;
+    margin: 0 auto;
+  }
+
+  .marketing-grid-div15 {
+    width: 70%;
+    height: 90px;
+    margin: 0 auto;
+    display: none;
+  }
+
+  .marketing-grid-div16 {
+    width: 95%;
+    height: 150px;
+    margin: 0 auto;
+  }
+
+  .marketing-grid-div17 {
+    width: 100%;
+    height: 110px;
+  }
+
+  .marketing-grid-div18 {
+    width: 80%;
+    height: 100px;
+    margin: 0 auto;
+  }
+
+  .marketing-grid-div19 {
+    width: 100%;
+    height: 120px;
+  }
+.marketing-grid-div20 {
+    width: 100%;
+    height: 120px;
+  }
+  /* Typography */
   .marketing-grid-div h2,
   .marketing-grid-div h3 {
-    font-size: 14px;
+    font-size: 30px;
+    color: black !important;
   }
-  
+
   .marketing-grid-div p {
-    font-size: 11px;
+    font-size: 18px;
+    color: rgb(255, 255, 255) !important;
   }
 }

@@ -1064,8 +1064,8 @@ const WhyUs3DCards = () => {
     padding: 0.8rem;
   }
   
-  .section-title {
-    font-size: 1.6rem;
+ .whysection-title {
+    font-size: 1.3rem;
   }
   
   .section-subtitle {
