@@ -148,7 +148,7 @@ const WhyUs3DCards = () => {
 
       <div className="why-us-content">
         <div className="whysection-header">
-          <h2 className="whysection-title">Creating Designs to Elevate your Brand</h2>
+          <h2 className="whysection-title">CREATING DESIGNS TO ELEVATE YOUR BRAND</h2>
         </div>
 
         <div className={`cards-container ${selectedCard ? 'expanded' : ''}`}>
@@ -344,7 +344,8 @@ const WhyUs3DCards = () => {
 
 .whysection-title {
   font-family: 'sarabun';
-  font-size: 3rem;
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
   font-weight: normal;
   margin-bottom: 1rem;
   text-align:center;
@@ -511,8 +512,9 @@ const WhyUs3DCards = () => {
 
 .card-title {
   font-size: 1.5rem;
-  font-weight: 600;
-  font-family: 'sarabun', sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.2rem;
+  font-family: 'sarabun';
   margin-bottom: 0.5rem;
   line-height: 1.2;
 }
@@ -565,12 +567,13 @@ const WhyUs3DCards = () => {
 }
 
 .card-hover-effect span {
-  background: #D84040;
+  background: #8e1616;
   color: white;
   padding: 0.4rem 0.8rem;
   border-radius: 16px;
-  font-size: 0.8rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-family: 'sarabun';
+  font-weight: normal;
   white-space: nowrap;
 }
 
@@ -1065,7 +1068,8 @@ const WhyUs3DCards = () => {
   }
   
  .whysection-title {
-    font-size: 1.3rem;
+    font-size: .6rem;
+    letter-spacing: 0.2rem;
     margin-bottom: 02rem;
     margin-top: -1rem;
   }
@@ -1090,6 +1094,8 @@ const WhyUs3DCards = () => {
   
   .card-title {
     font-size: 1.2rem;
+    font-weight: normal;
+    letter-spacing: 0.1rem;
   }
   
   .card-subtitle {

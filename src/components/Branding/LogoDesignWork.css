@@ -253,14 +253,14 @@
 .carousel3d-indicators {
   display: flex;
   justify-content: center;
-  gap: 12px;
+  gap: 8px;
 }
 
 .carousel3d-dot {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background: rgba(237, 128, 128, 0.4);
+  background: rgba(240, 70, 70, 0.4);
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -273,7 +273,7 @@
 
 .carousel3d-dot--active {
   background: #8e1616;
-  transform: scale(1.4);
+  transform: scale(1.2);
 }
 
 /* ====== RESPONSIVE DESIGN ====== */
