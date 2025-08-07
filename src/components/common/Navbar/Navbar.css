@@ -13,6 +13,7 @@
   --border-color: #e0e0e0;
   --shadow-color: rgba(0, 0, 0, 0.1);
   --transition: all 0.3s ease;
+  --overlay-bg: rgba(255, 255, 255, 0.95);
 }
 
 body.dark {
@@ -20,6 +21,7 @@ body.dark {
   --text-color: #ffffff;
   --border-color: #333333;
   --shadow-color: rgba(255, 255, 255, 0.1);
+  --overlay-bg: rgba(18, 18, 18, 0.95);
 }
 
 /* ========== NAVBAR BASE ========== */
@@ -139,7 +141,6 @@ body.dark {
   min-width: 250px;
 }
 
-
 /* ========== CTA BUTTON ========== */
 .navbar-cta {
   padding: 0.3rem 0.3rem;
@@ -197,11 +198,155 @@ body.dark {
   align-items: center;
   cursor: pointer;
   transition: var(--transition);
+  z-index: 1002;
+  position: relative;
 }
 
 .hamburger-icon:hover {
   background-color: var(--text-color);
   color: var(--bg-color);
+}
+
+/* ========== FULLSCREEN MOBILE MENU ========== */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--overlay-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1001;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-overlay.open .mobile-menu-content {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.mobile-menu-links a {
+  font-family: 'Sarabun', sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 1rem 0;
+  position: relative;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-overlay.open .mobile-menu-links a {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered animation for menu items */
+.mobile-menu-overlay.open .mobile-menu-links a:nth-child(1) { transition-delay: 0.1s; }
+.mobile-menu-overlay.open .mobile-menu-links a:nth-child(2) { transition-delay: 0.2s; }
+.mobile-menu-overlay.open .mobile-menu-links a:nth-child(3) { transition-delay: 0.3s; }
+.mobile-menu-overlay.open .mobile-menu-links a:nth-child(4) { transition-delay: 0.4s; }
+.mobile-menu-overlay.open .mobile-menu-links a:nth-child(5) { transition-delay: 0.5s; }
+
+.mobile-menu-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.mobile-menu-links a:hover::after {
+  width: 80%;
+}
+
+.mobile-menu-links a:hover {
+  color: var(--primary-color);
+}
+
+.mobile-menu-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.3s ease 0.6s;
+}
+
+.mobile-menu-overlay.open .mobile-menu-actions {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Close button */
+.menu-close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid var(--text-color);
+  border-radius: 50%;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.5);
+}
+
+.mobile-menu-overlay.open .menu-close {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+  transition-delay: 0.2s;
+}
+
+.menu-close:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  transform: rotate(90deg) scale(1.1);
+}
+
+/* Prevent body scroll when menu is open */
+body.menu-open {
+  overflow: hidden;
 }
 
 /* ========== VISIBILITY CLASSES ========== */
@@ -324,34 +469,10 @@ body.dark {
   .navbar-logo{
     margin-left: 0px;
   }
+  
+  /* Hide desktop navigation links */
   .navbar-links {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: var(--bg-color);
-    flex-direction: column;
-    padding: 1.5rem;
-    gap: 1.5rem;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-20px);
-    transition: var(--transition);
-    box-shadow: 0 4px 20px var(--shadow-color);
-    border-top: 1px solid var(--border-color);
-  }
-
-  .navbar-links.open {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-
-  .navbar-links a {
-    width: 100%;
-    text-align: center;
-    padding: 12px 0;
-    font-size: 16px;
+    display: none !important;
   }
 
   .navbar-cta {
@@ -397,14 +518,8 @@ body.dark {
     display: none;
   }
   
-  .navbar-links {
-    padding: 1rem;
-    gap: 1rem;
-  }
-  
-  .navbar-links a {
-    font-size: 14px;
-    padding: 10px 0;
+  .mobile-menu-links a {
+    font-size: 1.5rem;
   }
   
   .navbar-cta {
@@ -416,11 +531,21 @@ body.dark {
     gap: 0.3rem;
   }
   
-  .dark-toggle,
+  .dark-toggle{
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
   .hamburger-icon {
     width: 35px;
     height: 35px;
     font-size: 14px;
+    margin-top: -5px;
+  }
+  .menu-close {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
   }
 }
 
@@ -446,6 +571,10 @@ body.dark {
     height: 40px;
     font-size: 20px;
     font-weight: normal;
+  }
+  
+  .mobile-menu-links a {
+    font-size: 1.2rem;
   }
 }
 
@@ -494,15 +623,23 @@ body.dark {
   }
 }
 
-.navbar-links.open {
-  animation: fadeInUp 0.3s ease-out;
+@keyframes slideInScale {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 
 /* ========== FOCUS STATES ========== */
 .navbar-links a:focus,
 .navbar-cta:focus,
 .dark-toggle:focus,
-.hamburger-icon:focus {
+.hamburger-icon:focus,
+.menu-close:focus {
   outline: 2px solid var(--primary-color);
   outline-offset: 2px;
 }

@@ -21,80 +21,171 @@ const Navbar = () => {
     document.body.classList.toggle('dark', darkMode)
   }, [darkMode])
 
-  return (
-    <header className="navbar">
-      <div className="navbar-container">
-        <div className="navbar-logo">
-          <img
-            src={darkMode ? logoDark : logoLight}
-            alt="Logo"
-            className="logo-img"
-          />
-        </div>
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    document.body.classList.toggle('menu-open', menuOpen)
+    
+    // Cleanup on unmount
+    return () => {
+      document.body.classList.remove('menu-open')
+    }
+  }, [menuOpen])
 
-        <div className="navbar-actions mobile-only">
-          <MoonSunToggle
-            darkMode={darkMode}
-            onToggle={toggleDarkMode}
-            className="mobile-only"
-          />
-          <div
-            className="hamburger-icon"
-            onClick={toggleMenu}
-            aria-label="Toggle Menu"
-          >
-            {menuOpen ? <FaTimes /> : <FaBars />}
+  // Close menu on route change
+  useEffect(() => {
+    setMenuOpen(false)
+  }, [location])
+
+  // Handle overlay click to close menu
+  const handleOverlayClick = (e) => {
+    if (e.target === e.currentTarget) {
+      closeMenu()
+    }
+  }
+
+  return (
+    <>
+      <header className="navbar">
+        <div className="navbar-container">
+          <div className="navbar-logo">
+            <img
+              src={darkMode ? logoDark : logoLight}
+              alt="Logo"
+              className="logo-img"
+            />
+          </div>
+
+          {/* Desktop Navigation Links */}
+          <nav className="navbar-links desktop-only">
+            <Link
+              to="/"
+              className={location.pathname === '/' ? 'active' : ''}
+            >
+              HOME
+            </Link>
+
+            <Link
+              to="/branding"
+              className={location.pathname === '/branding' ? 'active' : ''}
+            >
+              BRANDING
+            </Link>
+
+            <Link
+              to="/digital-marketing"
+              className={location.pathname === '/digital-marketing' ? 'active' : ''}
+            >
+              DIGITAL-MARKETING
+            </Link>
+
+            <Link
+              to="/development"
+              className={location.pathname === '/development' ? 'active' : ''}
+            >
+              DEVELOPMENT
+            </Link>
+          </nav>
+
+          {/* Desktop Actions */}
+          <div className="navbar-actions desktop-only">
+            <button
+              className="navbar-cta"
+              onClick={() => window.open('https://wa.me/917838649867', '_blank')}
+            >
+              <span className="cta-content">WhatsApp Now</span>
+            </button>
+
+            <MoonSunToggle
+              darkMode={darkMode}
+              onToggle={toggleDarkMode}
+            />
+          </div>
+
+          {/* Mobile Actions */}
+          <div className="navbar-actions mobile-only">
+            <MoonSunToggle
+              darkMode={darkMode}
+              onToggle={toggleDarkMode}
+            />
+
+            <div
+              className="hamburger-icon"
+              onClick={toggleMenu}
+              aria-label="Toggle Menu"
+            >
+              <FaBars />
+            </div>
           </div>
         </div>
+      </header>
 
-        <nav className={`navbar-links ${menuOpen ? 'open' : ''}`}>
-          <Link
-            to="/"
-            onClick={closeMenu}
-            className={location.pathname === '/' ? 'active' : ''}
-          >
-            HOME
-          </Link>
-
-          <Link
-            to="/branding"
-            onClick={closeMenu}
-            className={location.pathname === '/branding' ? 'active' : ''}
-          >
-            BRANDING
-          </Link>
-
-          <Link
-            to="/digital-marketing"
-            onClick={closeMenu}
-            className={location.pathname === '/digital-marketing' ? 'active' : ''}
-          >
-            DIGITAL-MARKETING
-          </Link>
-
-          <Link
-            to="/development"
-            onClick={closeMenu}
-            className={location.pathname === '/development' ? 'active' : ''}
-          >
-            DEVELOPMENT
-          </Link>
-        </nav>
-
-        <button
-          className="navbar-cta desktop-only"
-          onClick={() => window.open('https://wa.me/917838649867', '_blank')}
+      {/* Full Screen Mobile Menu Overlay */}
+      <div 
+        className={`mobile-menu-overlay ${menuOpen ? 'open' : ''}`}
+        onClick={handleOverlayClick}
+      >
+        <button 
+          className="menu-close" 
+          onClick={closeMenu}
+          aria-label="Close Menu"
         >
-          <span className="cta-content">WhatsApp Now</span>
+          <FaTimes />
         </button>
+        
+        <div className="mobile-menu-content">
+          <nav className="mobile-menu-links">
+            <Link
+              to="/"
+              onClick={closeMenu}
+              className={location.pathname === '/' ? 'active' : ''}
+            >
+              HOME
+            </Link>
 
-        <MoonSunToggle
-          darkMode={darkMode}
-          onToggle={toggleDarkMode}
-          className="desktop-only"
-        />
+            <Link
+              to="/branding"
+              onClick={closeMenu}
+              className={location.pathname === '/branding' ? 'active' : ''}
+            >
+              BRANDING
+            </Link>
+
+            <Link
+              to="/digital-marketing"
+              onClick={closeMenu}
+              className={location.pathname === '/digital-marketing' ? 'active' : ''}
+            >
+              DIGITAL-MARKETING
+            </Link>
+
+            <Link
+              to="/development"
+              onClick={closeMenu}
+              className={location.pathname === '/development' ? 'active' : ''}
+            >
+              DEVELOPMENT
+            </Link>
+          </nav>
+          
+          <div className="mobile-menu-actions">
+            <button
+              className="navbar-cta"
+              onClick={() => {
+                window.open('https://wa.me/917838649867', '_blank')
+                closeMenu()
+              }}
+            >
+              <span className="cta-content">WhatsApp Now</span>
+            </button>
+            
+            <MoonSunToggle
+              darkMode={darkMode}
+              onToggle={toggleDarkMode}
+            />
+          </div>
+        </div>
       </div>
-    </header>
+    </>
   )
 }
 
