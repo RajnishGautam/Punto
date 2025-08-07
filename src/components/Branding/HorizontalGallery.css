@@ -41,7 +41,7 @@
   background: var(--bg-color);
   position: relative;
   overflow: hidden;
-  font-family: 'Sarabun', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Sarabun';
 }
 
 /* ====== FLOATING BACKGROUND ELEMENTS ====== */
@@ -105,7 +105,8 @@
 .hg-gallery-title {
   font-family: sarabun;
   font-weight: normal;
-  font-size: 4rem;
+  font-size: 2rem;
+  letter-spacing: .2rem;
   color: var(--text-color);
   animation: hg-fadeInUp 1s ease-out forwards;
   opacity: 0;
@@ -601,7 +602,7 @@
 }
 
 .hg-cta-button:hover {
-  background: #eab0b0;
+  background: #ec0f0f;
   transform: translateY(-2px);
 }
 
@@ -614,14 +615,31 @@
     display: none;
   }
 .hg-gallery-subtitle {
-    font-size: 1.5rem;
+    font-size: .8rem;
+    margin-bottom: 1rem;
   }
   .hg-gallery-title{
-    font-size: 2.5rem;
+    font-size: 1rem;
   }
   .hg-mobile-carousel-viewport {
     display: block;
   }
+  .hg-navigation-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    gap: 0.4rem;
+  }
+  .hg-nav-dot {
+  width: 5px;
+  height: 5px;
+  background: #8e1616;
+  opacity: 0.3;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
 }
 
 @media (min-width: 426px) {
