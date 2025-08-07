@@ -86,21 +86,18 @@ const Navbar = () => {
           </nav>
 
           {/* Desktop Actions */}
-         <div className="navbar-whatsapp desktop-only">
-  <button
-    className="navbar-contact"
-    onClick={() =>
-      window.open('https://wa.me/917838649867', '_blank')
-    }
-  >
-    <span className="contact-content">WhatsApp Now</span>
-  </button>
-</div>
+          <div className="navbar-actions desktop-only">
+            <button
+              className="navbar-contact"
+              onClick={() =>
+                window.open('https://wa.me/917838649867', '_blank')
+              }
+            >
+              <span className="contact-content">WhatsApp Now</span>
+            </button>
 
-<div className="navbar-darkmode desktop-only">
-  <MoonSunToggle darkMode={darkMode} onToggle={toggleDarkMode} />
-</div>
-
+            <MoonSunToggle darkMode={darkMode} onToggle={toggleDarkMode} />
+          </div>
 
           {/* Mobile Actions */}
           <div className="navbar-actions mobile-only">
