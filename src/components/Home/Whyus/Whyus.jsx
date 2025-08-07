@@ -395,26 +395,36 @@ const WhyUs3DCards = () => {
   width: 100%;
   max-width: 380px;
   height: 220px;
-  backdrop-filter: blur(20px);
-  border-radius: 20px;
   position: relative;
-  cursor: pointer;
-  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 20px;
   overflow: hidden;
+  cursor: pointer;
+  backdrop-filter: blur(25px) saturate(160%);
+  -webkit-backdrop-filter: blur(25px) saturate(160%);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   animation: cardFloat 4s ease-in-out infinite;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.12),
+    0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 .dark .floating-card {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 25px 50px rgba(255, 255, 255, 0.05),
+    0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
 .light .floating-card {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.55);
   border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow:
-    0 12px 40px rgba(0, 0, 0, 0.08),
-    0 4px 16px rgba(0, 0, 0, 0.04);
+    inset 0 0 0 1px rgba(255, 255, 255, 0.25),
+    0 12px 40px rgba(0, 0, 0, 0.15),
+    0 4px 16px rgba(0, 0, 0, 0.06);
 }
 
 .card-1 { animation-delay: 0s; }
@@ -435,7 +445,9 @@ const WhyUs3DCards = () => {
 }
 
 .dark .floating-card:hover {
-  box-shadow: 0 25px 50px rgba(142, 22, 22, 0.4);
+  box-shadow:
+    0 30px 60px rgba(255, 255, 255, 0.1),
+    0 20px 40px rgba(255, 255, 255, 0.05);
 }
 
 .light .floating-card:hover {
@@ -451,14 +463,15 @@ const WhyUs3DCards = () => {
   width: 200%;
   height: 200%;
   background: linear-gradient(
-    45deg,
-    transparent,
+    120deg,
+    rgba(255, 255, 255, 0.2),
     rgba(255, 255, 255, 0.1),
-    transparent
+    rgba(255, 255, 255, 0.2)
   );
   transform: rotate(-45deg);
   transition: all 0.6s ease;
   opacity: 0;
+  pointer-events: none;
 }
 
 .floating-card:hover .card-glow {
@@ -474,6 +487,7 @@ const WhyUs3DCards = () => {
     transform: rotate(-45deg) translateX(100%);
   }
 }
+
 
 .card-content {
   position: relative;
@@ -569,7 +583,7 @@ const WhyUs3DCards = () => {
 .card-hover-effect span {
   background: #8e1616;
   color: white;
-  padding: 0.4rem 0.8rem;
+  padding: 0.2rem 0.6rem;
   border-radius: 16px;
   font-size: 1.5rem;
   font-family: 'sarabun';

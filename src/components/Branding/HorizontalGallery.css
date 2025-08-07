@@ -137,14 +137,14 @@
 
 /* ====== DESKTOP/TABLET HORIZONTAL GALLERY ====== */
 .hg-gallery-wrapper {
-  max-width: 95%;
+  max-width: 98%;
   margin: 0 auto;
   padding: 0 1rem 1rem;
 }
 
 .hg-gallery-flex {
   display: flex;
-  gap: 1rem;
+  gap: .8rem;
   height: 30rem;
   position: relative;
 }
@@ -166,6 +166,7 @@
 .hg-gallery-panel.hg-inactive {
   flex: 1;
   z-index: 10;
+  min-width: 5rem;
 }
 
 .hg-gallery-panel.hg-inactive:hover {
@@ -588,23 +589,47 @@
 }
 
 .hg-cta-button {
-  background: #8e1616;
+  position: relative;
+  background: transparent;
   color: white;
-  border: none;
-  padding: .5rem 1rem;
-  font-family: sarabun;
+  border: 2px solid #ff4c4c; /* red neon border */
+  padding: 0.5rem 2.5rem;
+  font-family: 'Sarabun', sans-serif;
   font-size: 1.5rem;
   font-weight: normal;
-  border-radius: 03rem;
+  border-radius: 3rem;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 76, 76, 0.5); /* soft outer glow */
+  overflow: hidden;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.hg-cta-button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 76, 76, 0.3) 0%, transparent 70%);
+  z-index: -1;
+  transition: opacity 0.4s ease;
+  opacity: 0;
+  border-radius: 50%;
 }
 
 .hg-cta-button:hover {
-  background: #ec0f0f;
-  transform: translateY(-2px);
+  background: rgba(255, 76, 76, 0.1); /* soft red background on hover */
+  box-shadow: 0 0 25px rgba(255, 76, 76, 0.9), inset 0 0 15px rgba(255, 76, 76, 0.3);
+  transform: translateY(-3px);
 }
+
+.hg-cta-button:hover::before {
+  opacity: 1;
+}
+
 
 /* ====== RESPONSIVE VISIBILITY ====== */
 @media (max-width: 426px) {

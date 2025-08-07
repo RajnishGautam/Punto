@@ -6,7 +6,7 @@ const teamMembers = [
   {
     name: 'Vin Diesel',
     role: 'Senior App Developer',
-    img: 'https://1.bp.blogspot.com/-8c7QTLoyajs/YLjr2V6KYRI/AAAAAAAACO8/ViVPQpLWVM0jGh3RZhh-Ha1-1r3Oj62wQCNcBGAsYHQ/s16000/team-1-3.jpg',
+    img: '/team/Diego.jpg',
     instagram: 'https://instagram.com/vindiesel',
     whatsapp: 'https://wa.me/1234567890',
     linkedin: 'https://linkedin.com/in/vindiesel',
@@ -14,7 +14,7 @@ const teamMembers = [
   {
     name: 'David Corner',
     role: 'Front End Developer',
-    img: 'https://1.bp.blogspot.com/-vhmWFWO2r8U/YLjr2A57toI/AAAAAAAACO4/0GBonlEZPmAiQW4uvkCTm5LvlJVd_-l_wCNcBGAsYHQ/s16000/team-1-2.jpg',
+    img: '/team/Diego.jpg',
     instagram: 'https://instagram.com/davidcorner',
     whatsapp: 'https://wa.me/1234567890',
     linkedin: 'https://linkedin.com/in/davidcorner',
@@ -22,7 +22,7 @@ const teamMembers = [
   {
     name: 'Tom Cruise',
     role: 'Full Stack Developer',
-    img: 'https://1.bp.blogspot.com/-AO5j2Y9lzME/YLjr3mxiqAI/AAAAAAAACPE/KAaYYTtQTrgBE3diTbxGoc4U4fCGx-C2gCNcBGAsYHQ/s16000/team-1-4.jpg',
+    img: '/team/Diego.jpg',
     instagram: 'https://instagram.com/tomcruise',
     whatsapp: 'https://wa.me/1234567890',
     linkedin: 'https://linkedin.com/in/tomcruise',
@@ -30,7 +30,7 @@ const teamMembers = [
   {
     name: 'Emma Watson',
     role: 'UI/UX Designer',
-    img: 'https://randomuser.me/api/portraits/women/44.jpg',
+    img: '/team/Diego.jpg',
     instagram: 'https://instagram.com/emmawatson',
     whatsapp: 'https://wa.me/1234567890',
     linkedin: 'https://linkedin.com/in/emmawatson',
@@ -38,7 +38,7 @@ const teamMembers = [
   {
     name: 'Chris Evans',
     role: 'React Developer',
-    img: 'https://randomuser.me/api/portraits/men/32.jpg',
+    img: '/team/Diego.jpg',
     instagram: 'https://instagram.com/chrisevans',
     whatsapp: 'https://wa.me/1234567890',
     linkedin: 'https://linkedin.com/in/chrisevans',
@@ -46,7 +46,7 @@ const teamMembers = [
   {
     name: 'Scarlett Johansson',
     role: 'Backend Engineer',
-    img: 'https://randomuser.me/api/portraits/women/55.jpg',
+    img: '/team/Diego.jpg',
     instagram: 'https://instagram.com/scarlettjohansson',
     whatsapp: 'https://wa.me/1234567890',
     linkedin: 'https://linkedin.com/in/scarlettjohansson',
@@ -54,7 +54,7 @@ const teamMembers = [
   {
     name: 'Robert Downey',
     role: 'DevOps Engineer',
-    img: 'https://randomuser.me/api/portraits/men/45.jpg',
+    img: '/team/Diego.jpg',
     instagram: 'https://instagram.com/robertdowney',
     whatsapp: 'https://wa.me/1234567890',
     linkedin: 'https://linkedin.com/in/robertdowney',
@@ -62,7 +62,7 @@ const teamMembers = [
   {
     name: 'Gal Gadot',
     role: 'QA Engineer',
-    img: 'https://randomuser.me/api/portraits/women/52.jpg',
+    img: '/team/Diego.jpg',
     instagram: 'https://instagram.com/galgadot',
     whatsapp: 'https://wa.me/1234567890',
     linkedin: 'https://linkedin.com/in/galgadot',

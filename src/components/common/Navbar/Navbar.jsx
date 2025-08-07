@@ -24,7 +24,7 @@ const Navbar = () => {
   // Prevent body scroll when menu is open
   useEffect(() => {
     document.body.classList.toggle('menu-open', menuOpen)
-    
+
     // Cleanup on unmount
     return () => {
       document.body.classList.remove('menu-open')
@@ -57,10 +57,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation Links */}
           <nav className="navbar-links desktop-only">
-            <Link
-              to="/"
-              className={location.pathname === '/' ? 'active' : ''}
-            >
+            <Link to="/" className={location.pathname === '/' ? 'active' : ''}>
               HOME
             </Link>
 
@@ -73,7 +70,9 @@ const Navbar = () => {
 
             <Link
               to="/digital-marketing"
-              className={location.pathname === '/digital-marketing' ? 'active' : ''}
+              className={
+                location.pathname === '/digital-marketing' ? 'active' : ''
+              }
             >
               DIGITAL-MARKETING
             </Link>
@@ -87,26 +86,25 @@ const Navbar = () => {
           </nav>
 
           {/* Desktop Actions */}
-          <div className="navbar-actions desktop-only">
-            <button
-              className="navbar-cta"
-              onClick={() => window.open('https://wa.me/917838649867', '_blank')}
-            >
-              <span className="cta-content">WhatsApp Now</span>
-            </button>
+         <div className="navbar-whatsapp desktop-only">
+  <button
+    className="navbar-contact"
+    onClick={() =>
+      window.open('https://wa.me/917838649867', '_blank')
+    }
+  >
+    <span className="contact-content">WhatsApp Now</span>
+  </button>
+</div>
 
-            <MoonSunToggle
-              darkMode={darkMode}
-              onToggle={toggleDarkMode}
-            />
-          </div>
+<div className="navbar-darkmode desktop-only">
+  <MoonSunToggle darkMode={darkMode} onToggle={toggleDarkMode} />
+</div>
+
 
           {/* Mobile Actions */}
           <div className="navbar-actions mobile-only">
-            <MoonSunToggle
-              darkMode={darkMode}
-              onToggle={toggleDarkMode}
-            />
+            <MoonSunToggle darkMode={darkMode} onToggle={toggleDarkMode} />
 
             <div
               className="hamburger-icon"
@@ -120,18 +118,18 @@ const Navbar = () => {
       </header>
 
       {/* Full Screen Mobile Menu Overlay */}
-      <div 
+      <div
         className={`mobile-menu-overlay ${menuOpen ? 'open' : ''}`}
         onClick={handleOverlayClick}
       >
-        <button 
-          className="menu-close" 
+        <button
+          className="menu-close"
           onClick={closeMenu}
           aria-label="Close Menu"
         >
           <FaTimes />
         </button>
-        
+
         <div className="mobile-menu-content">
           <nav className="mobile-menu-links">
             <Link
@@ -153,7 +151,9 @@ const Navbar = () => {
             <Link
               to="/digital-marketing"
               onClick={closeMenu}
-              className={location.pathname === '/digital-marketing' ? 'active' : ''}
+              className={
+                location.pathname === '/digital-marketing' ? 'active' : ''
+              }
             >
               DIGITAL-MARKETING
             </Link>
@@ -166,22 +166,19 @@ const Navbar = () => {
               DEVELOPMENT
             </Link>
           </nav>
-          
+
           <div className="mobile-menu-actions">
             <button
-              className="navbar-cta"
+              className="navbar-contact"
               onClick={() => {
                 window.open('https://wa.me/917838649867', '_blank')
                 closeMenu()
               }}
             >
-              <span className="cta-content">WhatsApp Now</span>
+              <span className="contact-content">WhatsApp Now</span>
             </button>
-            
-            <MoonSunToggle
-              darkMode={darkMode}
-              onToggle={toggleDarkMode}
-            />
+
+            <MoonSunToggle darkMode={darkMode} onToggle={toggleDarkMode} />
           </div>
         </div>
       </div>

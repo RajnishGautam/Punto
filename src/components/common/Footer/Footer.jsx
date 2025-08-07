@@ -44,12 +44,18 @@ const Footer = () => {
             <h3 className="contactsection-title">Contact Us</h3>
             <div className="contact-info">
               <div className="contact-item">
-                <p>Head Branch : 7dot It Solutions </p>
-                <p>Lucknow, Chandigarh </p>
+                <p>Head Branch: 7dot It Solutions</p>
+                <p>Lucknow, Chandigarh</p>
               </div>
-              <p className="contact-item">Phone: +91 7838649867</p>
-              <p className="contact-item">Phone: +52 6643669369</p>
-              <p className="contact-item">Mail:hello@punto7x.com </p>
+              <p className="contact-item">
+                Phone: <a href="tel:+917838649867">+91 7838649867</a>
+              </p>
+              <p className="contact-item">
+                Phone: <a href="tel:+526643669369">+52 6643669369</a>
+              </p>
+              <p className="contact-item">
+                Mail: <a href="mailto:hello@punto7x.com">hello@punto7x.com</a>
+              </p>
             </div>
           </div>
 

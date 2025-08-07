@@ -58,13 +58,16 @@ const HeroWithVideo = () => {
     }
 
     try {
-      const response = await fetch('https://contactformproxy.onrender.com/submit-form', {
-        method: 'POST',
-        body: JSON.stringify({ name, email, phone, message }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      })
+      const response = await fetch(
+        'https://contactformproxy.onrender.com/submit-form',
+        {
+          method: 'POST',
+          body: JSON.stringify({ name, email, phone, message }),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      )
 
       const result = await response.json()
       if (result.result === 'success') {
@@ -87,10 +90,39 @@ const HeroWithVideo = () => {
       <div className="hero-container">
         {/* Social Icons */}
         <div className="hero-socials">
-          <a href="#" className="social-icon"><FaFacebookF /></a>
-          <a href="#" className="social-icon"><FaInstagram /></a>
-          <a href="#" className="social-icon"><FaWhatsapp /></a>
-          <a href="#" className="social-icon"><FaLinkedin /></a>
+          <a
+            href="https://www.facebook.com/share/1CRjRz1M3j/"
+            className="social-icon"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaFacebookF />
+          </a>
+          <a
+            href="https://www.instagram.com/punto7x_in?igsh=eWhyYTZ2bHdjYXFx"
+            className="social-icon"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaInstagram />
+          </a>
+          <a
+            href="https://wa.me/917838649867"
+            className="social-icon"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaWhatsapp />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/7dot-it-soln/"
+            className="social-icon"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin />
+          </a>
+
           <div className="social-scroll">
             <div className="scroll-dot" />
             <div className="scroll-line" />
@@ -107,19 +139,32 @@ const HeroWithVideo = () => {
           </div>
 
           <p className="hero-desc">
-            We'd love to hear from you. Fill out the form and our team will get back to you shortly.
+            We'd love to hear from you. Fill out the form and our team will get
+            back to you shortly.
           </p>
 
           <form className="contact-form" onSubmit={handleSubmit}>
             <input type="text" name="name" placeholder="Your Name" required />
-            <input type="email" name="email" placeholder="Your Email" required />
-            <input type="tel" name="phone" placeholder="+91 9999999999" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="+91 9999999999"
+              required
+            />
             <textarea
               name="message"
               placeholder="Your Message (Optional)"
               rows="5"
             ></textarea>
-            <button type="submit" className="submit-button">Get A Call</button>
+            <button type="submit" className="submit-button">
+              Get A Call
+            </button>
           </form>
 
           {showSuccess && (
