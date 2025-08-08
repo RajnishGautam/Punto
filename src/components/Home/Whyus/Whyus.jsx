@@ -1115,7 +1115,9 @@ const WhyUs3DCards = () => {
   .card-subtitle {
     font-size: 0.8rem;
   }
-  
+  .floating-card:hover .card-hover-effect {
+  display:none;
+  }
   .expanded-card {
     padding: 1rem;
     gap: 1rem;
