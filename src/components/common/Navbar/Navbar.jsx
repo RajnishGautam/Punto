@@ -175,7 +175,7 @@ const Navbar = () => {
               <span className="contact-content">WhatsApp Now</span>
             </button>
 
-            <MoonSunToggle darkMode={darkMode} onToggle={toggleDarkMode} />
+            {/* <MoonSunToggle darkMode={darkMode} onToggle={toggleDarkMode} /> */}
           </div>
         </div>
       </div>
