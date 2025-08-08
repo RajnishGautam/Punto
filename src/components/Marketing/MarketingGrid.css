@@ -85,7 +85,13 @@
   padding: 1rem;
   color: white;
 }
-
+.marketing-grid-div2 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.2);
+}
 /* Matrix-style animated background */
 .seo-animation-bg {
   position: absolute;
@@ -251,7 +257,14 @@
   grid-row: span 3 / span 3;
   grid-row-start: 9;
 }
-
+.marketing-grid-div9 img.grid9-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.1);
+}
 .marketing-grid-div10 {
   grid-row: span 6 / span 6;
   grid-column-start: 5;
@@ -315,7 +328,12 @@
   grid-column-start: 4;
   grid-row-start: 15;
 }
-
+.marketing-grid-div16 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 .marketing-grid-div17 {
   grid-column: span 3 / span 3;
   grid-row: span 2 / span 2;

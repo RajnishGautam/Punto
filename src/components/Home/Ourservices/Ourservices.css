@@ -309,7 +309,12 @@
     cursor: pointer;
     position: relative;
   }
-
+.our-services-section-heading{
+  font-size: 1rem;
+  letter-spacing: .2rem;
+  color: var(--text-color);
+  text-transform: uppercase;
+}
   /* Add a subtle tap indication */
   .our-services-card:active {
     transform: scale(0.98);
@@ -331,7 +336,7 @@
   }
 
   .our-services-title {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: normal;
   }
 

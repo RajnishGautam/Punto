@@ -12,7 +12,7 @@ const MarketingGrid = () => {
 
         {/* Grid Item 2 */}
         <div className="marketing-grid-div marketing-grid-div2">
-          <h3>Grid 2 - Wide Section</h3>
+          <video src="/marketing/grid2.mp4" autoPlay muted loop playsInline />
         </div>
 
         {/* Grid Item 3 */}
@@ -61,8 +61,11 @@ const MarketingGrid = () => {
 
         {/* Grid Item 9 */}
         <div className="marketing-grid-div marketing-grid-div9">
-          <h2>Grid 9 - Wide Section</h2>
-          <p>Perfect for banners or wide content</p>
+          <img
+            src="/marketing/grid9.jpg"
+            alt="SEO Visual"
+            className="grid9-img"
+          />
         </div>
 
         {/* Grid Item 10 */}
@@ -92,13 +95,12 @@ const MarketingGrid = () => {
 
         {/* Grid Item 15 */}
         <div className="marketing-grid-div marketing-grid-div15">
-          <video src="/marketing/grid5.mp4" autoPlay muted loop playsInline />
+          <video src="/marketing/grid15.mp4" autoPlay muted loop playsInline />
         </div>
 
         {/* Grid Item 16 */}
         <div className="marketing-grid-div marketing-grid-div16">
-          <h3>Grid 16</h3>
-          <p>Your content</p>
+          <video src="/marketing/grid16.mp4" autoPlay muted loop playsInline />
         </div>
 
         {/* Grid Item 17 */}

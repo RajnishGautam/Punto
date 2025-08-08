@@ -5,6 +5,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* Remove blue tap highlight on mobile devices */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+/* Prevent unwanted text selection on interactive elements */
+button, 
+input[type="button"], 
+input[type="submit"], 
+input[type="reset"],
+.clickable {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 /* ========================
@@ -51,10 +66,27 @@ a {
   color: var(--link-color);
   text-decoration: none;
   transition: color 0.2s ease;
+  /* Ensure links don't show tap highlight */
+  -webkit-tap-highlight-color: transparent;
 }
 
 a:hover {
   color: var(--hover-color);
+}
+
+/* Remove focus outline but maintain accessibility */
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible),
+input:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Keep focus visible for keyboard navigation */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
 }
 
 /* Scrollbar (optional enhancement) */

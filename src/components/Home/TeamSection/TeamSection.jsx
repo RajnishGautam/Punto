@@ -44,9 +44,9 @@ const teamMembers = [
     linkedin: 'https://linkedin.com/in/chrisevans',
   },
   {
-    name: 'Scarlett Johansson',
+    name: 'Scarlett',
     role: 'Backend Engineer',
-    img: '/team/Diego.jpg',
+    img: '/team/Rajnish.jpg',
     instagram: 'https://instagram.com/scarlettjohansson',
     whatsapp: 'https://wa.me/1234567890',
     linkedin: 'https://linkedin.com/in/scarlettjohansson',
@@ -54,7 +54,7 @@ const teamMembers = [
   {
     name: 'Robert Downey',
     role: 'DevOps Engineer',
-    img: '/team/Diego.jpg',
+    img: '/team/Rajnish.jpg',
     instagram: 'https://instagram.com/robertdowney',
     whatsapp: 'https://wa.me/1234567890',
     linkedin: 'https://linkedin.com/in/robertdowney',
@@ -62,7 +62,7 @@ const teamMembers = [
   {
     name: 'Gal Gadot',
     role: 'QA Engineer',
-    img: '/team/Diego.jpg',
+    img: '/team/Rajnish.jpg',
     instagram: 'https://instagram.com/galgadot',
     whatsapp: 'https://wa.me/1234567890',
     linkedin: 'https://linkedin.com/in/galgadot',

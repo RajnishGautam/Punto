@@ -13,61 +13,61 @@ const LogoDesignWork = () => {
   const images = [
     {
       id: 1,
-      src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "/branding/brand1.JPG",
       title: "Serene Mountain Lake",
       description: "Crystal clear waters reflecting majestic mountain peaks in perfect harmony"
     },
     {
       id: 2,
-      src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "/branding/brand2.JPG",
       title: "Mystical Forest Trail",
       description: "Ancient trees creating a natural cathedral of light and shadow"
     },
     {
       id: 3,
-      src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "/branding/brand3.JPG",
       title: "Endless Ocean Vista",
       description: "Where the infinite ocean meets the boundless sky in eternal dance"
     },
     {
       id: 4,
-      src: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "/branding/brand4.JPG",
       title: "Autumn's Golden Glory",
       description: "Nature's masterpiece painted in vibrant gold and amber hues"
     },
     {
       id: 5,
-      src: "https://images.unsplash.com/photo-1418489098061-ce87b5dc3aee?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "/branding/brand5.JPG",
       title: "Aurora Borealis Magic",
       description: "Dancing lights weaving stories across the arctic night sky"
     },
     {
       id: 6,
-      src: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "/branding/brand6.JPG",
       title: "Tropical Paradise Dream",
       description: "Palm trees swaying gently over pristine white sand beaches"
     },
     {
       id: 7,
-      src: "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "/branding/brand7.JPG",
       title: "Golden Desert Dunes",
       description: "Endless sands sculpted by wind and time into perfect waves"
     },
     {
       id: 8,
-      src: "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "/branding/brand8.JPG",
       title: "Majestic Snow Peaks",
       description: "Towering mountains crowned with eternal snow and morning light"
     },
 {
       id: 9,
-      src: "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "/branding/brand9.JPG",
       title: "Majestic Snow Peaks",
       description: "Towering mountains crowned with eternal snow and morning light"
     },
 {
       id: 10,
-      src: "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "/branding/brand10.JPG",
       title: "Majestic Snow Peaks",
       description: "Towering mountains crowned with eternal snow and morning light"
     }
