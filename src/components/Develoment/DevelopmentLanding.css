@@ -229,13 +229,14 @@
   }
   .development-hero-title {
     font-size: 1.8rem;
-    margin-bottom: 150px;
+    padding-top: -2rem;
   }
   .development-hero-right {
     height: 40vh;
     margin-bottom: 80px;
-    margin-top:-150px;
   }
+
+
   .development-3d-canvas-wrapper {
   position: absolute;
   padding: 0rem;
