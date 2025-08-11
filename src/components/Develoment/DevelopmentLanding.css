@@ -224,6 +224,12 @@
 }
 
 @media (max-width: 480px) {
+  .development-hero-section {
+    padding: 0 0%;
+  }
+  .development-hero-content.loaded {
+    padding: 0;
+  }
   .development-text-content {
     padding-top: -2rem;
   }
