@@ -1,6 +1,6 @@
 .ourteam-main {
   background-color: var(--bg-color);
-  padding: 4rem 10rem;
+  padding: 4rem 20rem;
 }
 
 /* ========== DESKTOP GRID ========== */
@@ -8,7 +8,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, auto);
-  gap:40px;
+  gap: 40px;
   justify-items: center;
   align-items: start;
   justify-content: center;
@@ -53,10 +53,12 @@
   border-radius: 50%;
   box-shadow: 0 0 22px #3336;
   transition: 0.6s;
+  filter: grayscale(100%);
 }
 
 .ourteam-card:hover img {
   border-radius: 10px;
+  filter: grayscale(100%);
 }
 
 .ourteam-caption {
@@ -95,7 +97,7 @@
 
 /* ========== MOBILE CAROUSEL ========== */
 @media screen and (max-width: 768px) {
-  .ourteam-main{
-  display: none;
-}
+  .ourteam-main {
+    display: none;
+  }
 }

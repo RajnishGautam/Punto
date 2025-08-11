@@ -63,9 +63,33 @@ const Footer = () => {
           <div className="career-section">
             <h3 className="contactsection-title">Career</h3>
             <ul className="career-list">
-              <li>Intern</li>
-              <li>Part Time</li>
-              <li>Full Time</li>
+              <li>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSf8yzZGlyXUPrcmm4rrJd-RtnQ4K8WXnpfkVT6XFL7duDtYNg/viewform?usp=header"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Intern
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSf8yzZGlyXUPrcmm4rrJd-RtnQ4K8WXnpfkVT6XFL7duDtYNg/viewform?usp=header"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Part Time
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSf8yzZGlyXUPrcmm4rrJd-RtnQ4K8WXnpfkVT6XFL7duDtYNg/viewform?usp=header"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Full Time
+                </a>
+              </li>
             </ul>
           </div>
 

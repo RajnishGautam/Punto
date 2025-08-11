@@ -163,20 +163,6 @@ const Navbar = () => {
               DEVELOPMENT
             </Link>
           </nav>
-
-          <div className="mobile-menu-actions">
-            <button
-              className="navbar-contact"
-              onClick={() => {
-                window.open('https://wa.me/917838649867', '_blank')
-                closeMenu()
-              }}
-            >
-              <span className="contact-content">WhatsApp Now</span>
-            </button>
-
-            {/* <MoonSunToggle darkMode={darkMode} onToggle={toggleDarkMode} /> */}
-          </div>
         </div>
       </div>
     </>

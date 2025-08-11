@@ -573,6 +573,13 @@
   opacity: 1;
   transition: opacity 0.4s ease;
 }
+.icon-emoji{
+  margin-top: 0px;
+}
+.icon-pulse{
+  margin-top: 0px;
+}
+
   .service-title{
     font-size: 1.5rem;
   }
@@ -580,9 +587,11 @@
     font-size: 1.2rem;
     text-align: center;
   }
+
   .cta-contentweb h3 {
     font-size: 1.5rem;
     line-height: 1;
+    margin-bottom: 1rem;
   }
 
   .cta-contentweb p{
@@ -636,6 +645,12 @@
   z-index: 2;
   opacity: 1;
   transition: opacity 0.4s ease;
+}
+.icon-emoji{
+  margin-top: 0px;
+}
+.icon-pulse{
+  margin-top: 0px;
 }
   .service-title{
     font-size: 1.5rem;

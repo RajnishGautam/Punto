@@ -22,7 +22,11 @@ const MarketingGrid = () => {
 
         {/* Grid Item 4 */}
         <div className="marketing-grid-div marketing-grid-div4">
-          <video src="/marketing/grid4.mp4" autoPlay muted loop playsInline />
+          <img
+            src="/marketing/grid4.png"
+            alt="Marketing Visual"
+            className="grid4-img"
+          />
         </div>
 
         {/* Grid Item 5 */}
@@ -42,21 +46,16 @@ const MarketingGrid = () => {
 
         {/* Grid Item 20  7ke niche wala*/}
         <div className="marketing-grid-div marketing-grid-div20">
-          <div className="seo-animation-bg"></div>
-          <div className="seo-content">
-            <h3 className="animated-heading">Rank Higher. Convert Faster.</h3>
-            <p className="typing-text">
-              Unlock your site's true potential with SEO that works
-            </p>
-          </div>
+          <img
+            src="/marketing/grid17.png"
+            alt="Marketing Visual"
+            className="grid20-img"
+          />
         </div>
+
         {/* Grid Item 8 */}
         <div className="marketing-grid-div marketing-grid-div8">
-          <img
-            src="/marketing/grid8.png"
-            alt="SEO Visual"
-            className="grid8-img"
-          />
+          <video src="/marketing/grid8.mp4" autoPlay muted loop playsInline />
         </div>
 
         {/* Grid Item 9 */}
@@ -75,12 +74,12 @@ const MarketingGrid = () => {
 
         {/* Grid Item 11 */}
         <div className="marketing-grid-div marketing-grid-div11">
-          <h4>Best Digital Marketing Agency in Lucknow</h4>
+          <video src="/marketing/grid11.mp4" autoPlay muted loop playsInline />
         </div>
 
         {/* Grid Item 12 */}
         <div className="marketing-grid-div marketing-grid-div12">
-          <h4>12</h4>
+          <video src="/marketing/grid12.mp4" autoPlay muted loop playsInline />
         </div>
 
         {/* Grid Item 13 */}
@@ -105,36 +104,25 @@ const MarketingGrid = () => {
 
         {/* Grid Item 17 */}
         <div className="marketing-grid-div marketing-grid-div17">
-          <h3>Grid 17 - Wide</h3>
-          <p>Wide section for content</p>
+          <img
+            src="/marketing/grid17.png"
+            alt="Marketing Visual"
+            className="grid17-img"
+          />
         </div>
 
-        {/* Grid Item 18 */}
-        <div className="marketing-grid-div marketing-grid-div18">
-          <h3>Grid 18</h3>
+        {/* CTA Button at Bottom */}
+        <div className="marketing-grid-cta">
+          <a
+            href="https://wa.me/917838649867"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="neon-button marketing primary"
+          >
+            <span>Start Your Journey</span>
+            <div className="button-glow"></div>
+          </a>
         </div>
-
-        {/* Grid Item 19 */}
-        {/* Grid Item 19 */}
-<div className="marketing-grid-div marketing-grid-div19">
-  <h3>Grid 19 - Wide</h3>
-  <p>Bottom wide section</p>
-</div>
-
-{/* CTA Button at Bottom */}
-<div className="marketing-grid-cta">
-  <a
-    href="https://wa.me/917838649867"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="neon-button marketing primary"
-  >
-    <span>Start Your Journey</span>
-    <div className="button-glow"></div>
-  </a>
-</div>
-
-
       </div>
     </div>
   )

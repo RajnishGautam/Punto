@@ -1,71 +1,55 @@
 import React from 'react';
 import './TeamSection.css';
-import { FaInstagram, FaWhatsapp, FaLinkedin } from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa';
 
 const teamMembers = [
   {
-    name: 'Vin Diesel',
-    role: 'Senior App Developer',
+    name: 'Atul',
+    role: 'Founder & CEO',
     img: '/team/Diego.jpg',
-    instagram: 'https://instagram.com/vindiesel',
-    whatsapp: 'https://wa.me/1234567890',
-    linkedin: 'https://linkedin.com/in/vindiesel',
+    linkedin: 'https://www.linkedin.com/in/atul-kumar7838649867?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
   },
   {
-    name: 'David Corner',
-    role: 'Front End Developer',
+    name: 'Varun',
+    role: 'Marketing Head',
     img: '/team/Diego.jpg',
-    instagram: 'https://instagram.com/davidcorner',
-    whatsapp: 'https://wa.me/1234567890',
     linkedin: 'https://linkedin.com/in/davidcorner',
   },
   {
-    name: 'Tom Cruise',
-    role: 'Full Stack Developer',
+    name: 'Diego',
+    role: 'Branding Head',
     img: '/team/Diego.jpg',
-    instagram: 'https://instagram.com/tomcruise',
-    whatsapp: 'https://wa.me/1234567890',
     linkedin: 'https://linkedin.com/in/tomcruise',
   },
   {
-    name: 'Emma Watson',
-    role: 'UI/UX Designer',
-    img: '/team/Diego.jpg',
-    instagram: 'https://instagram.com/emmawatson',
-    whatsapp: 'https://wa.me/1234567890',
+    name: 'Liam',
+    role: 'CGI & Design Head',
+    img: '/team/Liam.jpg',
     linkedin: 'https://linkedin.com/in/emmawatson',
   },
   {
     name: 'Chris Evans',
     role: 'React Developer',
-    img: '/team/Diego.jpg',
-    instagram: 'https://instagram.com/chrisevans',
-    whatsapp: 'https://wa.me/1234567890',
+    img: '/team/Sergio.jpg',
     linkedin: 'https://linkedin.com/in/chrisevans',
   },
   {
-    name: 'Scarlett',
-    role: 'Backend Engineer',
+    name: 'Rajnish',
+    role: 'Full Stack Developer',
     img: '/team/Rajnish.jpg',
-    instagram: 'https://instagram.com/scarlettjohansson',
-    whatsapp: 'https://wa.me/1234567890',
-    linkedin: 'https://linkedin.com/in/scarlettjohansson',
+    linkedin: 'https://www.linkedin.com/in/rajnish0903',
   },
   {
-    name: 'Robert Downey',
-    role: 'DevOps Engineer',
+    name: 'Rajnish',
+    role: 'Full Stack Developer',
     img: '/team/Rajnish.jpg',
-    instagram: 'https://instagram.com/robertdowney',
-    whatsapp: 'https://wa.me/1234567890',
-    linkedin: 'https://linkedin.com/in/robertdowney',
+    linkedin: 'https://www.linkedin.com/in/rajnish0903',
   },
   {
-    name: 'Gal Gadot',
-    role: 'QA Engineer',
+    name: 'Rajnish',
+    role: 'Full Stack Developer',
     img: '/team/Rajnish.jpg',
-    instagram: 'https://instagram.com/galgadot',
-    whatsapp: 'https://wa.me/1234567890',
-    linkedin: 'https://linkedin.com/in/galgadot',
+    linkedin: 'https://www.linkedin.com/in/rajnish0903',
   },
 ];
 
@@ -78,9 +62,9 @@ const TeamCard = ({ member }) => (
       <h3>{member.name}</h3>
       <p>{member.role}</p>
       <div className="ourteam-social-links">
-        <a href={member.linkedin} target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
-        <a href={member.instagram} target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-        <a href={member.whatsapp} target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a>
+        <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+          <FaLinkedin />
+        </a>
       </div>
     </div>
   </div>
