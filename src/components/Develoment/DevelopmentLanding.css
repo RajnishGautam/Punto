@@ -194,7 +194,7 @@
 
 @media (max-width: 768px) {
   .development-hero-section {
-    padding: 0 0%;
+    padding: 0 2%;
   }
   .development-text-content {
     padding: 1.5rem;
@@ -206,32 +206,26 @@
     font-size: 1.2rem;
   }
   .typewriter {
-    font-size: 2.5rem;
-    margin-top: -25rem;
+    font-size: 1.2rem;
   }
   .development-hero-cta {
     flex-direction: column;
     align-items: center;
-    gap: 0rem;
+    gap: 1rem;
   }
   .neon-button {
     width: 100%;
-    min-width: 200px;
-    padding: 5% 1%;
+    max-width: 300px;
   }
   .development-hero-right {
-    min-height: 500px;
-    padding: 0;
-    margin-top: -50px;
-  }
-  .development-3d-canvas-wrapper{
-    padding: 0rem 0rem 0rem 0rem;
+    height: 40vh;
+    min-height: 300px;
   }
 }
 
 @media (max-width: 480px) {
   .development-text-content {
-    padding-top: 0rem;
+    padding-top: -2rem;
   }
   .development-hero-title {
     font-size: 1.8rem;
@@ -252,7 +246,7 @@
 }
   .development-hero-subtitle, .typewriter {
     font-size: 1rem;
-    margin-top: -80px;
+    margin-top: -110px;
     color: #ffffff;
   }
   
