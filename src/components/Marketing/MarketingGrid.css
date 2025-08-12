@@ -345,7 +345,7 @@
   position: relative;
   padding: .1rem 2rem;
   background: transparent;
-  border: 2px solid #00D4FF;
+  border: 2px solid #8e1616;
   color: var(--text-color);
   font-size: 2rem;
   font-weight: normal;
@@ -355,6 +355,7 @@
   transition: all 0.3s ease;
   text-decoration: none;
   display: inline-block;
+  letter-spacing: .1rem;
 }
 
 .neon-button:hover,
@@ -406,12 +407,11 @@
   .marketing-grid-div4  { order: 3; }
   .marketing-grid-div5  { order: 4; }
   .marketing-grid-div6  { order: 4; }
-  .marketing-grid-div20 { order: 5; }
+  .marketing-grid-div17 { order: 6; }
   .marketing-grid-div2  { order: 6; }
-  .marketing-grid-div8  { order: 6; }
+  .marketing-grid-div8  { order: 7; }
+  .marketing-grid-div10  { order: 8; }
   .marketing-grid-div13 { order: 19; }
-  .marketing-grid-div15 { order: 15; }
-  .marketing-grid-div17 { order: 16; }
   .marketing-grid-cta   { order: 18; }
 
   /* Individual Div Sizes */
@@ -419,7 +419,10 @@
     min-width: 100%;
     height: 70vh;
   }
-
+ .marketing-grid-div9 {
+    width: 100%;
+    height: 140px;
+  }
   .marketing-grid-div1 video,
   .marketing-grid-div7 video {
     width: 100%;
@@ -444,45 +447,38 @@
 
   /* Hide elements on mobile */
   .marketing-grid-div7,
-  .marketing-grid-div10,
   .marketing-grid-div11,
   .marketing-grid-div12,
+  .marketing-grid-div13,
   .marketing-grid-div14,
-  .marketing-grid-div16 {
+  .marketing-grid-div15,
+  .marketing-grid-div16,
+  .marketing-grid-div20 {
     display: none;
   }
 
   .marketing-grid-div2 {
     width: 100%;
+    height: 10vh;
   }
 .marketing-grid-div2 video{
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transform: scale(1.4);
+  transform: scale(2);
 }
   .marketing-grid-div8 {
     width: 100%;
+    height: 20vh;
+    margin-left: auto;  /* pushes it to the right */
+  display: block;     /* ensure block or inline-block */
   }
-  .marketing-grid-div9 {
+  .marketing-grid-div10{
     width: 100%;
-    height: 140px;
+    height: 80vh;
   }
-
-  .marketing-grid-div13 {
-    width: 98%;
-    height: 200px; /* SEO section */
-    margin: 0 auto;
-    display: none;
-  }
-
-  .marketing-grid-div15 {
-    width: 98%;
-    height: 150px;
-    margin: 0 auto;
-  }
-
+ 
   .marketing-grid-div17 {
     width: 98%;
     height: 100px;
