@@ -86,7 +86,7 @@ const HybridGallery = () => {
     {
       id: 11,
       src: '/branding/brand3.JPG',
-      title: 'Harpers Bazzar India',
+      title: 'Harpers Bazzar',
       description:
         "Ancient trees and mystical paths through nature's enchanting landscapes.",
     },
@@ -94,7 +94,7 @@ const HybridGallery = () => {
     {
       id: 12,
       src: '/branding/brand9.JPG',
-      title: 'Harpers Bazzar India',
+      title: 'Harpers Bazzar',
       description:
         'Dynamic cityscapes and vibrant culture pulse through the streets.',
     },

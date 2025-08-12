@@ -128,7 +128,7 @@
 }
 .neon-button {
   position: relative;
-  padding: 1rem 2.5rem;
+  padding: .8rem 2rem;
   background: transparent;
   border: 2px solid #00D4FF;
   color: var(--text-color);

@@ -312,7 +312,10 @@
 .our-services-section-heading{
   font-size: 1rem;
   letter-spacing: .2rem;
-  color: var(--text-color);
+  color: #8e1616;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: -20px;
   text-transform: uppercase;
 }
   /* Add a subtle tap indication */
