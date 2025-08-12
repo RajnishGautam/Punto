@@ -232,7 +232,7 @@ const HybridGallery = () => {
       <div className="hg-gallery-header">
         <h1 className="hg-gallery-title">Shape Your Story</h1>
         <p className="hg-gallery-subtitle">
-          Transform ideas into ionic brand experiences
+          Transform ideas into iconic brand experiences
         </p>
       </div>
 

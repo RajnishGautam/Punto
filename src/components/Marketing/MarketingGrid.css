@@ -343,7 +343,7 @@
 .neon-button,
 .neon-button.marketing {
   position: relative;
-  padding: .5rem 2.5rem;
+  padding: .1rem 2rem;
   background: transparent;
   border: 2px solid #00D4FF;
   color: var(--text-color);
@@ -376,68 +376,17 @@
   opacity: 0.7;
   pointer-events: none;
 }
-
-
-/* Tablet Design (768px and below) */
-/* @media (max-width: 768px) {
-  .marketing-grid-parent {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    height: auto;
-  } */
-  
-  /* Reset all grid positioning for tablet */
-  /* .marketing-grid-div {
-    grid-column: unset;
-    grid-row: unset;
-    grid-column-start: unset;
-    grid-row-start: unset;
-    border-radius: 30px;
-  }
-  
-  /* Individual tablet sizes - customize as needed */
-  /* .marketing-grid-div1 { width: 100%; height: 200px; }
-  .marketing-grid-div2 { width: 80%; height: 150px; margin: 0 auto; }
-  .marketing-grid-div3 { width: 100%; height: 180px; }
-  .marketing-grid-div4 { width: 60%; height: 120px; margin: 0 auto; }
-  .marketing-grid-div5 { width: 60%; height: 120px; margin: 0 auto; }
-  .marketing-grid-div6 { width: 100%; height: 200px; }
-  .marketing-grid-div7 { width: 90%; height: 250px; margin: 0 auto; }
-  .marketing-grid-div8 { width: 85%; height: 180px; margin: 0 auto; }
-  .marketing-grid-div9 { width: 100%; height: 160px; }
-  .marketing-grid-div10 { width: 70%; height: 220px; margin: 0 auto; }
-  .marketing-grid-div11 { width: 50%; height: 100px; margin: 0 auto; }
-  .marketing-grid-div12 { width: 50%; height: 100px; margin: 0 auto; }
-  .marketing-grid-div13 { width: 75%; height: 140px; margin: 0 auto; }
-  .marketing-grid-div14 { width: 80%; height: 170px; margin: 0 auto; }
-  .marketing-grid-div15 { width: 55%; height: 110px; margin: 0 auto; }
-  .marketing-grid-div16 { width: 85%; height: 180px; margin: 0 auto; }
-  .marketing-grid-div17 { width: 90%; height: 130px; margin: 0 auto; }
-  .marketing-grid-div18 { width: 70%; height: 120px; margin: 0 auto; }
-  .marketing-grid-div19 { width: 95%; height: 140px; margin: 0 auto; }
-  
-  .marketing-grid-div h2,
-  .marketing-grid-div h3 {
-    font-size: 16px;
-  }
-  
-  .marketing-grid-div p {
-    font-size: 12px;
-  } */
-/* }  */
-/* Mobile Design (480px and below) */
 @media (max-width: 480px) {
   /* Parent Flex Container */
-  .marketing-grid-container{
-    padding: 4rem 0;
+  .marketing-grid-container {
+    padding-top: 4rem;
   }
+
   .marketing-grid-parent {
     display: flex;
-    flex-direction: column;
-    gap: 12px;
+    flex-wrap: wrap;
+    gap: 5px;
     height: auto;
-    padding-top: 0rem;
   }
 
   /* Reset all grid positioning for mobile */
@@ -447,37 +396,28 @@
     grid-column-start: unset;
     grid-row-start: unset;
     border-radius: 20px;
-    border: none;
+    border: 0.5px solid #8e1616;
   }
 
-  /* Flex Order: Rearranged Display Order */
-  /* Flex Order: Rearranged Display Order (hidden elements removed) */
-.marketing-grid-div11 { order: 91; }
-.marketing-grid-div12 { order: 92; }
-.marketing-grid-div1  { order: 1; }
-.marketing-grid-div20 { order: 2; }
-.marketing-grid-div2  { order: 2; }
-.marketing-grid-div3  { order: 3; }
-.marketing-grid-div4  { order: 3; }
-.marketing-grid-div5  { order: 3; }
-.marketing-grid-div6  { order: 3; }
-.marketing-grid-div7  { order: 96; }
-.marketing-grid-div8  { order: 2; }
-.marketing-grid-div9  { order: 8; }
- /* shifted up */
-.marketing-grid-div13 { order: 13; }
-.marketing-grid-div14 { order: 14; }
-.marketing-grid-div15 { order: 15; }
-.marketing-grid-div16 { order: 16; }
-.marketing-grid-div17 { order: 16; } /* hidden */
-.marketing-grid-div10 { order: 17; }
-.marketing-grid-cta   { order: 18; }
+  /* Order assignments */
+  .marketing-grid-div1  { order: 1; }  
+  .marketing-grid-div9  { order: 2; }
+  .marketing-grid-div3  { order: 3; }
+  .marketing-grid-div4  { order: 3; }
+  .marketing-grid-div5  { order: 4; }
+  .marketing-grid-div6  { order: 4; }
+  .marketing-grid-div20 { order: 5; }
+  .marketing-grid-div2  { order: 6; }
+  .marketing-grid-div8  { order: 6; }
+  .marketing-grid-div13 { order: 19; }
+  .marketing-grid-div15 { order: 15; }
+  .marketing-grid-div17 { order: 16; }
+  .marketing-grid-cta   { order: 18; }
 
   /* Individual Div Sizes */
   .marketing-grid-div1 {
-    width: 100%;
-    height: 450px;
-    border: .5px solid #8e1616;
+    min-width: 100%;
+    height: 70vh;
   }
 
   .marketing-grid-div1 video,
@@ -487,111 +427,59 @@
     object-fit: cover;
     display: block;
   }
- .marketing-grid-div20 {
-    width: 90%;
-    height: 100px;
-    margin-top: -58px;
-    margin-left: 120px;
-    rotate: 90deg;
-    border: .5px solid #8e1616;
-  }
-  .marketing-grid-div20 img.grid20-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  .marketing-grid-div2 {
-    width: 65%;
-    height: 137px;
-    border: .5px solid #8e1616;
-  }
-.marketing-grid-div2 video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transform: scale(1.4);
-  }
-  
-.marketing-grid-div8 {
-    width: 65%;
-    height: 137px;
-    margin-top: -58px;
-    border: .5px solid #8e1616;
-  }
-  .marketing-grid-div4 {
-    width: 48%;
-    height: 100px;
-    margin: 0 auto;
-    margin-left: 0;
-  }
-  .marketing-grid-div5 {
-    width: 48%;
-    height: 100px;
-    margin: 0 auto;
-    margin-right: 0;
-  }
 
+
+  /* Perfect 2x2 layout for squares */
+  .marketing-grid-div3,
+  .marketing-grid-div4,
+  .marketing-grid-div5,
   .marketing-grid-div6 {
-    width: 98%;
-    height: 270px;
-    margin-left: 5px;
+    flex: 0 0 49%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    border-radius: 20px;
+    border: 0.5px solid #8e1616;
+    margin: 0;
   }
 
-  .marketing-grid-div7 {
-    width: 98%;
-    height: 210px;
-
+  /* Hide elements on mobile */
+  .marketing-grid-div7,
+  .marketing-grid-div10,
+  .marketing-grid-div11,
+  .marketing-grid-div12,
+  .marketing-grid-div14,
+  .marketing-grid-div16 {
+    display: none;
   }
-.marketing-grid-div3 {
+
+  .marketing-grid-div2 {
     width: 100%;
-    height: 260px;
+  }
+.marketing-grid-div2 video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.4);
+}
+  .marketing-grid-div8 {
+    width: 100%;
   }
   .marketing-grid-div9 {
     width: 100%;
     height: 140px;
   }
 
-  .marketing-grid-div10 {
-    width: 98%;
-    height: 500px;
-    margin: 0 auto;
-  }
-
-  .marketing-grid-div11 {
-    width: 98%;
-    height: 80px;
-    margin: 0 auto;
-  }
-
-  .marketing-grid-div12 {
-    width: 98%;
-    height: 80px;
-    margin: 0 auto;
-  }
-
   .marketing-grid-div13 {
     width: 98%;
-     height: 200px; /*seo wala */
+    height: 200px; /* SEO section */
     margin: 0 auto;
-  }
-
-  .marketing-grid-div14 {
-    width: 98%;
-    height: 240px;
-    margin: 0 auto;
+    display: none;
   }
 
   .marketing-grid-div15 {
     width: 98%;
     height: 150px;
-    margin: 0 auto;
-  }
-
-  .marketing-grid-div16 {
-    width: 98%;
-    height: 250px;
     margin: 0 auto;
   }
 
@@ -618,32 +506,29 @@
     height: 150px;
     margin: 0 auto;
   }
- 
-  /* Typography */
-  .marketing-grid-div h2,
-  .marketing-grid-div h3 {
-    font-size: 30px;
-    color: black !important;
-  }
 
-  .marketing-grid-div p {
-    font-size: 18px;
-    color: rgb(255, 255, 255) !important;
-  }
-  .marketing-grid-cta {
-    text-align: center;
-    margin: 5rem 0;
-    grid-column: 1 / -1; /* Makes it span full width of the grid */
-    padding: 0 4rem;
-    }
-  .neon-button,
-  .neon-button.marketing {
-    padding: 0.5rem;
-    font-size: 1.5rem;
-  }
-  .button-glow {
-    box-shadow: 0 0 10px 3px rgba(0, 212, 255, 0.6);
-    border-radius: 30px;
-    opacity: 0.5;
-  }
+  /* CTA Button */
+.marketing-grid-cta {
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center;     /* center vertically */
+  width: 100%;
+  /* Optional: add some padding or height if needed */
+  padding: 1rem 0;
+}
+
+.neon-button,
+.neon-button.marketing {
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  display: inline-block; /* keep natural width */
+  max-width: fit-content; /* shrink to content */
+}
+
+.button-glow {
+  box-shadow: 0 0 10px 3px rgba(0, 212, 255, 0.6);
+  border-radius: 30px;
+  opacity: 0.5;
+}
+
 }
