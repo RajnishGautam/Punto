@@ -589,7 +589,7 @@ padding-top: 3rem;
 .hg-cta-button {
   position: relative;
   background: transparent;
-  color: white;
+  color: var(--text-color);
   border: 2px solid #ff4c4c; /* red neon border */
   padding: 0.5rem 2.5rem;
   font-family: 'Sarabun', sans-serif;
@@ -625,6 +625,76 @@ padding-top: 3rem;
 
 
 /* ====== RESPONSIVE VISIBILITY ====== */
+/* ====== TABLET VIEW (768px to 1024px) ====== */
+@media (max-width: 1024px) and (min-width: 426px) {
+  .hg-gallery-main-container {
+    padding-top: 2rem;
+  }
+
+  .hg-gallery-header {
+    padding: 2rem 1rem 1.5rem;
+  }
+
+  .hg-gallery-title {
+    font-size: 3rem;
+    letter-spacing: 0.15rem;
+  }
+
+  .hg-gallery-subtitle {
+    font-size: 1.8rem;
+    margin-top: -20px;
+    letter-spacing: 0.05rem;
+  }
+
+  .hg-gallery-flex {
+    height: 22rem; /* slightly shorter than desktop */
+    gap: 0.6rem;
+  }
+
+  .hg-gallery-panel.hg-active {
+    flex: 5;
+  }
+
+  .hg-gallery-panel.hg-inactive {
+    flex: 1;
+    min-width: 15px;
+  }
+
+  .hg-panel-title.hg-active {
+    font-size: 1.6rem;
+  }
+
+  .hg-panel-title.hg-inactive {
+    font-size: 1rem;
+  }
+
+  .hg-panel-description {
+    font-size: 0.8rem;
+  }
+
+  /* Make floating circles smaller or reposition for tablet */
+  .hg-floating-circle-1 {
+    width: 70px;
+    height: 70px;
+    top: 15%;
+    left: 5%;
+  }
+
+  .hg-floating-circle-2 {
+    width: 90px;
+    height: 90px;
+    top: 55%;
+    right: 5%;
+  }
+
+  .hg-floating-circle-3 {
+    width: 60px;
+    height: 60px;
+    bottom: 100px;
+    left: 25%;
+  }
+}
+
 @media (max-width: 426px) {
   .hg-gallery-wrapper {
     display: none;
@@ -637,12 +707,12 @@ padding-top: 3rem;
     padding-bottom: 5rem;
   }
 .hg-gallery-subtitle {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 100px;
     margin: -10px;
   }
   .hg-gallery-title{
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   .hg-mobile-carousel-viewport {
     display: block;

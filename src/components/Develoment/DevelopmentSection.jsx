@@ -4,6 +4,7 @@ import DevelopmentLanding from './DevelopmentLanding';
 import WebServices from './WebServices';
 import AppServices from './AppServices';
 import HeroWithVideo from '../common/Contactsection/Contactsection';
+import './DevelopmentSection.css';
 
 const DevelopmentSection = () => {
   const location = useLocation();

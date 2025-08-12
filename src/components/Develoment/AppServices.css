@@ -568,7 +568,7 @@
   font-family: "sarabun";
   font-size: 70px;
   font-weight: normal;
-  color: white;
+  color: var(--text-color);
 }
 
 .appcta-content p {
@@ -589,9 +589,9 @@
 
 .primary-cta {
   position: relative;
-  background: linear-gradient(135deg, #00D4FF, #39FF14);
-  color: black;
-  border: none;
+  background: transparent;
+  color: var(--text-color);
+  border: 2px solid #00D4FF;
   padding: 1rem 1rem;
   border-radius: 50px;
   font-size: 1.1rem;
@@ -602,7 +602,9 @@
 }
 
 .primary-cta:hover {
-  transform: translateY(-5px) scale(1.05);
+  background: rgba(0, 212, 255, 0.1);
+  box-shadow: 0 0 20px rgba(222, 24, 21, 0.792), inset 0 0 20px rgba(0, 212, 255, 0.2);
+  transform: translateY(-3px);
 }
 
 .button-shine {

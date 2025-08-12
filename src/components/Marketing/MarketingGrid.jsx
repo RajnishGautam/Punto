@@ -23,7 +23,7 @@ const MarketingGrid = () => {
         {/* Grid Item 4 */}
         <div className="marketing-grid-div marketing-grid-div4">
           <img
-            src="/marketing/grid4.png"
+            src="/marketing/grid4.jpg"
             alt="Marketing Visual"
             className="grid4-img"
           />
@@ -47,7 +47,7 @@ const MarketingGrid = () => {
         {/* Grid Item 20  7ke niche wala*/}
         <div className="marketing-grid-div marketing-grid-div20">
           <img
-            src="/marketing/grid17.png"
+            src="/marketing/grid20.png"
             alt="Marketing Visual"
             className="grid20-img"
           />
@@ -74,12 +74,20 @@ const MarketingGrid = () => {
 
         {/* Grid Item 11 */}
         <div className="marketing-grid-div marketing-grid-div11">
-          <video src="/marketing/grid11.mp4" autoPlay muted loop playsInline />
+          <img
+            src="/marketing/grid11.jpg"
+            alt="Marketing Visual"
+            className="grid11-img"
+          />
         </div>
 
         {/* Grid Item 12 */}
         <div className="marketing-grid-div marketing-grid-div12">
-          <video src="/marketing/grid12.mp4" autoPlay muted loop playsInline />
+           <img
+            src="/marketing/grid12.jpg"
+            alt="Marketing Visual"
+            className="grid11-img"
+          />
         </div>
 
         {/* Grid Item 13 */}
@@ -105,7 +113,7 @@ const MarketingGrid = () => {
         {/* Grid Item 17 */}
         <div className="marketing-grid-div marketing-grid-div17">
           <img
-            src="/marketing/grid17.png"
+            src="/marketing/grid17.jpg"
             alt="Marketing Visual"
             className="grid17-img"
           />

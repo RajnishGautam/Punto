@@ -58,7 +58,8 @@
 
 .ourteam-card:hover img {
   border-radius: 10px;
-  filter: grayscale(100%);
+  border: 2px solid #8e1616;
+  filter: grayscale(0%);
 }
 
 .ourteam-caption {
@@ -74,14 +75,18 @@
 
 .ourteam-caption h3 {
   font-size: 18px;
+  text-transform: uppercase;
   margin-bottom: 4px;
   color: #000000;
+  font-weight: normal;
 }
 
 .ourteam-caption p {
   font-size: 14px;
   color: #000000;
   margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
 }
 
 .ourteam-social-links a {

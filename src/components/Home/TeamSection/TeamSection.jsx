@@ -5,52 +5,53 @@ import { FaLinkedin } from 'react-icons/fa';
 const teamMembers = [
   {
     name: 'Atul',
-    role: 'Founder & CEO',
+    role: 'Marketing',
     img: '/team/Diego.jpg',
     linkedin: 'https://www.linkedin.com/in/atul-kumar7838649867?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
   },
   {
     name: 'Varun',
-    role: 'Marketing Head',
+    role: 'AI Generalist',
     img: '/team/Diego.jpg',
     linkedin: 'https://linkedin.com/in/davidcorner',
   },
   {
     name: 'Diego',
-    role: 'Branding Head',
+    role: 'CRM',
     img: '/team/Diego.jpg',
     linkedin: 'https://linkedin.com/in/tomcruise',
   },
   {
+    name: 'Abraham',
+    role: 'Marketing',
+    img: '/team/Abraham.jpg',
+    linkedin: 'https://www.linkedin.com/in/rajnish0903',
+  },
+  {
     name: 'Liam',
-    role: 'CGI & Design Head',
+    role: 'CGI & Design',
     img: '/team/Liam.jpg',
     linkedin: 'https://linkedin.com/in/emmawatson',
   },
   {
-    name: 'Chris Evans',
-    role: 'React Developer',
+    name: 'Ben Jamir',
+    role: 'Branding',
     img: '/team/Sergio.jpg',
     linkedin: 'https://linkedin.com/in/chrisevans',
   },
   {
-    name: 'Rajnish',
-    role: 'Full Stack Developer',
+    name: 'Juzer',
+    role: 'Developer',
     img: '/team/Rajnish.jpg',
     linkedin: 'https://www.linkedin.com/in/rajnish0903',
   },
   {
     name: 'Rajnish',
-    role: 'Full Stack Developer',
+    role: 'Developer',
     img: '/team/Rajnish.jpg',
     linkedin: 'https://www.linkedin.com/in/rajnish0903',
   },
-  {
-    name: 'Rajnish',
-    role: 'Full Stack Developer',
-    img: '/team/Rajnish.jpg',
-    linkedin: 'https://www.linkedin.com/in/rajnish0903',
-  },
+  
 ];
 
 const TeamCard = ({ member }) => (

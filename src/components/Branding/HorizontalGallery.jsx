@@ -230,9 +230,9 @@ const HybridGallery = () => {
       </div>
 
       <div className="hg-gallery-header">
-        <h1 className="hg-gallery-title">Light. Lens. Impact.</h1>
+        <h1 className="hg-gallery-title">Shape Your Story</h1>
         <p className="hg-gallery-subtitle">
-          Framing Brands Brilliantly
+          Transform ideas into ionic brand experiences
         </p>
       </div>
 

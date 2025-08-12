@@ -238,6 +238,24 @@
 .marketing-grid-div11 {
   grid-row-start: 12;
 }
+.marketing-grid-div11 img,.marketing-grid-div12 img
+ {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  animation: zoomInOut 8s ease-in-out infinite;
+}
+
+@keyframes zoomInOut {
+  0%, 100% {
+    transform: scale(1); /* normal */
+  }
+  50% {
+    transform: scale(1.15); /* zoom in slightly */
+  }
+}
+
 .marketing-grid-div11 h4 {
   font-family: sarabun;
   font-size: 2.3rem;
@@ -303,6 +321,7 @@
   height: auto;
   object-fit: cover;
   display: block;
+  transform: translateY(60px);
 }
 .marketing-grid-div18 {
   grid-column: span 2 / span 2;
@@ -407,10 +426,12 @@
     font-size: 12px;
   } */
 /* }  */
-
 /* Mobile Design (480px and below) */
 @media (max-width: 480px) {
   /* Parent Flex Container */
+  .marketing-grid-container{
+    padding: 4rem 0;
+  }
   .marketing-grid-parent {
     display: flex;
     flex-direction: column;
@@ -431,30 +452,32 @@
 
   /* Flex Order: Rearranged Display Order */
   /* Flex Order: Rearranged Display Order (hidden elements removed) */
-.marketing-grid-div11 { order: 1; }
-.marketing-grid-div12 { order: 2; }
-.marketing-grid-div1  { order: 3; }
-.marketing-grid-div20 { order: 4; }
-.marketing-grid-div2  { order: 5; }
-.marketing-grid-div7  { order: 6; }
-.marketing-grid-div8  { order: 7; }
+.marketing-grid-div11 { order: 91; }
+.marketing-grid-div12 { order: 92; }
+.marketing-grid-div1  { order: 1; }
+.marketing-grid-div20 { order: 2; }
+.marketing-grid-div2  { order: 2; }
+.marketing-grid-div3  { order: 3; }
+.marketing-grid-div4  { order: 3; }
+.marketing-grid-div5  { order: 3; }
+.marketing-grid-div6  { order: 3; }
+.marketing-grid-div7  { order: 96; }
+.marketing-grid-div8  { order: 2; }
 .marketing-grid-div9  { order: 8; }
-.marketing-grid-div3  { order: 9; }
-.marketing-grid-div4  { order: 10; }
-.marketing-grid-div5  { order: 11; }
-.marketing-grid-div6  { order: 12; } /* shifted up */
+ /* shifted up */
 .marketing-grid-div13 { order: 13; }
 .marketing-grid-div14 { order: 14; }
-/* .marketing-grid-div15 hidden */
-.marketing-grid-div16 { order: 15; }
-/* .marketing-grid-div17 hidden */
-.marketing-grid-div10 { order: 16; }
-.marketing-grid-cta   { order: 17; }
+.marketing-grid-div15 { order: 15; }
+.marketing-grid-div16 { order: 16; }
+.marketing-grid-div17 { order: 16; } /* hidden */
+.marketing-grid-div10 { order: 17; }
+.marketing-grid-cta   { order: 18; }
 
   /* Individual Div Sizes */
   .marketing-grid-div1 {
     width: 100%;
     height: 450px;
+    border: .5px solid #8e1616;
   }
 
   .marketing-grid-div1 video,
@@ -464,11 +487,24 @@
     object-fit: cover;
     display: block;
   }
-
+ .marketing-grid-div20 {
+    width: 90%;
+    height: 100px;
+    margin-top: -58px;
+    margin-left: 120px;
+    rotate: 90deg;
+    border: .5px solid #8e1616;
+  }
+  .marketing-grid-div20 img.grid20-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
   .marketing-grid-div2 {
-    width: 98%;
-    height: 130px;
-    margin: 0 auto;
+    width: 65%;
+    height: 137px;
+    border: .5px solid #8e1616;
   }
 .marketing-grid-div2 video {
     width: 100%;
@@ -477,11 +513,13 @@
     display: block;
     transform: scale(1.4);
   }
-  .marketing-grid-div3 {
-    width: 100%;
-    height: 260px;
+  
+.marketing-grid-div8 {
+    width: 65%;
+    height: 137px;
+    margin-top: -58px;
+    border: .5px solid #8e1616;
   }
-
   .marketing-grid-div4 {
     width: 48%;
     height: 100px;
@@ -493,27 +531,23 @@
     height: 100px;
     margin: 0 auto;
     margin-right: 0;
-    margin-top: -110px;
   }
 
   .marketing-grid-div6 {
     width: 98%;
     height: 270px;
-margin-left: 5px;
+    margin-left: 5px;
   }
 
   .marketing-grid-div7 {
     width: 98%;
     height: 210px;
-    margin: 0 auto;
-  }
 
-  .marketing-grid-div8 {
+  }
+.marketing-grid-div3 {
     width: 100%;
-    height: 180px;
-    margin: 0 auto;
+    height: 260px;
   }
-
   .marketing-grid-div9 {
     width: 100%;
     height: 140px;
@@ -550,7 +584,9 @@ margin-left: 5px;
   }
 
   .marketing-grid-div15 {
-    display: none;
+    width: 98%;
+    height: 150px;
+    margin: 0 auto;
   }
 
   .marketing-grid-div16 {
@@ -560,7 +596,16 @@ margin-left: 5px;
   }
 
   .marketing-grid-div17 {
-    display: none;
+    width: 98%;
+    height: 100px;
+    margin: 0 auto;
+  }
+  .marketing-grid-div17 img.grid17-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    transform: scale(1.5) translateX(40px) translateY(20px);
   }
 
   .marketing-grid-div18 {
@@ -568,6 +613,12 @@ margin-left: 5px;
     height: 100px;
     margin: 0 auto;
   }
+  .marketing-grid-div19 {
+    width: 98%;
+    height: 150px;
+    margin: 0 auto;
+  }
+ 
   /* Typography */
   .marketing-grid-div h2,
   .marketing-grid-div h3 {
