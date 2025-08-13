@@ -106,20 +106,20 @@ body.dark {
 /* Tooltip */
 .partner-tooltip {
   position: absolute;
-  bottom: 105%;
+  bottom: 100%;
   left: 50%;
   transform: translateX(-50%);
   background-color: var(--partners-text);
   color: var(--partners-bg);
-  padding: 6px 10px;
-  border-radius: 6px;
+  padding: 4px 10px;
+  border-radius: 40px;
+  border: 4px solid #8e1616;
   font-size: 0.75rem;
   white-space: nowrap;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.2s ease;
   z-index: 10;
-  box-shadow: 0 4px 8px var(--partners-shadow);
 }
 
 /* Show tooltip on hover for desktop */

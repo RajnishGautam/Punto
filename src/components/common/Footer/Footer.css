@@ -42,8 +42,9 @@
 
 .brand-description {
   color: var(--text-secondary);
-  font-size: 40px;
+  font-size: 25px;
   max-width: 300px;
+  margin-left: 2.2rem;
 }
 
 /* ---------- Section Titles ---------- */

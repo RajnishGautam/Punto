@@ -47,17 +47,17 @@ const WhyUs3DCards = () => {
         {
           icon: <Users className="w-6 h-6" />,
           label: 'Happy Clients',
-          value: '10K+',
+          value: '50+',
         },
         {
           icon: <Award className="w-6 h-6" />,
-          label: 'Awards Won',
-          value: '50+',
+          label: 'Faster Delivery',
+          value: '3x Speed',
         },
         {
           icon: <Globe className="w-6 h-6" />,
           label: 'Global Reach',
-          value: '25+ Countries',
+          value: '5+ Countries',
         },
       ],
       description:
@@ -73,17 +73,17 @@ const WhyUs3DCards = () => {
         {
           icon: <Users className="w-6 h-6" />,
           label: 'Expert Team',
-          value: '200+',
+          value: '20+',
         },
         {
           icon: <Globe className="w-6 h-6" />,
           label: 'Years Experience',
-          value: '15+',
+          value: '5+',
         },
         {
           icon: <Zap className="w-6 h-6" />,
           label: 'Projects Completed',
-          value: '5000+',
+          value: '500+',
         },
         {
           icon: <Award className="w-6 h-6" />,
@@ -96,30 +96,30 @@ const WhyUs3DCards = () => {
     },
     {
       id: 3,
-      title: "Why We're Unique",
+      title: "Our Process",
       subtitle: 'Innovation at Core',
       icon: <Award className="w-8 h-8" />,
       gradient: 'from-orange-600 via-red-600 to-pink-600',
       facts: [
         {
           icon: <Zap className="w-6 h-6" />,
-          label: 'Faster Delivery',
-          value: '3x Speed',
+          label: 'Researched Planning',
+          value: 'Plan',
         },
         {
           icon: <Target className="w-6 h-6" />,
-          label: 'Accuracy Rate',
-          value: '99.9%',
+          label: 'Out Of Box Design',
+          value: 'Design',
         },
         {
           icon: <Globe className="w-6 h-6" />,
-          label: '24/7 Support',
-          value: 'Always On',
+          label: '3x Speed Process',
+          value: 'Develop',
         },
         {
           icon: <TrendingUp className="w-6 h-6" />,
-          label: 'Growth Impact',
-          value: '300% ROI',
+          label: 'Fastest Deployment',
+          value: 'Deliver',
         },
       ],
       description:
@@ -148,7 +148,7 @@ const WhyUs3DCards = () => {
 
       <div className="why-us-content">
         <div className="whysection-header">
-          <h2 className="whysection-title">CREATING DESIGNS TO ELEVATE YOUR BRAND</h2>
+          <h2 className="whysection-title">DESIGN - STRATEGY - GROWTH WITHOUT LIMITS.</h2>
         </div>
 
         <div className={`cards-container ${selectedCard ? 'expanded' : ''}`}>
@@ -744,8 +744,7 @@ const WhyUs3DCards = () => {
 
 .expanded-title {
   font-size: 1.8rem;
-  font-weight: 600;
-  margin-bottom: 0.4rem;
+  font-weight: normal;
   background: linear-gradient(135deg, #D84040, #8e1616);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -754,12 +753,16 @@ const WhyUs3DCards = () => {
 }
 
 .expanded-subtitle {
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1.4;
+  font-weight: normal;
+  font-family: 'sarabun';
+  opacity: 1.8; 
+  letter-spacing: 0.1rem;
 }
 
 .dark .expanded-subtitle {
-  color: rgba(255, 255, 255, 0.7);
+  color: #ffffff;
 }
 
 .light .expanded-subtitle {
@@ -863,9 +866,10 @@ const WhyUs3DCards = () => {
 }
 
 .fact-value {
-  font-size: 1.2rem;
-  font-weight: 900;
-  line-height: 1.1;
+  font-size: 1.7rem;
+  font-family: 'sarabun';
+  font-weight: normal;
+  line-height: 1;
 }
 
 .dark .fact-value {
@@ -877,13 +881,16 @@ const WhyUs3DCards = () => {
 }
 
 .fact-label {
-  font-size: 0.7rem;
-  margin-top: 0.2rem;
-  line-height: 1.2;
+  font-size: 1rem;
+  font-family: 'sarabun';
+  font-weight:600;
+  opacity: 1.8;
+  letter-spacing: 0.05rem;
+  line-height: 1;
 }
 
 .dark .fact-label {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 1);
 }
 
 .light .fact-label {

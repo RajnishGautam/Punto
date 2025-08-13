@@ -6,13 +6,13 @@ const teamMembers = [
   {
     name: 'Atul',
     role: 'Marketing',
-    img: '/team/Diego.jpg',
+    img: '/team/Atul.jpg',
     linkedin: 'https://www.linkedin.com/in/atul-kumar7838649867?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
   },
   {
     name: 'Varun',
     role: 'AI Generalist',
-    img: '/team/Diego.jpg',
+    img: '/team/Varun.jpg',
     linkedin: 'https://linkedin.com/in/davidcorner',
   },
   {
@@ -42,7 +42,7 @@ const teamMembers = [
   {
     name: 'Juzer',
     role: 'Developer',
-    img: '/team/Rajnish.jpg',
+    img: '/team/Juzer.jpg',
     linkedin: 'https://www.linkedin.com/in/rajnish0903',
   },
   {

@@ -69,7 +69,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Intern
+                  Internship
                 </a>
               </li>
               <li>
@@ -78,7 +78,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Part Time
+                  Training
                 </a>
               </li>
               <li>

@@ -107,7 +107,11 @@ const MarketingGrid = () => {
 
         {/* Grid Item 16 */}
         <div className="marketing-grid-div marketing-grid-div16">
-          <video src="/marketing/grid16.mp4" autoPlay muted loop playsInline />
+          <img 
+            src="/marketing/grid16.jpg"
+            alt="Marketing Visual"
+            className="grid16-img"
+          />  
         </div>
 
         {/* Grid Item 17 */}

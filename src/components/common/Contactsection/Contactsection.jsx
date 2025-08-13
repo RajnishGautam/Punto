@@ -126,7 +126,7 @@ const HeroWithVideo = () => {
           <div className="social-scroll">
             <div className="scroll-dot" />
             <div className="scroll-line" />
-            <div className="scroll-text">SCROLL</div>
+            {/* <div className="scroll-text"></div> */}
           </div>
         </div>
 
@@ -154,7 +154,7 @@ const HeroWithVideo = () => {
             <input
               type="tel"
               name="phone"
-              placeholder="+91 9999999999"
+              placeholder="+91 9876543210"
               required
             />
             <textarea
