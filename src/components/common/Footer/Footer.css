@@ -63,7 +63,8 @@
 /* ---------- Sections Common Styles ---------- */
 .contact-section,
 .career-section,
-.services-section {
+.services-section,
+.blogs-section {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -71,7 +72,8 @@
 
 .contact-info,
 .career-list,
-.services-list {
+.services-list,
+.blogs-list {
   list-style: none;
   padding: 0;
   margin: 0;

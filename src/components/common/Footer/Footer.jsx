@@ -92,7 +92,18 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
+           
+          {/* Blog Page Section*/}
+          <div className="blogs-section">
+            <h3 className="contactsection-title">Blog</h3>
+            <ul className="blogs-list">
+              <li>
+                <a href="/blog/1">
+                  Read Our Blogs
+                </a>
+              </li>
+            </ul>
+          </div>
           {/* Services Section */}
           <div className="services-section">
             <h3 className="contactsection-title">Services</h3>
@@ -107,11 +118,11 @@ const Footer = () => {
                 <a href="/branding">Branding & Identity</a>
               </li>
               <li>
+                <a href="/development">Website Development</a>
+              </li>
+               <li>
                 <a href="/development">Mobile App Development</a>
               </li>
-              {/* <li>
-                <a href="/Development">Web Design & Development</a>
-              </li> */}
             </ul>
           </div>
         </div>

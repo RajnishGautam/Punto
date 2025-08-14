@@ -1,6 +1,6 @@
 import React from 'react';
 import './TeamSection.css';
-import { FaLinkedin } from 'react-icons/fa';
+import { FaLinkedin, FaPinterest } from 'react-icons/fa';
 
 const teamMembers = [
   {
@@ -13,37 +13,37 @@ const teamMembers = [
     name: 'Varun',
     role: 'AI Generalist',
     img: '/team/Varun.jpg',
-    linkedin: 'https://linkedin.com/in/davidcorner',
+    linkedin: 'https://linkedin.com',
   },
   {
     name: 'Diego',
     role: 'CRM',
     img: '/team/Diego.jpg',
-    linkedin: 'https://linkedin.com/in/tomcruise',
+    linkedin: 'https://linkedin.com',
   },
   {
     name: 'Abraham',
     role: 'Marketing',
     img: '/team/Abraham.jpg',
-    linkedin: 'https://www.linkedin.com/in/rajnish0903',
+    linkedin: 'https://www.linkedin.com',
   },
   {
     name: 'Liam',
     role: 'CGI & Design',
     img: '/team/Liam.jpg',
-    linkedin: 'https://linkedin.com/in/emmawatson',
+    linkedin: 'https://linkedin.com',
   },
   {
     name: 'Ben Jamir',
     role: 'Branding',
     img: '/team/Sergio.jpg',
-    linkedin: 'https://linkedin.com/in/chrisevans',
+    linkedin: 'https://linkedin.com/',
   },
   {
     name: 'Juzer',
     role: 'Developer',
     img: '/team/Juzer.jpg',
-    linkedin: 'https://www.linkedin.com/in/rajnish0903',
+    linkedin: 'https://www.linkedin.com',
   },
   {
     name: 'Rajnish',
